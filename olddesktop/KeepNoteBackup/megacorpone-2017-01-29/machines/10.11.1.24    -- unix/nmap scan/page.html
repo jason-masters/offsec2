@@ -1,0 +1,39 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.24<br/>
+Host is up (0.052s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  IPC$: <br/>
+|   Type: STYPE_IPC_HIDDEN<br/>
+|   Comment: IPC Service (payday server (Samba, Ubuntu))<br/>
+|   Users: 1<br/>
+|   Max Users: &lt;unlimited&gt;<br/>
+|   Path: C:\tmp<br/>
+|   Anonymous access: READ/WRITE<br/>
+|  print$: <br/>
+|   Type: STYPE_DISKTREE_HIDDEN<br/>
+|   Comment: Printer Drivers<br/>
+|   Users: 0<br/>
+|   Max Users: &lt;unlimited&gt;<br/>
+|   Path: C:\var\lib\samba\printers<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+|  OS: Unix (Samba 3.0.26a)<br/>
+|  Computer name: payday<br/>
+|  NetBIOS computer name: <br/>
+|  Domain name: <br/>
+|  FQDN: payday<br/>
+|_ System time: 2016-12-24T19:04:36-05:00<br/>
+<br/>
+</body></html>

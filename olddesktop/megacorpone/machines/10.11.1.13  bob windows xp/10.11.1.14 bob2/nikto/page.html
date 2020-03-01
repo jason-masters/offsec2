@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikto</title>
+</head><body>root@kali:~/gen/nikto# nikto -host 10.11.1.14<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10.11.1.14<br/>
++ Target Hostname: &nbsp; &nbsp;10.11.1.14<br/>
++ Target Port: &nbsp; &nbsp; &nbsp; &nbsp;80<br/>
++ Start Time: &nbsp; &nbsp; &nbsp; &nbsp; 2017-03-31 01:43:09 (GMT-4)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: Microsoft-IIS/5.1<br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ OSVDB-397: HTTP method 'PUT' allows clients to save files on the web server.<br/>
++ OSVDB-5646: HTTP method 'DELETE' allows clients to delete files on the web server.<br/>
++ Retrieved dasl header: &lt;DAV:sql&gt;<br/>
++ Retrieved dav header: 1, 2<br/>
++ Retrieved ms-author-via header: DAV<br/>
++ Uncommon header 'ms-author-via' found, with contents: DAV<br/>
++ Allowed HTTP Methods: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH <br/>
++ OSVDB-5646: HTTP method ('Allow' Header): 'DELETE' may allow clients to remove files on the web server.<br/>
++ OSVDB-397: HTTP method ('Allow' Header): 'PUT' method could allow clients to save files on the web server.<br/>
++ OSVDB-5647: HTTP method ('Allow' Header): 'MOVE' may allow clients to change file locations on the web server.<br/>
++ Public HTTP Methods: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH <br/>
++ OSVDB-5646: HTTP method ('Public' Header): 'DELETE' may allow clients to remove files on the web server.<br/>
++ OSVDB-397: HTTP method ('Public' Header): 'PUT' method could allow clients to save files on the web server.<br/>
++ OSVDB-5647: HTTP method ('Public' Header): 'MOVE' may allow clients to change file locations on the web server.<br/>
++ WebDAV enabled (COPY PROPFIND MKCOL PROPPATCH SEARCH LOCK UNLOCK listed as allowed)<br/>
++ OSVDB-13431: PROPFIND HTTP verb may show the server's internal IP address: http://bob2/scripts/nc.exe<br/>
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST<br/>
++ OSVDB-877: HTTP TRACK method is active, suggesting the host is vulnerable to XST<br/>
++ OSVDB-3092: /scripts/: This might be interesting... possibly a system shell found.<br/>
++ Cookie ASPSESSIONIDQQGQQHQC created without the httponly flag<br/>
++ OSVDB-3092: /iishelp/iis/misc/default.asp: Default IIS page found.<br/>
++ 8353 requests: 0 error(s) and 24 item(s) reported on remote host<br/>
++ End Time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2017-03-31 02:08:59 (GMT-4) (1550 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested<br/>
+root@kali:~/gen/nikto# <br/>
+</body></html>

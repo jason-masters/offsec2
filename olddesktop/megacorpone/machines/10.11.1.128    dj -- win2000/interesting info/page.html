@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>interesting info</title>
+</head><body>http://10.11.1.128/check-bank_info.asp.txt<br/>
+<br/>
+<br/>
+&lt;html&gt;<br/>
+&lt;body&gt;<br/>
+<br/>
+&lt;%<br/>
+set conn=Server.CreateObject("ADODB.Connection")<br/>
+conn.open "PROVIDER=SQLOLEDB;DATA SOURCE=dj;User ID=sa;PWD=password;DATABASE=bankdb"<br/>
+<br/>
+Set rs = Server.CreateObject("ADODB.Recordset")<br/>
+sSql="SELECT DISTINCT cust_id FROM tblCustomers ORDER BY cust_id"<br/>
+rs.Open sSql,conn<br/>
+<br/>
+ID=request.form("ID")<br/>
+<br/>
+%&gt;<br/>
+<br/>
+&lt;form method="post"&gt;<br/>
+Choose Customer ID &lt;select name="ID"&gt;<br/>
+&lt;% &nbsp;do until rs.EOF<br/>
+&nbsp; &nbsp; response.write("&lt;option")<br/>
+&nbsp; &nbsp; if rs.fields("cust_id")=ID then<br/>
+&nbsp; &nbsp; &nbsp; response.write(" selected")<br/>
+&nbsp; &nbsp; end if<br/>
+&nbsp; &nbsp; response.write("&gt;")<br/>
+&nbsp; &nbsp; response.write(rs.fields("cust_id"))<br/>
+&nbsp; &nbsp; rs.MoveNext<br/>
+loop<br/>
+rs.Close<br/>
+set rs=Nothing %&gt;<br/>
+&lt;/select&gt;<br/>
+<br/>
+<br/>
+&lt;input type="submit" value="Show Customer Name"&gt;<br/>
+&lt;/form&gt;<br/>
+<br/>
+&lt;%<br/>
+cust_id = "1001"<br/>
+if cust_id&lt;&gt;"" then<br/>
+&nbsp; &nbsp;sSql="SELECT * FROM tblCustomers WHERE cust_id='" &amp; ID &amp; "'"<br/>
+&nbsp; &nbsp;set rs=Server.CreateObject("ADODB.Recordset")<br/>
+&nbsp; &nbsp;rs.Open sSql,conn<br/>
+%&gt;<br/>
+&nbsp; &nbsp;&lt;table width="100%" cellspacing="0" cellpadding="2" border="1"&gt;<br/>
+&nbsp; &nbsp;&lt;tr&gt;<br/>
+&nbsp; &nbsp; &nbsp;&lt;th&gt;Customer Name&lt;/th&gt;<br/>
+&nbsp; &nbsp;&lt;/tr&gt;<br/>
+&lt;%<br/>
+do until rs.EOF<br/>
+&nbsp; &nbsp;response.write("&lt;tr&gt;")<br/>
+&nbsp; &nbsp;response.write("&lt;td&gt;" &amp; rs.fields("cust_name") &amp; "&lt;/td&gt;")<br/>
+&nbsp; &nbsp;response.write("&lt;/tr&gt;")<br/>
+&nbsp; &nbsp;rs.MoveNext<br/>
+<br/>
+loop<br/>
+rs.close<br/>
+conn.Close<br/>
+set rs=Nothing<br/>
+set conn=Nothing%&gt;<br/>
+&lt;/table&gt;<br/>
+&lt;% &nbsp;end if %&gt;<br/>
+<br/>
+&lt;/body&gt;<br/>
+&lt;/html&gt;<br/>
+</body></html>

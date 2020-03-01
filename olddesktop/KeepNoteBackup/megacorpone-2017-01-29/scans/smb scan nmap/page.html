@@ -1,0 +1,564 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>smb scan nmap</title>
+</head><body><br/>
+msf auxiliary(smb_enumusers) &gt; run<br/>
+<br/>
+[*] 10.11.1.8:139     - PHOENIX [ ] ( LockoutTries=0 PasswordMin=5 )<br/>
+Error: 10.11.1.22 Rex::Proto::DCERPC::Exceptions::Fault DCERPC FAULT =&gt; nca_op_rng_error<br/>
+[*] 10.11.1.24:139    - PAYDAY [ games, nobody, proxy, syslog, www-data, root, news, bin, mail, dhcp, daemon, sshd, man, lp, mysql, dovecot, gnats, backup, sys, klog, postfix, list, irc, sync, uucp ] ( LockoutTries=0 PasswordMin=5 )<br/>
+[*] Scanned 26 of 254 hosts (10% complete)<br/>
+[*] 10.11.1.31:445    - RALPH [ ] <br/>
+[*] Scanned 55 of 254 hosts (21% complete)<br/>
+[*] Scanned 79 of 254 hosts (31% complete)<br/>
+[*] Scanned 102 of 254 hosts (40% complete)<br/>
+Error: 10.11.1.115 Rex::Proto::DCERPC::Exceptions::Fault DCERPC FAULT =&gt; nca_op_rng_error<br/>
+[*] 10.11.1.128:445    - DJ [ Administrator, Guest, IUSR_SRV2, IWAM_SRV2, TsInternetUser ] ( LockoutTries=0 PasswordMin=0 )<br/>
+[*] 10.11.1.136:139    - SUFFERANCE [ games, nobody, proxy, www-data, root, news, bin, mail, daemon, sshd, man, lp, Debian-exim, gnats, backup, sys, bob, identd, list, irc, statd, sync, uucp ] ( LockoutTries=0 PasswordMin=5 )<br/>
+[*] Scanned 136 of 254 hosts (53% complete)<br/>
+[*] Scanned 154 of 254 hosts (60% complete)<br/>
+[*] Scanned 178 of 254 hosts (70% complete)<br/>
+[*] 10.11.1.202:445    - ORACLE [ admin, Administrator, alison, backup, david, Guest, IUSR_ORACLE, IWAM_ORACLE, john, lisa, mark, TsInternetUser ] ( LockoutTries=0 PasswordMin=3 )<br/>
+[*] Scanned 204 of 254 hosts (80% complete)<br/>
+[*] 10.11.1.227:445    - JD [ admin, Administrator, backup, david, gary, Guest, homer, IUSR_SRV2, IWAM_SRV2, john, lee, lisa, mark, ned, nick, simon, sqlusr, todd, TsInternetUser ] ( LockoutTries=0 PasswordMin=0 )<br/>
+[*] Scanned 232 of 254 hosts (91% complete)<br/>
+[*] Scanned 254 of 254 hosts (100% complete)<br/>
+[*] Auxiliary module execution completed<br/>
+msf auxiliary(smb_enumusers) &gt; show options<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+[*] 10.11.1.5:445     - Host is running Windows XP (name:ALICE) (domain:THINC)<br/>
+[*] 10.11.1.8:445     - Host could not be identified: Unix (Samba 3.0.33-0.17.el4)<br/>
+[*] 10.11.1.24:445    - Host could not be identified: Unix (Samba 3.0.26a)<br/>
+[*] 10.11.1.22:139    - Host could not be identified: Unix (Samba 2.2.3a)<br/>
+[*] Scanned 26 of 254 hosts (10% complete)<br/>
+[*] 10.11.1.31:445    - Host is running Windows 2003 SP1 (build:3790) (name:RALPH) (domain:RALPH)<br/>
+[*] 10.11.1.49:139    - Host could not be identified: ()<br/>
+[*] Scanned 55 of 254 hosts (21% complete)<br/>
+[*] 10.11.1.50:139    - Host could not be identified: ()<br/>
+[*] 10.11.1.73:445    - Host is running Windows 7 Professional SP1 (build:7601) (name:GAMMA) (domain:WORKGROUP)<br/>
+[*] Scanned 81 of 254 hosts (31% complete)<br/>
+[*] Scanned 102 of 254 hosts (40% complete)<br/>
+[*] 10.11.1.115:139    - Host could not be identified: Unix (Samba 2.2.7a)<br/>
+[*] 10.11.1.128:445    - Host is running Windows 2000 SP0 - 4 (language:English) (name:DJ) (domain:DJ)<br/>
+[*] 10.11.1.136:445    - Host could not be identified: Unix (Samba 3.0.24)<br/>
+[*] Scanned 136 of 254 hosts (53% complete)<br/>
+[*] 10.11.1.145:445    - Host is running Windows 2008 Standard SP1 (build:6001) (name:HELPDESK) (domain:WORKGROUP)<br/>
+[*] Scanned 153 of 254 hosts (60% complete)<br/>
+[*] Scanned 178 of 254 hosts (70% complete)<br/>
+[*] 10.11.1.202:445    - Host is running Windows 2000 SP4 with ms05-010+ (language:English) (name:ORACLE) (domain:ACME)<br/>
+[*] Scanned 204 of 254 hosts (80% complete)<br/>
+[*] 10.11.1.220:445    - Host is running Windows 2008 R2 Standard SP1 (build:7601) (name:MASTER) (domain:THINC)<br/>
+[*] 10.11.1.218:445    - Host is running Windows 7 Professional SP1 (build:7601) (name:OBSERVER) (domain:THINC)<br/>
+[*] 10.11.1.223:445    - Host is running Windows 2008 Standard SP1 (build:6001) (name:JEFF) (domain:WORKGROUP)<br/>
+[*] 10.11.1.227:445    - Host is running Windows 2000 SP0 - 4 (language:English) (name:JD) (domain:JD)<br/>
+[*] 10.11.1.229:139    - Host is running Windows 2003 SP1 (build:3790) (name:MAIL) (domain:WORKGROUP)<br/>
+[*] Scanned 231 of 254 hosts (90% complete)<br/>
+[*] 10.11.1.230:445    - Host is running Windows 7 Ultimate N (build:7600) (name:KEVIN) (domain:WORKGROUP)<br/>
+[*] Scanned 254 of 254 hosts (100% complete)<br/>
+[*] Auxiliary module execution completed<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap --script smb-enum-shares.nse -p 445 10.11.1.0-255<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-22 13:42 EST<br/>
+Stats: 0:01:08 elapsed; 212 hosts completed (44 up), 44 undergoing Script Scan<br/>
+NSE Timing: About 84.09% done; ETC: 13:43 (0:00:12 remaining)<br/>
+Stats: 0:01:28 elapsed; 212 hosts completed (44 up), 44 undergoing Script Scan<br/>
+NSE Timing: About 86.36% done; ETC: 13:43 (0:00:13 remaining)<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|_  Anonymous access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.7<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:24:B2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.8<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:17:A0 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  IPC$: <br/>
+|   Type: STYPE_IPC_HIDDEN<br/>
+|   Comment: IPC Service (Samba Server Version 3.0.33-0.17.el4)<br/>
+|   Users: 1<br/>
+|   Max Users: &lt;unlimited&gt;<br/>
+|   Path: C:\tmp<br/>
+|_  Anonymous access: READ/WRITE<br/>
+<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.13<br/>
+Host is up (0.0000040s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:0D:D8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.14<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:7D:3B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.22<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:0F:E1 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.059s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  IPC$: <br/>
+|   Type: STYPE_IPC_HIDDEN<br/>
+|   Comment: IPC Service (payday server (Samba, Ubuntu))<br/>
+|   Users: 1<br/>
+|   Max Users: &lt;unlimited&gt;<br/>
+|   Path: C:\tmp<br/>
+|   Anonymous access: READ/WRITE<br/>
+|  print$: <br/>
+|   Type: STYPE_DISKTREE_HIDDEN<br/>
+|   Comment: Printer Drivers<br/>
+|   Users: 0<br/>
+|   Max Users: &lt;unlimited&gt;<br/>
+|   Path: C:\var\lib\samba\printers<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: guest<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Type: Not a file share<br/>
+|   Anonymous access: READ<br/>
+|   Current user access: READ/WRITE<br/>
+|  wwwroot: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|_  Current user access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.35<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:6D:A6 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.39<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:15:0E (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.44<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:09:4D (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.49<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:0C:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.50<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:7D:73 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.71<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:26:A8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: READ<br/>
+|  USERS: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+Nmap scan report for 10.11.1.115<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:0B:99 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.116<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:37:D7 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: guest<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Type: Not a file share<br/>
+|   Anonymous access: READ<br/>
+|   Current user access: READ/WRITE<br/>
+|  share: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: READ/WRITE<br/>
+|  wwwroot: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|_  Current user access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.136<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:54:12 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.141<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:6F:1B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.145<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:7E:40 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: READ<br/>
+|  PUBLIC: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+Nmap scan report for 10.11.1.146<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:37:10 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|_  Anonymous access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.209<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:32:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.217<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:74:1A (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.054s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.219<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:0F:7B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: READ<br/>
+|  NETLOGON: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+Nmap scan report for 10.11.1.221<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:18:FA (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: READ<br/>
+<br/>
+Nmap scan report for 10.11.1.226<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:5F:EE (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.227<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: guest<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Type: Not a file share<br/>
+|   Anonymous access: READ<br/>
+|   Current user access: READ/WRITE<br/>
+|  share: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|_  Current user access: READ/WRITE<br/>
+<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.047s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.013s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: READ<br/>
+|  USERS: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.237<br/>
+Host is up (0.049s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:27:39 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.238<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp closed microsoft-ds<br/>
+MAC Address: 00:50:56:89:51:D2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.247<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:7E:F8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.251<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:66:33 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.252<br/>
+Host is up (0.048s latency).<br/>
+PORT  STATE  SERVICE<br/>
+445/tcp filtered microsoft-ds<br/>
+MAC Address: 00:50:56:89:22:6B (VMware)<br/>
+<br/>
+Nmap done: 256 IP addresses (44 hosts up) scanned in 171.23 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

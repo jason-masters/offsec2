@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -Pn 192.168.21.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 20:31 EDT<br/>
+Nmap scan report for 192.168.21.161<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+443/tcp &nbsp;open &nbsp;https<br/>
+3306/tcp open &nbsp;mysql<br/>
+MAC Address: 00:50:56:89:2C:06 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 5.63 seconds<br/>
+root@kali:~/gen/nmap# nmap -sU 192.168.21.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 20:32 EDT<br/>
+Nmap scan report for 192.168.21.161<br/>
+Host is up (0.052s latency).<br/>
+All 1000 scanned ports on 192.168.21.161 are open|filtered<br/>
+MAC Address: 00:50:56:89:2C:06 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 53.77 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -Pn 192.168.21.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 21:07 EDT<br/>
+Nmap scan report for 192.168.21.161<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http<br/>
+135/tcp &nbsp; open &nbsp;msrpc<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+443/tcp &nbsp; open &nbsp;https<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+3306/tcp &nbsp;open &nbsp;mysql<br/>
+49152/tcp open &nbsp;unknown<br/>
+49153/tcp open &nbsp;unknown<br/>
+49154/tcp open &nbsp;unknown<br/>
+49155/tcp open &nbsp;unknown<br/>
+49156/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:2C:06 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 3.18 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 192.168.21.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 20:31 EDT<br/>
+Nmap scan report for 192.168.21.161<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp;VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; Apache httpd 2.4.18 ((Win32) OpenSSL/1.0.2e PHP/7.0.5)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /robots.txt: Robots file<br/>
+| &nbsp; /dev/: Potentially interesting folder<br/>
+| &nbsp; /icons/: Potentially interesting folder w/ directory listing<br/>
+| &nbsp; /img/: Potentially interesting directory w/ listing on 'apache/2.4.18 (win32) openssl/1.0.2e php/7.0.5'<br/>
+| &nbsp; /server-info/: Potentially interesting folder<br/>
+|_ &nbsp;/server-status/: Potentially interesting folder<br/>
+|_http-server-header: Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+443/tcp &nbsp;open &nbsp;ssl/http Apache httpd 2.4.18 ((Win32) OpenSSL/1.0.2e PHP/7.0.5)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /robots.txt: Robots file<br/>
+| &nbsp; /dev/: Potentially interesting folder<br/>
+| &nbsp; /icons/: Potentially interesting folder w/ directory listing<br/>
+| &nbsp; /img/: Potentially interesting directory w/ listing on 'apache/2.4.18 (win32) openssl/1.0.2e php/7.0.5'<br/>
+| &nbsp; /server-info/: Potentially interesting folder<br/>
+|_ &nbsp;/server-status/: Potentially interesting folder<br/>
+|_http-server-header: Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/7.0.5<br/>
+| http-sql-injection: <br/>
+| &nbsp; Possible sqli for queries:<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://192.168.21.161/dashboard/javascripts/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+|_ &nbsp; &nbsp;https://192.168.21.161/dashboard/javascripts/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+|_ssl-ccs-injection: No reply from server (TIMEOUT)<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: RFC2409/Oakley Group 2<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+|_sslv2-drown: <br/>
+3306/tcp open &nbsp;mysql &nbsp; &nbsp;MariaDB (unauthorized)<br/>
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)<br/>
+MAC Address: 00:50:56:89:2C:06 (VMware)<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 105.67 seconds<br/>
+</body></html>

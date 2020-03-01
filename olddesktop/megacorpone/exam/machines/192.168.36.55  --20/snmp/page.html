@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SNMP</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV 192.168.36.55<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 09:55 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.058s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+3306/tcp open &nbsp;mysql &nbsp; &nbsp; &nbsp; &nbsp; MySQL (unauthorized)<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port21-TCP:V=7.25BETA2%I=7%D=7/1%Time=5957A9F4%P=i686-pc-linux-gnu%r(NU<br/>
+SF:LL,35,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x20Server\x2<br/>
+SF:0ready\.\r\n")%r(GenericLines,79,"220-Wellcome\x20to\x20Home\x20Ftp\x20<br/>
+SF:Server!\r\n220\x20Server\x20ready\.\r\n500\x20'\r':\x20command\x20not\x<br/>
+SF:20understood\.\r\n500\x20'\r':\x20command\x20not\x20understood\.\r\n")%<br/>
+SF:r(Help,5A,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x20Serve<br/>
+SF:r\x20ready\.\r\n500\x20'HELP':\x20command\x20not\x20understood\.\r\n")%<br/>
+SF:r(SMBProgNeg,35,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x2<br/>
+SF:0Server\x20ready\.\r\n");<br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+Service Info: Host: Wellcome; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 30.17 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

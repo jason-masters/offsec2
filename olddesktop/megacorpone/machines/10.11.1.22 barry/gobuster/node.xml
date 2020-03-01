@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>f71d1fa4-216d-46c4-90bb-75529aa23832</string>
+  <key>title</key><string>GoBuster</string>
+  <key>nodeid</key><string>f5a7b7b9-08e0-44c9-a57b-db2aae2a887c</string>
+  <key>modified_time</key><integer>1490938884</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1490848037</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>8</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

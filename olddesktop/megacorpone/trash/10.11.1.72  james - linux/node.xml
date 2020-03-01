@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><true/>
+  <key>duplicate_of</key><string>65ebb0a0-19d8-4d97-8727-6b425cf71a44</string>
+  <key>nodeid</key><string>a239f374-ac07-4bd6-9f34-ce9c48c85f96</string>
+  <key>modified_time</key><integer>1491526678</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482247293</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>10.11.1.72  James - linux</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>16</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

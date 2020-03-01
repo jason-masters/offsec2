@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.8<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-19 22:17 EDT<br/>
+Nmap scan report for 10.11.1.8<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 990 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 2.0.1<br/>
+|_banner: 220 (vsFTPd 2.0.1)<br/>
+22/tcp &nbsp; open &nbsp; ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.9p1 (protocol 1.99)<br/>
+|_banner: SSH-1.99-OpenSSH_3.9p1<br/>
+25/tcp &nbsp; closed smtp<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+111/tcp &nbsp;open &nbsp; rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;844/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;847/tcp &nbsp;status<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)<br/>
+443/tcp &nbsp;open &nbsp; ssl/http &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+445/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)<br/>
+631/tcp &nbsp;open &nbsp; ipp &nbsp; &nbsp; &nbsp; &nbsp; CUPS 1.1<br/>
+|_http-server-header: CUPS/1.1<br/>
+3306/tcp open &nbsp; mysql?<br/>
+MAC Address: 00:50:56:89:17:A0 (VMware)<br/>
+Service Info: OS: Unix<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 169.89 seconds<br/>
+</body></html>

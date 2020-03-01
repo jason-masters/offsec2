@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.128<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-10 10:13 EST<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft ftpd 5.0<br/>
+|_banner: 220 dj Microsoft FTP Service (Version 5.0).<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ESMTP 5.0.2195.6713<br/>
+| banner: 220 dj.acme.local Microsoft ESMTP MAIL Service, Version: 5.0.21<br/>
+|_95.6713 ready at &nbsp;Fri, 10 Feb 2017 18:29:48 +0200<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft IIS httpd 5.0<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds Microsoft Windows 2000 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1026/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1029/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Distributed Transaction Coordinator (error)<br/>
+5800/tcp open &nbsp;vnc-http &nbsp; &nbsp; TightVNC<br/>
+5900/tcp open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+|_banner: RFB 003.008<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+Service Info: Host: dj.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 71.17 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

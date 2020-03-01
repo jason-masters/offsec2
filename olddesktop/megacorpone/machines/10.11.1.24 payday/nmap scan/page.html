@@ -1,0 +1,879 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.24<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-21 11:24 EDT<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.058s latency).<br/>
+Not shown: 992 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp;open &nbsp;ssh<br/>
+80/tcp &nbsp;open &nbsp;http<br/>
+110/tcp open &nbsp;pop3<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+143/tcp open &nbsp;imap<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+993/tcp open &nbsp;imaps<br/>
+995/tcp open &nbsp;pop3s<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+<br/>
+<br/>
+root@kali:~# nmap -sV --script vuln 10.11.1.24<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-02 11:51 EDT<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.11s latency).<br/>
+Not shown: 992 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.6p1 Debian 5build1 (protocol 2.0)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.4 ((Ubuntu) PHP/5.2.3-1ubuntu6)<br/>
+| http-csrf: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.24<br/>
+| &nbsp; Found the following possible CSRF vulnerabilities: <br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24:80/<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24:80/<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24:80/<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=search<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=search<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=search<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=search<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=about<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=about<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=about<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=recover_password<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=recover_password<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=recover_password<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=topics&amp;amp;topic_id=9<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=topics&amp;amp;topic_id=9<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=topics&amp;amp;topic_id=9<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart&amp;csid=7047e584644999eae730d23dd479f10e<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart&amp;csid=7047e584644999eae730d23dd479f10e<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart&amp;csid=7047e584644999eae730d23dd479f10e<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=privacy_policy<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=privacy_policy<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=privacy_policy<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?mode=catalog<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?mode=catalog<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?mode=catalog<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=exceptions&amp;no_page&amp;csid=4ab34181ed583d4437683574a559f50a<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=exceptions&amp;no_page&amp;csid=4ab34181ed583d4437683574a559f50a<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=exceptions&amp;no_page&amp;csid=4ab34181ed583d4437683574a559f50a<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=what_is_cs<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=what_is_cs<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=pages&amp;amp;page_id=what_is_cs<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=cart<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=login_form<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=login_form<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=auth&amp;amp;mode=login_form<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=sitemap<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=sitemap<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=sitemap<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=categories&amp;amp;category_id=119<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=categories&amp;amp;category_id=119<br/>
+| &nbsp; &nbsp; Form id: login_form2<br/>
+| &nbsp; &nbsp; Form action: index.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.24/index.php?target=categories&amp;amp;category_id=119<br/>
+| &nbsp; &nbsp; Form id: subscribe_email<br/>
+|_ &nbsp; &nbsp;Form action: index.php<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /admin.php: Possible admin folder<br/>
+| &nbsp; /admin/: Possible admin folder<br/>
+| &nbsp; /admin/admin/: Possible admin folder<br/>
+| &nbsp; /admin/account.php: Possible admin folder<br/>
+| &nbsp; /admin/index.php: Possible admin folder<br/>
+| &nbsp; /admin/login.php: Possible admin folder<br/>
+| &nbsp; /admin/admin.php: Possible admin folder<br/>
+| &nbsp; /admin/index.html: Possible admin folder<br/>
+| &nbsp; /admin/login.html: Possible admin folder<br/>
+| &nbsp; /admin/admin.html: Possible admin folder<br/>
+| &nbsp; /admin/home.php: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.php: Possible admin folder<br/>
+| &nbsp; /admin/account.html: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.html: Possible admin folder<br/>
+| &nbsp; /admin/cp.php: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.php: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.php: Possible admin folder<br/>
+| &nbsp; /admin/home.html: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.html: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.html: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.html: Possible admin folder<br/>
+| &nbsp; /admin/cp.html: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.php: Possible admin folder<br/>
+| &nbsp; /admin/account.cfm: Possible admin folder<br/>
+| &nbsp; /admin/index.cfm: Possible admin folder<br/>
+| &nbsp; /admin/login.cfm: Possible admin folder<br/>
+| &nbsp; /admin/admin.cfm: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.cfm: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.cfm: Possible admin folder<br/>
+| &nbsp; /admin/cp.cfm: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.cfm: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.cfm: Possible admin folder<br/>
+| &nbsp; /admin/home.cfm: Possible admin folder<br/>
+| &nbsp; /admin/account.asp: Possible admin folder<br/>
+| &nbsp; /admin/index.asp: Possible admin folder<br/>
+| &nbsp; /admin/login.asp: Possible admin folder<br/>
+| &nbsp; /admin/admin.asp: Possible admin folder<br/>
+| &nbsp; /admin/home.asp: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.asp: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.asp: Possible admin folder<br/>
+| &nbsp; /admin/cp.asp: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.asp: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.asp: Possible admin folder<br/>
+| &nbsp; /admin/account.aspx: Possible admin folder<br/>
+| &nbsp; /admin/index.aspx: Possible admin folder<br/>
+| &nbsp; /admin/login.aspx: Possible admin folder<br/>
+| &nbsp; /admin/admin.aspx: Possible admin folder<br/>
+| &nbsp; /admin/home.aspx: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.aspx: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.aspx: Possible admin folder<br/>
+| &nbsp; /admin/cp.aspx: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.aspx: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.aspx: Possible admin folder<br/>
+| &nbsp; /admin/index.jsp: Possible admin folder<br/>
+| &nbsp; /admin/login.jsp: Possible admin folder<br/>
+| &nbsp; /admin/admin.jsp: Possible admin folder<br/>
+| &nbsp; /admin/home.jsp: Possible admin folder<br/>
+| &nbsp; /admin/controlpanel.jsp: Possible admin folder<br/>
+| &nbsp; /admin/admin-login.jsp: Possible admin folder<br/>
+| &nbsp; /admin/cp.jsp: Possible admin folder<br/>
+| &nbsp; /admin/account.jsp: Possible admin folder<br/>
+| &nbsp; /admin/admin_login.jsp: Possible admin folder<br/>
+| &nbsp; /admin/adminLogin.jsp: Possible admin folder<br/>
+| &nbsp; /admin/backup/: Possible backup<br/>
+| &nbsp; /admin/download/backup.sql: Possible database backup<br/>
+| &nbsp; /admin/upload.php: Admin File Upload<br/>
+| &nbsp; /admin/CiscoAdmin.jhtml: Cisco Collaboration Server<br/>
+| &nbsp; /config/public/usergrp.gif: AXIS StorPoint<br/>
+| &nbsp; /admin/libraries/ajaxfilemanager/ajaxfilemanager.php: Log1 CMS<br/>
+| &nbsp; /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload<br/>
+| &nbsp; /admin/includes/tiny_mce/plugins/tinybrowser/upload.php: CompactCMS or B-Hind CMS/FCKeditor File upload<br/>
+| &nbsp; /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload<br/>
+| &nbsp; /admin/jscript/upload.php: Lizard Cart/Remote File upload<br/>
+| &nbsp; /admin/jscript/upload.html: Lizard Cart/Remote File upload<br/>
+| &nbsp; /admin/jscript/upload.pl: Lizard Cart/Remote File upload<br/>
+| &nbsp; /admin/jscript/upload.asp: Lizard Cart/Remote File upload<br/>
+| &nbsp; /admin/environment.xml: Moodle files<br/>
+| &nbsp; /catalog/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'<br/>
+| &nbsp; /classes/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'<br/>
+| &nbsp; /config/: Potentially interesting folder<br/>
+| &nbsp; /icons/: Potentially interesting directory w/ listing on 'apache/2.2.4 (ubuntu) php/5.2.3-1ubuntu6'<br/>
+| &nbsp; /image/: Potentially interesting folder<br/>
+| &nbsp; /index/: Potentially interesting folder<br/>
+| &nbsp; /install/: Potentially interesting folder<br/>
+|_ &nbsp;/payments/: Potentially interesting folder<br/>
+| http-internal-ip-disclosure: <br/>
+|_ &nbsp;Internal IP Leaked: 127.0.0.1<br/>
+|_http-server-header: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+110/tcp open &nbsp;pop3 &nbsp; &nbsp; &nbsp; &nbsp;Dovecot pop3d<br/>
+| ssl-ccs-injection: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL/TLS MITM vulnerability (CCS Injection)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; Risk factor: High<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h<br/>
+| &nbsp; &nbsp; &nbsp; does not properly restrict processing of ChangeCipherSpec messages,<br/>
+| &nbsp; &nbsp; &nbsp; which allows man-in-the-middle attackers to trigger use of a zero<br/>
+| &nbsp; &nbsp; &nbsp; length master key in certain OpenSSL-to-OpenSSL communications, and<br/>
+| &nbsp; &nbsp; &nbsp; consequently hijack sessions or obtain sensitive information, via<br/>
+| &nbsp; &nbsp; &nbsp; a crafted TLS handshake, aka the "CCS Injection" vulnerability.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://www.openssl.org/news/secadv_20140605.txt<br/>
+| &nbsp; &nbsp; &nbsp; http://www.cvedetails.com/cve/2014-0224<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Anonymous Diffie-Hellman Key Exchange MitM Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use anonymous<br/>
+| &nbsp; &nbsp; &nbsp; Diffie-Hellman key exchange only provide protection against passive<br/>
+| &nbsp; &nbsp; &nbsp; eavesdropping, and are vulnerable to active man-in-the-middle attacks<br/>
+| &nbsp; &nbsp; &nbsp; which could completely compromise the confidentiality and integrity<br/>
+| &nbsp; &nbsp; &nbsp; of any data exchanged over the resulting session.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; ANONYMOUS DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.ietf.org/rfc/rfc2246.txt<br/>
+| &nbsp; <br/>
+| &nbsp; Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:122331 &nbsp;CVE:CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; The Transport Layer Security (TLS) protocol contains a flaw that is<br/>
+| &nbsp; &nbsp; &nbsp; triggered when handling Diffie-Hellman key exchanges defined with<br/>
+| &nbsp; &nbsp; &nbsp; the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker<br/>
+| &nbsp; &nbsp; &nbsp; to downgrade the security of a TLS session to 512-bit export-grade<br/>
+| &nbsp; &nbsp; &nbsp; cryptography, which is significantly weaker, allowing the attacker<br/>
+| &nbsp; &nbsp; &nbsp; to more easily break the encryption and monitor or tamper with<br/>
+| &nbsp; &nbsp; &nbsp; the encrypted stream.<br/>
+| &nbsp; &nbsp; Disclosure date: 2015-5-19<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; EXPORT-GRADE DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/122331<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; https://weakdh.org<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+| ssl-poodle: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL POODLE information leak<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:113251 &nbsp;CVE:CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; products, uses nondeterministic CBC padding, which makes it easier<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for man-in-the-middle attackers to obtain cleartext data via a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-oracle attack, aka the "POODLE" issue.<br/>
+| &nbsp; &nbsp; Disclosure date: 2014-10-14<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; TLS_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.imperialviolet.org/2014/10/14/poodle.html<br/>
+| &nbsp; &nbsp; &nbsp; https://www.openssl.org/~bodo/ssl-poodle.pdf<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566<br/>
+|_ &nbsp; &nbsp; &nbsp;http://osvdb.org/113251<br/>
+| sslv2-drown: <br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; forced_ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; vulns: <br/>
+| &nbsp; &nbsp; CVE-2015-3197: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: SSLv2 doesn't block disabled ciphers<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2015-3197<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ssl/s2_srvr.c in OpenSSL 1.0.1 before 1.0.1r and 1.0.2 before 1.0.2f does not<br/>
+| &nbsp; &nbsp; &nbsp; prevent use of disabled ciphers, which makes it easier for man-in-the-middle<br/>
+| &nbsp; &nbsp; &nbsp; attackers to defeat cryptographic protection mechanisms by performing computations<br/>
+| &nbsp; &nbsp; &nbsp; on SSLv2 traffic, related to the get_client_master_key and get_client_hello<br/>
+| &nbsp; &nbsp; &nbsp; functions.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160128.txt<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3197<br/>
+| &nbsp; &nbsp; CVE-2016-0703: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Divide-and-conquer session key recovery in SSLv2<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before<br/>
+| &nbsp; &nbsp; &nbsp; 1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value<br/>
+| &nbsp; &nbsp; &nbsp; and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a<br/>
+| &nbsp; &nbsp; &nbsp; related issue to CVE-2016-0800.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160301.txt<br/>
+| &nbsp; &nbsp; CVE-2016-0800: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0800<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and<br/>
+| &nbsp; &nbsp; &nbsp; other products, requires a server to send a ServerVerify message before establishing<br/>
+| &nbsp; &nbsp; &nbsp; that a client possesses certain plaintext RSA data, which makes it easier for remote<br/>
+| &nbsp; &nbsp; &nbsp; attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding<br/>
+| &nbsp; &nbsp; &nbsp; oracle, aka a "DROWN" attack.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;https://www.openssl.org/news/secadv/20160301.txt<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)<br/>
+143/tcp open &nbsp;imap &nbsp; &nbsp; &nbsp; &nbsp;Dovecot imapd<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Anonymous Diffie-Hellman Key Exchange MitM Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use anonymous<br/>
+| &nbsp; &nbsp; &nbsp; Diffie-Hellman key exchange only provide protection against passive<br/>
+| &nbsp; &nbsp; &nbsp; eavesdropping, and are vulnerable to active man-in-the-middle attacks<br/>
+| &nbsp; &nbsp; &nbsp; which could completely compromise the confidentiality and integrity<br/>
+| &nbsp; &nbsp; &nbsp; of any data exchanged over the resulting session.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; ANONYMOUS DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.ietf.org/rfc/rfc2246.txt<br/>
+| &nbsp; <br/>
+| &nbsp; Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:122331 &nbsp;CVE:CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; The Transport Layer Security (TLS) protocol contains a flaw that is<br/>
+| &nbsp; &nbsp; &nbsp; triggered when handling Diffie-Hellman key exchanges defined with<br/>
+| &nbsp; &nbsp; &nbsp; the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker<br/>
+| &nbsp; &nbsp; &nbsp; to downgrade the security of a TLS session to 512-bit export-grade<br/>
+| &nbsp; &nbsp; &nbsp; cryptography, which is significantly weaker, allowing the attacker<br/>
+| &nbsp; &nbsp; &nbsp; to more easily break the encryption and monitor or tamper with<br/>
+| &nbsp; &nbsp; &nbsp; the encrypted stream.<br/>
+| &nbsp; &nbsp; Disclosure date: 2015-5-19<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; EXPORT-GRADE DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/122331<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; https://weakdh.org<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+| ssl-poodle: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL POODLE information leak<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:113251 &nbsp;CVE:CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; products, uses nondeterministic CBC padding, which makes it easier<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for man-in-the-middle attackers to obtain cleartext data via a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-oracle attack, aka the "POODLE" issue.<br/>
+| &nbsp; &nbsp; Disclosure date: 2014-10-14<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; TLS_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.imperialviolet.org/2014/10/14/poodle.html<br/>
+| &nbsp; &nbsp; &nbsp; https://www.openssl.org/~bodo/ssl-poodle.pdf<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566<br/>
+|_ &nbsp; &nbsp; &nbsp;http://osvdb.org/113251<br/>
+| sslv2-drown: <br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; forced_ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; vulns: <br/>
+| &nbsp; &nbsp; CVE-2015-3197: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: SSLv2 doesn't block disabled ciphers<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2015-3197<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ssl/s2_srvr.c in OpenSSL 1.0.1 before 1.0.1r and 1.0.2 before 1.0.2f does not<br/>
+| &nbsp; &nbsp; &nbsp; prevent use of disabled ciphers, which makes it easier for man-in-the-middle<br/>
+| &nbsp; &nbsp; &nbsp; attackers to defeat cryptographic protection mechanisms by performing computations<br/>
+| &nbsp; &nbsp; &nbsp; on SSLv2 traffic, related to the get_client_master_key and get_client_hello<br/>
+| &nbsp; &nbsp; &nbsp; functions.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160128.txt<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3197<br/>
+| &nbsp; &nbsp; CVE-2016-0703: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Divide-and-conquer session key recovery in SSLv2<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before<br/>
+| &nbsp; &nbsp; &nbsp; 1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value<br/>
+| &nbsp; &nbsp; &nbsp; and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a<br/>
+| &nbsp; &nbsp; &nbsp; related issue to CVE-2016-0800.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160301.txt<br/>
+| &nbsp; &nbsp; CVE-2016-0800: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0800<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and<br/>
+| &nbsp; &nbsp; &nbsp; other products, requires a server to send a ServerVerify message before establishing<br/>
+| &nbsp; &nbsp; &nbsp; that a client possesses certain plaintext RSA data, which makes it easier for remote<br/>
+| &nbsp; &nbsp; &nbsp; attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding<br/>
+| &nbsp; &nbsp; &nbsp; oracle, aka a "DROWN" attack.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;https://www.openssl.org/news/secadv/20160301.txt<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)<br/>
+993/tcp open &nbsp;ssl/imap &nbsp; &nbsp;Dovecot imapd<br/>
+| ssl-ccs-injection: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL/TLS MITM vulnerability (CCS Injection)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; Risk factor: High<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h<br/>
+| &nbsp; &nbsp; &nbsp; does not properly restrict processing of ChangeCipherSpec messages,<br/>
+| &nbsp; &nbsp; &nbsp; which allows man-in-the-middle attackers to trigger use of a zero<br/>
+| &nbsp; &nbsp; &nbsp; length master key in certain OpenSSL-to-OpenSSL communications, and<br/>
+| &nbsp; &nbsp; &nbsp; consequently hijack sessions or obtain sensitive information, via<br/>
+| &nbsp; &nbsp; &nbsp; a crafted TLS handshake, aka the "CCS Injection" vulnerability.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://www.openssl.org/news/secadv_20140605.txt<br/>
+| &nbsp; &nbsp; &nbsp; http://www.cvedetails.com/cve/2014-0224<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Anonymous Diffie-Hellman Key Exchange MitM Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use anonymous<br/>
+| &nbsp; &nbsp; &nbsp; Diffie-Hellman key exchange only provide protection against passive<br/>
+| &nbsp; &nbsp; &nbsp; eavesdropping, and are vulnerable to active man-in-the-middle attacks<br/>
+| &nbsp; &nbsp; &nbsp; which could completely compromise the confidentiality and integrity<br/>
+| &nbsp; &nbsp; &nbsp; of any data exchanged over the resulting session.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; ANONYMOUS DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.ietf.org/rfc/rfc2246.txt<br/>
+| &nbsp; <br/>
+| &nbsp; Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:122331 &nbsp;CVE:CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; The Transport Layer Security (TLS) protocol contains a flaw that is<br/>
+| &nbsp; &nbsp; &nbsp; triggered when handling Diffie-Hellman key exchanges defined with<br/>
+| &nbsp; &nbsp; &nbsp; the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker<br/>
+| &nbsp; &nbsp; &nbsp; to downgrade the security of a TLS session to 512-bit export-grade<br/>
+| &nbsp; &nbsp; &nbsp; cryptography, which is significantly weaker, allowing the attacker<br/>
+| &nbsp; &nbsp; &nbsp; to more easily break the encryption and monitor or tamper with<br/>
+| &nbsp; &nbsp; &nbsp; the encrypted stream.<br/>
+| &nbsp; &nbsp; Disclosure date: 2015-5-19<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; EXPORT-GRADE DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/122331<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; https://weakdh.org<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+| ssl-poodle: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL POODLE information leak<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:113251 &nbsp;CVE:CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; products, uses nondeterministic CBC padding, which makes it easier<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for man-in-the-middle attackers to obtain cleartext data via a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-oracle attack, aka the "POODLE" issue.<br/>
+| &nbsp; &nbsp; Disclosure date: 2014-10-14<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; TLS_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.imperialviolet.org/2014/10/14/poodle.html<br/>
+| &nbsp; &nbsp; &nbsp; https://www.openssl.org/~bodo/ssl-poodle.pdf<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566<br/>
+|_ &nbsp; &nbsp; &nbsp;http://osvdb.org/113251<br/>
+| sslv2-drown: <br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; forced_ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; vulns: <br/>
+| &nbsp; &nbsp; CVE-2015-3197: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: SSLv2 doesn't block disabled ciphers<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2015-3197<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ssl/s2_srvr.c in OpenSSL 1.0.1 before 1.0.1r and 1.0.2 before 1.0.2f does not<br/>
+| &nbsp; &nbsp; &nbsp; prevent use of disabled ciphers, which makes it easier for man-in-the-middle<br/>
+| &nbsp; &nbsp; &nbsp; attackers to defeat cryptographic protection mechanisms by performing computations<br/>
+| &nbsp; &nbsp; &nbsp; on SSLv2 traffic, related to the get_client_master_key and get_client_hello<br/>
+| &nbsp; &nbsp; &nbsp; functions.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160128.txt<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3197<br/>
+| &nbsp; &nbsp; CVE-2016-0800: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0800<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and<br/>
+| &nbsp; &nbsp; &nbsp; other products, requires a server to send a ServerVerify message before establishing<br/>
+| &nbsp; &nbsp; &nbsp; that a client possesses certain plaintext RSA data, which makes it easier for remote<br/>
+| &nbsp; &nbsp; &nbsp; attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding<br/>
+| &nbsp; &nbsp; &nbsp; oracle, aka a "DROWN" attack.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;https://www.openssl.org/news/secadv/20160301.txt<br/>
+995/tcp open &nbsp;ssl/pop3 &nbsp; &nbsp;Dovecot pop3d<br/>
+| ssl-ccs-injection: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL/TLS MITM vulnerability (CCS Injection)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; Risk factor: High<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h<br/>
+| &nbsp; &nbsp; &nbsp; does not properly restrict processing of ChangeCipherSpec messages,<br/>
+| &nbsp; &nbsp; &nbsp; which allows man-in-the-middle attackers to trigger use of a zero<br/>
+| &nbsp; &nbsp; &nbsp; length master key in certain OpenSSL-to-OpenSSL communications, and<br/>
+| &nbsp; &nbsp; &nbsp; consequently hijack sessions or obtain sensitive information, via<br/>
+| &nbsp; &nbsp; &nbsp; a crafted TLS handshake, aka the "CCS Injection" vulnerability.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://www.openssl.org/news/secadv_20140605.txt<br/>
+| &nbsp; &nbsp; &nbsp; http://www.cvedetails.com/cve/2014-0224<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Anonymous Diffie-Hellman Key Exchange MitM Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use anonymous<br/>
+| &nbsp; &nbsp; &nbsp; Diffie-Hellman key exchange only provide protection against passive<br/>
+| &nbsp; &nbsp; &nbsp; eavesdropping, and are vulnerable to active man-in-the-middle attacks<br/>
+| &nbsp; &nbsp; &nbsp; which could completely compromise the confidentiality and integrity<br/>
+| &nbsp; &nbsp; &nbsp; of any data exchanged over the resulting session.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; ANONYMOUS DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DH_anon_EXPORT_WITH_RC4_40_MD5<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.ietf.org/rfc/rfc2246.txt<br/>
+| &nbsp; <br/>
+| &nbsp; Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:122331 &nbsp;CVE:CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; The Transport Layer Security (TLS) protocol contains a flaw that is<br/>
+| &nbsp; &nbsp; &nbsp; triggered when handling Diffie-Hellman key exchanges defined with<br/>
+| &nbsp; &nbsp; &nbsp; the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker<br/>
+| &nbsp; &nbsp; &nbsp; to downgrade the security of a TLS session to 512-bit export-grade<br/>
+| &nbsp; &nbsp; &nbsp; cryptography, which is significantly weaker, allowing the attacker<br/>
+| &nbsp; &nbsp; &nbsp; to more easily break the encryption and monitor or tamper with<br/>
+| &nbsp; &nbsp; &nbsp; the encrypted stream.<br/>
+| &nbsp; &nbsp; Disclosure date: 2015-5-19<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; EXPORT-GRADE DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 504<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/122331<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; https://weakdh.org<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+| ssl-poodle: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL POODLE information leak<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:113251 &nbsp;CVE:CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; products, uses nondeterministic CBC padding, which makes it easier<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for man-in-the-middle attackers to obtain cleartext data via a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-oracle attack, aka the "POODLE" issue.<br/>
+| &nbsp; &nbsp; Disclosure date: 2014-10-14<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; TLS_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.imperialviolet.org/2014/10/14/poodle.html<br/>
+| &nbsp; &nbsp; &nbsp; https://www.openssl.org/~bodo/ssl-poodle.pdf<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566<br/>
+|_ &nbsp; &nbsp; &nbsp;http://osvdb.org/113251<br/>
+| sslv2-drown: <br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; vulns: <br/>
+| &nbsp; &nbsp; CVE-2016-0703: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Divide-and-conquer session key recovery in SSLv2<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before<br/>
+| &nbsp; &nbsp; &nbsp; 1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value<br/>
+| &nbsp; &nbsp; &nbsp; and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a<br/>
+| &nbsp; &nbsp; &nbsp; related issue to CVE-2016-0800.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160301.txt<br/>
+| &nbsp; &nbsp; CVE-2016-0800: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0800<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and<br/>
+| &nbsp; &nbsp; &nbsp; other products, requires a server to send a ServerVerify message before establishing<br/>
+| &nbsp; &nbsp; &nbsp; that a client possesses certain plaintext RSA data, which makes it easier for remote<br/>
+| &nbsp; &nbsp; &nbsp; attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding<br/>
+| &nbsp; &nbsp; &nbsp; oracle, aka a "DROWN" attack.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;https://www.openssl.org/news/secadv/20160301.txt<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: false<br/>
+| smb-vuln-regsvc-dos: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Service regsvc in Microsoft Windows systems vulnerable to denial of service<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference<br/>
+| &nbsp; &nbsp; &nbsp; pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes<br/>
+| &nbsp; &nbsp; &nbsp; while working on smb-enum-sessions.<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 344.01 seconds<br/>
+root@kali:~# <br/>
+</body></html>

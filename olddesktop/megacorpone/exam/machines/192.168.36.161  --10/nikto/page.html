@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikto</title>
+</head><body>root@kali:~/gen/nikto# nikto -host 192.168.36.161<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;192.168.36.161<br/>
++ Target Hostname: &nbsp; &nbsp;192.168.36.161<br/>
++ Target Port: &nbsp; &nbsp; &nbsp; &nbsp;80<br/>
++ Start Time: &nbsp; &nbsp; &nbsp; &nbsp; 2017-07-01 09:00:35 (GMT-4)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: Apache/1.3.33 (Debian GNU/Linux)<br/>
++ Server leaks inodes via ETags, header found with file /, inode: 418030, size: 289, mtime: Wed Jan 21 20:57:56 2009<br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ Apache/1.3.33 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.<br/>
++ Uncommon header 'tcn' found, with contents: list<br/>
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html<br/>
++ Allowed HTTP Methods: GET, HEAD, OPTIONS, TRACE <br/>
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST<br/>
++ OSVDB-3268: /icons/: Directory indexing found.<br/>
++ 8345 requests: 0 error(s) and 10 item(s) reported on remote host<br/>
++ End Time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2017-07-01 09:09:14 (GMT-4) (519 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested<br/>
+</body></html>

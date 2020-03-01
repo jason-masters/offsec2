@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap --script=banner 192.168.36.53<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 09:09 EDT<br/>
+Nmap scan report for 192.168.36.53<br/>
+Host is up (0.060s latency).<br/>
+Not shown: 978 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+|<span style="background-color: #ffff99">_banner: 220 MadCowz FTP!</span><br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+443/tcp &nbsp;open &nbsp;https<br/>
+3306/tcp open &nbsp;mysql<br/>
+| banner: F\x00\x00\x00\xFFj\x04Host '192.168.36.31' is not allowed to co<br/>
+|_nnect to this MySQL server<br/>
+6666/tcp open &nbsp;irc<br/>
+| banner: :irc.madcowz.localdomain NOTICE Auth :*** Looking up your hostn<br/>
+|_ame...<br/>
+6667/tcp open &nbsp;irc<br/>
+| banner: :irc.madcowz.localdomain NOTICE Auth :*** Looking up your hostn<br/>
+|_ame...<br/>
+6668/tcp open &nbsp;irc<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6669/tcp open &nbsp;irc<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6689/tcp open &nbsp;tsa<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6692/tcp open &nbsp;unknown<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6699/tcp open &nbsp;napster<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6779/tcp open &nbsp;unknown<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6788/tcp open &nbsp;smc-http<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6789/tcp open &nbsp;ibm-db2-admin<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6792/tcp open &nbsp;unknown<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6839/tcp open &nbsp;unknown<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6881/tcp open &nbsp;bittorrent-tracker<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6901/tcp open &nbsp;jetstream<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+6969/tcp open &nbsp;acmsoda<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+7000/tcp open &nbsp;afs3-fileserver<br/>
+| banner: ERROR :Closing link: (unknown@192.168.36.31) [No more connectio<br/>
+|_ns allowed from your host via this connect class (local)]<br/>
+7001/tcp open &nbsp;afs3-callback<br/>
+7007/tcp open &nbsp;afs3-bos<br/>
+| banner: :irc.madcowz.localdomain NOTICE Auth :*** Looking up your hostn<br/>
+|_ame...<br/>
+MAC Address: 00:50:56:89:44:39 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 31.62 seconds<br/>
+</body></html>

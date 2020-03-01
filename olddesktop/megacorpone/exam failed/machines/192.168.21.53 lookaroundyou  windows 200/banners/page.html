@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap --script=banner 192.168.21.53<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 17:58 EDT<br/>
+Nmap scan report for 192.168.21.53<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 982 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp<br/>
+|_banner: 220 Hello<br/>
+23/tcp &nbsp; &nbsp;open &nbsp;telnet<br/>
+| banner: \xFF\xFD%\xFF\xFB\x01\xFF\xFB\x03\xFF\xFD'\xFF\xFD\x1F\xFF\xFD\<br/>
+|_x00\xFF\xFB\x00<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain<br/>
+111/tcp &nbsp; open &nbsp;rpcbind<br/>
+135/tcp &nbsp; open &nbsp;msrpc<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+1039/tcp &nbsp;open &nbsp;sbl<br/>
+1047/tcp &nbsp;open &nbsp;neod1<br/>
+1048/tcp &nbsp;open &nbsp;neod2<br/>
+2049/tcp &nbsp;open &nbsp;nfs<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+8080/tcp &nbsp;open &nbsp;http-proxy<br/>
+49152/tcp open &nbsp;unknown<br/>
+49153/tcp open &nbsp;unknown<br/>
+49154/tcp open &nbsp;unknown<br/>
+49155/tcp open &nbsp;unknown<br/>
+49175/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:4F:78 (VMware)<br/>
+</body></html>

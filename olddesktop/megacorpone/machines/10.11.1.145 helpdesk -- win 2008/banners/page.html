@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.145<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-22 00:42 EDT<br/>
+Nmap scan report for 10.11.1.145<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 994 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;(workgroup: WORKGROUP)<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache Tomcat/Coyote JSP engine 1.1<br/>
+|_http-server-header: Apache-Coyote/1.1<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=3/22%Time=58D200DF%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,77,"\0\0\0s\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fd\xe3\x01\0\xe7\xa5\x81\x07\x84\xa2\xd2\x01\xa4\x01\x08\.\0\xc0\x858\]<br/>
+SF:\+=\x01\xf6W\0O\0R\0K\0G\0R\0O\0U\0P\0\0\0H\0E\0L\0P\0D\0E\0S\0K\0\0\0"<br/>
+SF:);<br/>
+MAC Address: 00:50:56:89:7E:40 (VMware)<br/>
+Service Info: Host: HELPDESK; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 37.43 seconds<br/>
+</body></html>

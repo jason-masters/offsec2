@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>cc44dc1c-ae5d-485d-bc8b-d4f810f93a43</string>
+  <key>nodeid</key><string>ab45ab2e-6ea0-47d3-b8ed-3a22afc455ca</string>
+  <key>modified_time</key><integer>1492294353</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482247293</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>192.168.21.53 lookaroundyou  windows 2008</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>1</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

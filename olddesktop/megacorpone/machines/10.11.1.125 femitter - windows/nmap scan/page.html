@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -Pn 10.11.1.125<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-11 22:07 EDT<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.057s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+21/tcp &nbsp;open &nbsp;ftp<br/>
+135/tcp open &nbsp;msrpc<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 2.93 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sU 10.11.1.125<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-11 22:11 EDT<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp; &nbsp; &nbsp; &nbsp; SERVICE<br/>
+137/udp &nbsp;open &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;netbios-ns<br/>
+138/udp &nbsp;open|filtered netbios-dgm<br/>
+445/udp &nbsp;open|filtered microsoft-ds<br/>
+500/udp &nbsp;open|filtered isakmp<br/>
+1025/udp open|filtered blackjack<br/>
+1900/udp open|filtered upnp<br/>
+4500/udp open|filtered nat-t-ike<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 4.25 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.125<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-11 22:07 EDT<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; Acritum Femitter Server ftpd<br/>
+|_ftp-libopie: ERROR: Script execution failed (use -d to debug)<br/>
+|_sslv2-drown: <br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!<br/>
+| smb-vuln-cve2009-3103: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SMBv2 exploit (CVE-2009-3103, Microsoft Security Advisory 975497)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2009-3103<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Array index error in the SMBv2 protocol implementation in srv2.sys in Microsoft Windows Vista Gold, SP1, and SP2,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Windows Server 2008 Gold and SP2, and Windows 7 RC allows remote attackers to execute arbitrary code or cause a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; denial of service (system crash) via an &amp; (ampersand) character in a Process ID High header field in a NEGOTIATE<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PROTOCOL REQUEST packet, which triggers an attempted dereference of an out-of-bounds memory location,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; aka "SMBv2 Negotiation Vulnerability."<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2009-09-08<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 24.79 seconds<br/>
+</body></html>

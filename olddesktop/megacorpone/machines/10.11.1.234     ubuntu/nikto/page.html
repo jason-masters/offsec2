@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikto</title>
+</head><body>oot@kali:~/gen# nikto -host http://10.11.1.234<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10.11.1.234<br/>
++ Target Hostname: &nbsp; &nbsp;10.11.1.234<br/>
++ Target Port: &nbsp; &nbsp; &nbsp; &nbsp;80<br/>
++ Start Time: &nbsp; &nbsp; &nbsp; &nbsp; 2017-01-15 16:49:38 (GMT-5)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: Apache/2.2.14 (Ubuntu)<br/>
++ Retrieved x-powered-by header: PHP/5.3.2-1ubuntu4<br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ Apache/2.2.14 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.<br/>
++ Uncommon header 'tcn' found, with contents: list<br/>
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.php<br/>
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.<br/>
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.<br/>
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.<br/>
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.<br/>
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.<br/>
++ Server leaks inodes via ETags, header found with file /readme, inode: 0x60ffc, size: 0x23d9, mtime: 0x546249425c550;546249425d4f4<br/>
++ OSVDB-3268: /icons/: Directory indexing found.<br/>
++ OSVDB-3092: /xmlrpc.php: xmlrpc.php was found.<br/>
++ OSVDB-3233: /icons/README: Apache default file found.<br/>
++ /readme.html: This WordPress file reveals the installed version.<br/>
++ /wp-links-opml.php: This WordPress script reveals the installed version.<br/>
++ OSVDB-3092: /license.txt: License file found may identify site software.<br/>
++ Cookie wordpress_test_cookie created without the httponly flag<br/>
++ /wp-login/: Admin login page/section found.<br/>
++ /wp-login.php: Wordpress login found<br/>
++ 8358 requests: 11 error(s) and 22 item(s) reported on remote host<br/>
++ End Time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2017-01-15 16:59:48 (GMT-5) (610 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested<br/>
+</body></html>

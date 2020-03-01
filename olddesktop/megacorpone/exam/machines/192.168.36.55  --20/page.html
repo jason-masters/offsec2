@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>192.168.36.55  --20</title>
+</head><body><br/>
+root@kali:~# ftp 192.168.36.55<br/>
+Connected to 192.168.36.55.<br/>
+220-Wellcome to Home Ftp Server!<br/>
+220 Server ready.<br/>
+Name (192.168.36.55:root): ftp<br/>
+331 Password required for ftp.<br/>
+Password:<br/>
+230 User Anonymous logged in.<br/>
+Remote system type is UNIX.<br/>
+Using binary mode to transfer files.<br/>
+ftp&gt; dir<br/>
+200 Port command successful.<br/>
+150 Opening data connection for directory list.<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 28 &nbsp;2015 .<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 28 &nbsp;2015 ..<br/>
+226 File sent ok<br/>
+ftp&gt; cd ..<br/>
+501 CWD failed. Invalid directory name syntax<br/>
+ftp&gt; cd ftp<br/>
+501 CWD failed. Directory does not exist<br/>
+ftp&gt; ls<br/>
+200 Port command successful.<br/>
+150 Opening data connection for directory list.<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 28 &nbsp;2015 .<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 28 &nbsp;2015 ..<br/>
+226 File sent ok<br/>
+ftp&gt; <br/>
+<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<br/>
+<img src="screenshot 2.png" /><br/>
+<br/>
+<br/>
+<img src="screenshot 3.png" /><br/>
+<br/>
+<img src="screenshot 4.png" /><br/>
+<br/>
+xampp-dav-unsecure:$apr1$6O9scpDQ$JGw2Tjz0jkrqfKh5hhiqD1 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+WEB-DAV für den gemeinsamen REMOTE-Zugriff<br/>
+auf WWW-Dokumente über den Apache2.<br/>
+<br/>
+Die Module mod_dav.so und mod_dav_fs.so auskommentieren<br/>
+URL: http://localhost/webdav/<br/>
+User: wampp Password: xampp<br/>
+E-Mail-Adresse bei Dreamweaver angeben. <br/>
+Lokales Directory: /xampp/webdav/<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+### XAMPP Default Passwords ###<br/>
+<br/>
+1) MySQL (phpMyAdmin):<br/>
+<br/>
+&nbsp; &nbsp;User: root<br/>
+&nbsp; &nbsp;Password:<br/>
+&nbsp; &nbsp;(means no password!)<br/>
+<br/>
+2) FileZilla FTP:<br/>
+<br/>
+&nbsp; &nbsp;[ You have to create a new user on the FileZilla Interface ] <br/>
+<br/>
+3) Mercury (not in the USB &amp; lite version): <br/>
+<br/>
+&nbsp; &nbsp;Postmaster: Postmaster (postmaster@localhost)<br/>
+&nbsp; &nbsp;Administrator: Admin (admin@localhost)<br/>
+<br/>
+&nbsp; &nbsp;User: newuser &nbsp;<br/>
+&nbsp; &nbsp;Password: wampp <br/>
+<br/>
+4) WEBDAV: <br/>
+<br/>
+&nbsp; &nbsp;User: xampp-dav-unsecure<br/>
+&nbsp; &nbsp;Password: ppmax2011<br/>
+&nbsp; &nbsp;Attention: WEBDAV is not active since XAMPP Version 1.7.4.<br/>
+&nbsp; &nbsp;For activation please comment out the httpd-dav.conf and<br/>
+&nbsp; &nbsp;following modules in the httpd.conf<br/>
+&nbsp; &nbsp;<br/>
+&nbsp; &nbsp;LoadModule dav_module modules/mod_dav.so<br/>
+&nbsp; &nbsp;LoadModule dav_fs_module modules/mod_dav_fs.so &nbsp;<br/>
+&nbsp; &nbsp;<br/>
+&nbsp; &nbsp;Please do not forget ro refresh the WEBDAV authentification (users and passwords). &nbsp; &nbsp; <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<img src="screenshot 5.png" /><br/>
+<br/>
+</body></html>

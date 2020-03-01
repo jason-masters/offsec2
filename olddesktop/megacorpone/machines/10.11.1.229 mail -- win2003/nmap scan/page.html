@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body><br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.229<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-22 16:48 EST<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.060s latency).<br/>
+Not shown: 988 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; tcpwrapped<br/>
+|_sslv2-drown: <br/>
+23/tcp &nbsp; closed telnet<br/>
+25/tcp &nbsp; open &nbsp; smtp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer smtpd<br/>
+| smtp-vuln-cve2010-4344: <br/>
+|_ &nbsp;The SMTP server is not Exim: NOT VULNERABLE<br/>
+|_sslv2-drown: <br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /_vti_log/: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/access.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/bots.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/botinfs.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/service.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/services.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/svcacl.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/writeto.cnf: Frontpage file or folder<br/>
+| &nbsp; /images/: Potentially interesting folder<br/>
+|_ &nbsp;/_private/: Potentially interesting folder<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+110/tcp &nbsp;open &nbsp; pop3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer pop3d<br/>
+|_sslv2-drown: <br/>
+135/tcp &nbsp;open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+143/tcp &nbsp;open &nbsp; imap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer imapd<br/>
+|_sslv2-drown: <br/>
+443/tcp &nbsp;closed https<br/>
+1025/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+2869/tcp closed icslap<br/>
+3389/tcp open &nbsp; ms-wbt-server Microsoft Terminal Service<br/>
+| rdp-vuln-ms12-020: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0152<br/>
+| &nbsp; &nbsp; Risk factor: Medium &nbsp;CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+| &nbsp; <br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0002<br/>
+| &nbsp; &nbsp; Risk factor: High &nbsp;CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002<br/>
+|_ssl-ccs-injection: No reply from server (TIMEOUT)<br/>
+|_sslv2-drown: <br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+| smb-vuln-cve2009-3103: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SMBv2 exploit (CVE-2009-3103, Microsoft Security Advisory 975497)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2009-3103<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Array index error in the SMBv2 protocol implementation in srv2.sys in Microsoft Windows Vista Gold, SP1, and SP2,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Windows Server 2008 Gold and SP2, and Windows 7 RC allows remote attackers to execute arbitrary code or cause a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; denial of service (system crash) via an &amp; (ampersand) character in a Process ID High header field in a NEGOTIATE<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PROTOCOL REQUEST packet, which triggers an attempted dereference of an out-of-bounds memory location,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; aka "SMBv2 Negotiation Vulnerability."<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2009-09-08<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br/>
+|_ &nbsp; &nbsp; &nbsp;http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3103<br/>
+| smb-vuln-ms08-067: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Microsoft Windows system vulnerable to remote code execution (MS08-067)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2008-4250<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code via a crafted RPC request that triggers the overflow during path canonicalization.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2008-10-23<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://technet.microsoft.com/en-us/library/security/ms08-067.aspx<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 207.27 seconds<br/>
+</body></html>

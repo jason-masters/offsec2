@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -Pn 10.11.1.73<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-06 21:14 EDT<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 980 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+135/tcp &nbsp; open &nbsp;msrpc<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+554/tcp &nbsp; open &nbsp;rtsp<br/>
+1100/tcp &nbsp;open &nbsp;mctp<br/>
+2869/tcp &nbsp;open &nbsp;icslap<br/>
+3306/tcp &nbsp;open &nbsp;mysql<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+5357/tcp &nbsp;open &nbsp;wsdapi<br/>
+5800/tcp &nbsp;open &nbsp;vnc-http<br/>
+5900/tcp &nbsp;open &nbsp;vnc<br/>
+8080/tcp &nbsp;open &nbsp;http-proxy<br/>
+10243/tcp open &nbsp;unknown<br/>
+49152/tcp open &nbsp;unknown<br/>
+49153/tcp open &nbsp;unknown<br/>
+49154/tcp open &nbsp;unknown<br/>
+49155/tcp open &nbsp;unknown<br/>
+49156/tcp open &nbsp;unknown<br/>
+49157/tcp open &nbsp;unknown<br/>
+49175/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 4.67 seconds<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sU 10.11.1.73<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-06 21:19 EDT<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 999 open|filtered ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+137/udp open &nbsp;netbios-ns<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 27.23 seconds<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.73<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-06 21:15 EDT<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 981 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)<br/>
+554/tcp &nbsp; open &nbsp;rtsp?<br/>
+1100/tcp &nbsp;open &nbsp;rmiregistry &nbsp;Java RMI<br/>
+2869/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-vuln-wnr1000-creds: ERROR: Script execution failed (use -d to debug)<br/>
+3306/tcp &nbsp;open &nbsp;mysql &nbsp; &nbsp; &nbsp; &nbsp;MySQL (unauthorized; French)<br/>
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)<br/>
+5357/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+5800/tcp &nbsp;open &nbsp;vnc-http &nbsp; &nbsp; TightVNC (user: gamma; VNC TCP port: 5900)<br/>
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)<br/>
+5900/tcp &nbsp;open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+|_sslv2-drown: <br/>
+8080/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Apache httpd 2.4.9 ((Win32) PHP/5.5.12)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /robots.txt: Robots file<br/>
+|_ &nbsp;/php/: Potentially interesting folder<br/>
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+10243/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;unknown<br/>
+49175/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 634.65 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.060s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; USERS: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_ &nbsp; &nbsp;Anonymous access: &lt;none&gt;<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::sp1:professional<br/>
+| &nbsp; Computer name: gamma<br/>
+| &nbsp; NetBIOS computer name: GAMMA<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2016-12-24T09:02:07-08:00<br/>
+</body></html>

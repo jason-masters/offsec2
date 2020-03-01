@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 192.168.36.161 -p-<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 13:16 EDT<br/>
+Nmap scan report for 192.168.36.161<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 65528 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+199/tcp &nbsp; open &nbsp;smux<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+60000/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:2B:60 (VMware)<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sS 192.168.36.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 08:50 EDT<br/>
+Nmap scan report for 192.168.36.161<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp;open &nbsp;ssh<br/>
+25/tcp &nbsp;open &nbsp;smtp<br/>
+80/tcp &nbsp;open &nbsp;http<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+199/tcp open &nbsp;smux<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:2B:60 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.37 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 192.168.36.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 08:58 EDT<br/>
+Nmap scan report for 192.168.36.161<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp;OpenSSH 3.8.1p1 Debian 8.sarge.6 (protocol 2.0)<br/>
+25/tcp &nbsp;open &nbsp;smtp &nbsp; &nbsp; &nbsp; Sendmail 8.13.4/8.13.4/Debian-3sarge3<br/>
+| smtp-vuln-cve2010-4344: <br/>
+|_ &nbsp;The SMTP server is not Exim: NOT VULNERABLE<br/>
+|_sslv2-drown: <br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 1.3.33 ((Debian GNU/Linux))<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+|_ &nbsp;/icons/: Potentially interesting directory w/ listing on 'apache/1.3.33'<br/>
+|_http-server-header: Apache/1.3.33 (Debian GNU/Linux)<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+139/tcp open &nbsp;tcpwrapped<br/>
+199/tcp open &nbsp;smux &nbsp; &nbsp; &nbsp; Linux SNMP multiplexer<br/>
+445/tcp open &nbsp;tcpwrapped<br/>
+MAC Address: 00:50:56:89:2B:60 (VMware)<br/>
+Service Info: Host: localhost.localdomain; OSs: Linux, Unix; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: SMB: ERROR: Server disconnected the connection<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: SMB: ERROR: Server disconnected the connection<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 321.76 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>oot@kali:~/gen/nmap# nmap --script=banner 192.168.36.161<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 09:14 EDT<br/>
+Nmap scan report for 192.168.36.161<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp;open &nbsp;ssh<br/>
+|_banner: SSH-2.0-OpenSSH_3.8.1p1 Debian-8.sarge.6<br/>
+25/tcp &nbsp;open &nbsp;smtp<br/>
+| banner: 220 localhost.localdomain ESMTP Sendmail 8.13.4/8.13.4/Debian-3<br/>
+|_sarge3; Sat, 1 Jul 2017 02:20:18 -0400; (No UCE/UBE) logging access ...<br/>
+80/tcp &nbsp;open &nbsp;http<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+199/tcp open &nbsp;smux<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:2B:60 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 11.73 seconds<br/>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -Pn 192.168.21.67<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 17:18 EDT<br/>
+Nmap scan report for 192.168.21.67<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp;open &nbsp;ssh<br/>
+25/tcp &nbsp;open &nbsp;smtp<br/>
+111/tcp open &nbsp;rpcbind<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:35:22 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.25 seconds<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sU 192.168.21.67<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 17:21 EDT<br/>
+Nmap scan report for 192.168.21.67<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp; &nbsp; &nbsp; &nbsp; SERVICE<br/>
+111/udp &nbsp;open &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;rpcbind<br/>
+137/udp &nbsp;open &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;netbios-ns<br/>
+138/udp &nbsp;open|filtered netbios-dgm<br/>
+631/udp &nbsp;open|filtered ipp<br/>
+903/udp &nbsp;open|filtered ideafarm-panic<br/>
+5353/udp open &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;zeroconf<br/>
+MAC Address: 00:50:56:89:35:22 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1085.53 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 192.168.21.67<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 17:19 EDT<br/>
+Nmap scan report for 192.168.21.67<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)<br/>
+25/tcp &nbsp;open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp;Postfix smtpd<br/>
+| smtp-vuln-cve2010-4344: <br/>
+|_ &nbsp;The SMTP server is not Exim: NOT VULNERABLE<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Anonymous Diffie-Hellman Key Exchange MitM Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use anonymous<br/>
+| &nbsp; &nbsp; &nbsp; Diffie-Hellman key exchange only provide protection against passive<br/>
+| &nbsp; &nbsp; &nbsp; eavesdropping, and are vulnerable to active man-in-the-middle attacks<br/>
+| &nbsp; &nbsp; &nbsp; which could completely compromise the confidentiality and integrity<br/>
+| &nbsp; &nbsp; &nbsp; of any data exchanged over the resulting session.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; ANONYMOUS DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DH_anon_WITH_AES_256_GCM_SHA384<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.ietf.org/rfc/rfc2246.txt<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: Unknown/Custom-generated<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+|_sslv2-drown: <br/>
+111/tcp open &nbsp;rpcbind &nbsp; &nbsp; 2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+|_ &nbsp;100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: SECURITY)<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: SECURITY)<br/>
+MAC Address: 00:50:56:89:35:22 (VMware)<br/>
+Service Info: Hosts: &nbsp;mail.local, MAIL; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: false<br/>
+| smb-vuln-regsvc-dos: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Service regsvc in Microsoft Windows systems vulnerable to denial of service<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference<br/>
+| &nbsp; &nbsp; &nbsp; pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes<br/>
+| &nbsp; &nbsp; &nbsp; while working on smb-enum-sessions.<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 39.49 seconds<br/>
+</body></html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.5<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-25 22:34 EDT<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.048s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+135/tcp &nbsp;open &nbsp;msrpc<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds<br/>
+1025/tcp open &nbsp;NFS-or-IIS<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.28 seconds<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.5<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-25 22:35 EDT<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds Microsoft Windows XP microsoft-ds<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp<br/>
+<br/>
+Host script results:<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 84.25 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|_ &nbsp; &nbsp;Anonymous access: READ<br/>
+<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows XP (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_xp::-<br/>
+| &nbsp; Computer name: alice<br/>
+| &nbsp; NetBIOS computer name: ALICE<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; FQDN: alice.thinc.local<br/>
+|_ &nbsp;System time: 2016-12-24T19:07:49+00:00<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-vuln-ms08-067: <br/>
+<span style="background-color: #ff0000">| &nbsp; VULNERABLE:</span><br/>
+| &nbsp; Microsoft Windows system vulnerable to remote code execution (MS08-067)<br/>
+| &nbsp; &nbsp; State: LIKELY VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2008-4250<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code via a crafted RPC request that triggers the overflow during path canonicalization.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2008-10-23<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250<br/>
+|_ &nbsp; &nbsp; &nbsp;https://technet.microsoft.com/en-us/library/security/ms08-067.aspx<br/>
+</body></html>

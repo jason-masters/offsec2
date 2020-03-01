@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS -p- 192.168.36.55<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 10:04 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 65530 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp<br/>
+3306/tcp &nbsp;open &nbsp;mysql<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+<span style="background-color: #ffff99">10443/tcp open &nbsp;unknown<br/>
+</span><span style="background-color: #ffff99">11443/tcp open &nbsp;unknown</span><br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 126.42 seconds<br/>
+<br/>
+root@kali:~/gen/nmap# nmap --script=banner 192.168.36.55 -p-<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 10:15 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.058s latency).<br/>
+Not shown: 65530 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp<br/>
+|_banner: 220-Wellcome to Home Ftp Server!\x0D\x0A220 Server ready.<br/>
+3306/tcp &nbsp;open &nbsp;mysql<br/>
+| banner: F\x00\x00\x00\xFFj\x04Host '192.168.36.31' is not allowed to co<br/>
+|_nnect to this MySQL server<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+10443/tcp open &nbsp;unknown<br/>
+11443/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 144.83 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sS 192.168.36.55<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 08:51 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+3306/tcp open &nbsp;mysql<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 5.83 seconds<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 192.168.36.55<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 09:08 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+|_sslv2-drown: <br/>
+3306/tcp open &nbsp;mysql &nbsp; &nbsp; &nbsp; &nbsp; MySQL (unauthorized)<br/>
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: RFC2409/Oakley Group 2<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+|_sslv2-drown: <br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port21-TCP:V=7.25BETA2%I=7%D=7/1%Time=59579ED2%P=i686-pc-linux-gnu%r(NU<br/>
+SF:LL,35,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x20Server\x2<br/>
+SF:0ready\.\r\n")%r(GenericLines,79,"220-Wellcome\x20to\x20Home\x20Ftp\x20<br/>
+SF:Server!\r\n220\x20Server\x20ready\.\r\n500\x20'\r':\x20command\x20not\x<br/>
+SF:20understood\.\r\n500\x20'\r':\x20command\x20not\x20understood\.\r\n")%<br/>
+SF:r(Help,5A,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x20Serve<br/>
+SF:r\x20ready\.\r\n500\x20'HELP':\x20command\x20not\x20understood\.\r\n")%<br/>
+SF:r(SMBProgNeg,35,"220-Wellcome\x20to\x20Home\x20Ftp\x20Server!\r\n220\x2<br/>
+SF:0Server\x20ready\.\r\n");<br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+Service Info: Host: Wellcome; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 76.24 seconds<br/>
+</body></html>

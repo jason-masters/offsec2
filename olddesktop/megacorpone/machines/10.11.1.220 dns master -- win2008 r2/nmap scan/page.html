@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body><br/>
+root@kali:~/gen/nmap# nmap -sS 10.11.1.220<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-15 23:36 EDT<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.048s latency).<br/>
+Not shown: 980 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain<br/>
+88/tcp &nbsp; &nbsp;open &nbsp;kerberos-sec<br/>
+135/tcp &nbsp; open &nbsp;msrpc<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+389/tcp &nbsp; open &nbsp;ldap<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+464/tcp &nbsp; open &nbsp;kpasswd5<br/>
+593/tcp &nbsp; open &nbsp;http-rpc-epmap<br/>
+636/tcp &nbsp; open &nbsp;ldapssl<br/>
+3268/tcp &nbsp;open &nbsp;globalcatLDAP<br/>
+3269/tcp &nbsp;open &nbsp;globalcatLDAPssl<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+49152/tcp open &nbsp;unknown<br/>
+49153/tcp open &nbsp;unknown<br/>
+49154/tcp open &nbsp;unknown<br/>
+49155/tcp open &nbsp;unknown<br/>
+49157/tcp open &nbsp;unknown<br/>
+49158/tcp open &nbsp;unknown<br/>
+49165/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 2.92 seconds<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.059s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; NETLOGON: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_ &nbsp; &nbsp;Anonymous access: &lt;none&gt;<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2008 R2 Standard 7601 Service Pack 1 (Windows Server 2008 R2 Standard 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2008::sp1<br/>
+| &nbsp; Computer name: master<br/>
+| &nbsp; NetBIOS computer name: MASTER<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; Forest name: thinc.local<br/>
+| &nbsp; FQDN: master.thinc.local<br/>
+|_ &nbsp;System time: 2013-12-27T23:37:46-08:00<br/>
+</body></html>

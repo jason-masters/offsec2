@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.73<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-06 21:15 EDT<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 981 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)<br/>
+554/tcp &nbsp; open &nbsp;rtsp?<br/>
+1100/tcp &nbsp;open &nbsp;rmiregistry &nbsp;Java RMI<br/>
+2869/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-vuln-wnr1000-creds: ERROR: Script execution failed (use -d to debug)<br/>
+3306/tcp &nbsp;open &nbsp;mysql &nbsp; &nbsp; &nbsp; &nbsp;MySQL (unauthorized; French)<br/>
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)<br/>
+5357/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+5800/tcp &nbsp;open &nbsp;vnc-http &nbsp; &nbsp; TightVNC (user: gamma; VNC TCP port: 5900)<br/>
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)<br/>
+5900/tcp &nbsp;open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+|_sslv2-drown: <br/>
+8080/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Apache httpd 2.4.9 ((Win32) PHP/5.5.12)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /robots.txt: Robots file<br/>
+|_ &nbsp;/php/: Potentially interesting folder<br/>
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+10243/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;unknown<br/>
+49175/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 634.65 seconds<br/>
+</body></html>

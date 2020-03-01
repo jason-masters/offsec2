@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>nbtscan</title>
+</head><body>root@kali:~/gen/networkscan# nbtscan -r 10.11.1.0/24<br/>
+Doing NBT name scan for addresses from 10.11.1.0/24<br/>
+<br/>
+IP address &nbsp; &nbsp; &nbsp; NetBIOS Name &nbsp; &nbsp; Server &nbsp; &nbsp;User &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MAC address &nbsp; &nbsp; &nbsp;<br/>
+------------------------------------------------------------------------------<br/>
+10.11.1.5 &nbsp; &nbsp; &nbsp; &nbsp;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:25:59<br/>
+10.11.1.22 &nbsp; &nbsp; &nbsp; BARRY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;BARRY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:00:00:00:00:00<br/>
+10.11.1.24 &nbsp; &nbsp; &nbsp; PAYDAY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;PAYDAY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:00:00:00:00:00<br/>
+10.11.1.31 &nbsp; &nbsp; &nbsp; RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:17:75<br/>
+10.11.1.73 &nbsp; &nbsp; &nbsp; GAMMA &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:61:7d<br/>
+10.11.1.145 &nbsp; &nbsp; &nbsp;HELPDESK &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:7e:40<br/>
+10.11.1.218 &nbsp; &nbsp; &nbsp;OBSERVER &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:4b:13<br/>
+10.11.1.221 &nbsp; &nbsp; &nbsp;SLAVE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:18:fa<br/>
+10.11.1.229 &nbsp; &nbsp; &nbsp;MAIL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;TEST &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:14:14<br/>
+10.11.1.227 &nbsp; &nbsp; &nbsp;JD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;JD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:1b:3b<br/>
+10.11.1.223 &nbsp; &nbsp; &nbsp;JEFF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:03:d2<br/>
+10.11.1.202 &nbsp; &nbsp; &nbsp;ORACLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;ORACLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:69:ce<br/>
+10.11.1.220 &nbsp; &nbsp; &nbsp;MASTER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:31:e1<br/>
+10.11.1.230 &nbsp; &nbsp; &nbsp;KEVIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:32:45<br/>
+root@kali:~/gen/networkscan# <br/>
+<br/>
+<br/>
+root@kali:~/gen/msf# nbtscan -r 10.11.1.0/24<br/>
+Doing NBT name scan for addresses from 10.11.1.0/24<br/>
+<br/>
+IP address &nbsp; &nbsp; &nbsp; NetBIOS Name &nbsp; &nbsp; Server &nbsp; &nbsp;User &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MAC address &nbsp; &nbsp; &nbsp;<br/>
+------------------------------------------------------------------------------<br/>
+10.11.1.10 &nbsp; &nbsp; &nbsp; MIKE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:04:25<br/>
+10.11.1.5 &nbsp; &nbsp; &nbsp; &nbsp;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:25:59<br/>
+10.11.1.22 &nbsp; &nbsp; &nbsp; BARRY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;BARRY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:00:00:00:00:00<br/>
+10.11.1.31 &nbsp; &nbsp; &nbsp; RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:17:75<br/>
+10.11.1.128 &nbsp; &nbsp; &nbsp;DJ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;DJ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:45:48<br/>
+10.11.1.73 &nbsp; &nbsp; &nbsp; GAMMA &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:61:7d<br/>
+10.11.1.24 &nbsp; &nbsp; &nbsp; PAYDAY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;PAYDAY &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:00:00:00:00:00<br/>
+10.11.1.136 &nbsp; &nbsp; &nbsp;SUFFERANCE &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;SUFFERANCE &nbsp; &nbsp; &nbsp; 00:00:00:00:00:00<br/>
+10.11.1.115 &nbsp; &nbsp; &nbsp;TOPHAT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;TOPHAT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:00:00:00:00:00<br/>
+10.11.1.202 &nbsp; &nbsp; &nbsp;ORACLE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;TEST &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:69:ce<br/>
+10.11.1.229 &nbsp; &nbsp; &nbsp;MAIL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;MAIL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:14:14<br/>
+10.11.1.227 &nbsp; &nbsp; &nbsp;JD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;JD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00:50:56:89:1b:3b<br/>
+10.11.1.145 &nbsp; &nbsp; &nbsp;HELPDESK &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:7e:40<br/>
+10.11.1.218 &nbsp; &nbsp; &nbsp;OBSERVER &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:4b:13<br/>
+10.11.1.220 &nbsp; &nbsp; &nbsp;MASTER &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:31:e1<br/>
+10.11.1.223 &nbsp; &nbsp; &nbsp;JEFF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:03:d2<br/>
+10.11.1.221 &nbsp; &nbsp; &nbsp;SLAVE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:18:fa<br/>
+10.11.1.230 &nbsp; &nbsp; &nbsp;KEVIN &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;server&gt; &nbsp;&lt;unknown&gt; &nbsp; &nbsp; &nbsp; &nbsp;00:50:56:89:32:45<br/>
+root@kali:~/gen/msf# ^C<br/>
+</body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.230<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 09:06 EDT<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.067s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE &nbsp; &nbsp;SERVICE<br/>
+80/tcp &nbsp; &nbsp;open &nbsp; &nbsp; http<br/>
+135/tcp &nbsp; open &nbsp; &nbsp; msrpc<br/>
+139/tcp &nbsp; open &nbsp; &nbsp; netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp; &nbsp; microsoft-ds<br/>
+1105/tcp &nbsp;filtered ftranhc<br/>
+3389/tcp &nbsp;open &nbsp; &nbsp; ms-wbt-server<br/>
+27355/tcp filtered unknown<br/>
+49152/tcp open &nbsp; &nbsp; unknown<br/>
+49153/tcp open &nbsp; &nbsp; unknown<br/>
+49154/tcp open &nbsp; &nbsp; unknown<br/>
+49155/tcp open &nbsp; &nbsp; unknown<br/>
+49156/tcp open &nbsp; &nbsp; unknown<br/>
+49157/tcp open &nbsp; &nbsp; unknown<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 51.95 seconds<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.059s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; USERS: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_ &nbsp; &nbsp;Anonymous access: &lt;none&gt;<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::-<br/>
+| &nbsp; Computer name: kevin<br/>
+| &nbsp; NetBIOS computer name: KEVIN<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2016-12-24T06:49:49-08:00<br/>
+<br/>
+</body></html>

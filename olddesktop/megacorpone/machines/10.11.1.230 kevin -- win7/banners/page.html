@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.230<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 09:09 EDT<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.065s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GoAhead WebServer<br/>
+|_http-server-header: GoAhead-Webs<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+Service Info: Host: KEVIN; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1023.40 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

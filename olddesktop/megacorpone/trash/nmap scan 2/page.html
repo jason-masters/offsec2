@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.133<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-19 17:37 EDT<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.050s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE &nbsp; &nbsp;SERVICE<br/>
+22/tcp filtered ssh<br/>
+80/tcp open &nbsp; &nbsp; http<br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 3.19 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Microsoft-IIS &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port80-TCP:V=7.25BETA2%I=7%D=12/24%Time=585F4EC8%P=i686-pc-linux-gnu%r(<br/>
+SF:GetRequest,333,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2024\x20Dec\x2<br/>
+SF:02016\x2019:46:08\x20GMT\r\nServer:\x20Microsoft-IIS\x20\x20\x20\x20\x2<br/>
+SF:0\x20\x20\x20\x20\r\nContent-Type:\x20text/html\r\nCache-control:\x20pr<br/>
+SF:ivate\r\nVary:\x20Accept-Encoding\r\nContent-Length:\x20619\r\nConnecti<br/>
+SF:on:\x20close\r\n\r\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;Let's\x20play\x20with\x20the<br/>
+SF:\x20offsec\x20team&lt;/title&gt;\n&lt;/head&gt;\n&lt;body\x20style=\"color:\x20#FFFFFF<br/>
+SF:;\x20background-color:\x20#000000;font-family:\x20verdana;\"&gt;\n&lt;center&gt;<br/>
+SF:\n&lt;div\x20style=\"width:600px;height:399px;background-image:url\(offsec<br/>
+SF:-team\.jpg\);\"&gt;\n&lt;form\x20method=\"post\"\x20action=\"login\.asp\"&gt;\n&lt;<br/>
+SF:table\x20style=\"padding-top:170px;\"&gt;\n&lt;tr&gt;\n&lt;td&gt;Username:\x20&lt;/td&gt;&lt;td<br/>
+SF:&gt;&lt;input\x20type=\"text\"\x20name=\"username\"\x20value=\"\"&gt;&lt;/td&gt;\n&lt;/tr<br/>
+SF:&gt;\n&lt;tr&gt;\n&lt;td&gt;Password:\x20&lt;/td&gt;&lt;td&gt;&lt;input\x20type=\"password\"\x20name=<br/>
+SF:\"password\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td\x20colspan=\"2\"\x20align=\"right\<br/>
+SF:"&gt;&lt;input\x20type=\"submit\"\x20name=\"submit\"\x20value=\"Enter\"&gt;&lt;/td&gt;<br/>
+SF:\n&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/form&gt;\n&lt;/div&gt;\n&lt;/center&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n")%r(H<br/>
+SF:TTPOptions,333,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Sat,\x2024\x20Dec\x2<br/>
+SF:02016\x2019:46:10\x20GMT\r\nServer:\x20Microsoft-IIS\x20\x20\x20\x20\x2<br/>
+SF:0\x20\x20\x20\x20\r\nContent-Type:\x20text/html\r\nCache-control:\x20pr<br/>
+SF:ivate\r\nVary:\x20Accept-Encoding\r\nContent-Length:\x20619\r\nConnecti<br/>
+SF:on:\x20close\r\n\r\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;Let's\x20play\x20with\x20the<br/>
+SF:\x20offsec\x20team&lt;/title&gt;\n&lt;/head&gt;\n&lt;body\x20style=\"color:\x20#FFFFFF<br/>
+SF:;\x20background-color:\x20#000000;font-family:\x20verdana;\"&gt;\n&lt;center&gt;<br/>
+SF:\n&lt;div\x20style=\"width:600px;height:399px;background-image:url\(offsec<br/>
+SF:-team\.jpg\);\"&gt;\n&lt;form\x20method=\"post\"\x20action=\"login\.asp\"&gt;\n&lt;<br/>
+SF:table\x20style=\"padding-top:170px;\"&gt;\n&lt;tr&gt;\n&lt;td&gt;Username:\x20&lt;/td&gt;&lt;td<br/>
+SF:&gt;&lt;input\x20type=\"text\"\x20name=\"username\"\x20value=\"\"&gt;&lt;/td&gt;\n&lt;/tr<br/>
+SF:&gt;\n&lt;tr&gt;\n&lt;td&gt;Password:\x20&lt;/td&gt;&lt;td&gt;&lt;input\x20type=\"password\"\x20name=<br/>
+SF:\"password\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td\x20colspan=\"2\"\x20align=\"right\<br/>
+SF:"&gt;&lt;input\x20type=\"submit\"\x20name=\"submit\"\x20value=\"Enter\"&gt;&lt;/td&gt;<br/>
+SF:\n&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/form&gt;\n&lt;/div&gt;\n&lt;/center&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n");<br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+<br/>
+</body></html>

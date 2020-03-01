@@ -1,0 +1,16 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>10.11.1.217</title>
+</head><body><br/>
+root@kali:~/gen/smtp# nc -nv 10.11.1.217 25<br/>
+(UNKNOWN) [10.11.1.217] 25 (smtp) open<br/>
+220 hotline.localdomain ESMTP Postfix<br/>
+vrfy root<br/>
+252 2.0.0 root<br/>
+vrfy bob<br/>
+550 5.1.1 &lt;bob&gt;: Recipient address rejected: User unknown in local recipient table<br/>
+vrfy kevin<br/>
+550 5.1.1 &lt;kevin&gt;: Recipient address rejected: User unknown in local recipient table<br/>
+<br/>
+<img src="screenshot.png"/></body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikto</title>
+</head><body>^Croot@kali:~/gen/curl# nikto -host 10.11.1.39<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10.11.1.39<br/>
++ Target Hostname: &nbsp; &nbsp;10.11.1.39<br/>
++ Target Port: &nbsp; &nbsp; &nbsp; &nbsp;80<br/>
++ Start Time: &nbsp; &nbsp; &nbsp; &nbsp; 2017-03-26 23:49:15 (GMT-4)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: nginx/1.6.3<br/>
++ Server leaks inodes via ETags, header found with file /, fields: 0x1321 0x5058a1e728280 <br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ Retrieved x-powered-by header: OTRS 5.0.2 - Open Ticket Request System (http://www.otrs.com/)<br/>
++ Uncommon header 'x-otrs-login' found, with contents: /otrs/index.pl?<br/>
++ Cookie OTRSBrowserHasCookie created without the httponly flag<br/>
++ Entry '/otrs/index.pl' in robots.txt returned a non-forbidden or redirect HTTP code (200)<br/>
++ "robots.txt" contains 1 entry which should be manually viewed.<br/>
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE <br/>
++ OSVDB-3268: /icons/: Directory indexing found.<br/>
++ OSVDB-3233: /icons/README: Apache default file found.<br/>
++ Uncommon header 'content-disposition' found, with contents: filename="Installer.html"</body></html>

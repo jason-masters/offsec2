@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.50<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-21 08:58 EDT<br/>
+Nmap scan report for 10.11.1.50<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 996 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 8.5<br/>
+|_http-server-header: Microsoft-IIS/8.5<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:7D:73 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 75.85 seconds</body></html>

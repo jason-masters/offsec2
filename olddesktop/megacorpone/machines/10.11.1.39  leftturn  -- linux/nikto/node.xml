@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>564d0674-14c8-4caf-a8b2-76ea45293e31</string>
+  <key>title</key><string>Nikto</string>
+  <key>nodeid</key><string>d7004ccc-2517-49f1-a225-5f13cbd92095</string>
+  <key>modified_time</key><integer>1490587027</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482247319</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>1</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

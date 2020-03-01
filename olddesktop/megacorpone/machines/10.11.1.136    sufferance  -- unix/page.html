@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.136    Sufferance  -- Unix</title>
+</head><body><br/>
+root@kali:~# smbclient -L 10.11.1.136<br/>
+WARNING: The "syslog" option is deprecated<br/>
+Enter root's password: <br/>
+Domain=[THINC.LOCAL] OS=[Unix] Server=[Samba 3.0.24]<br/>
+<br/>
+&#09;Sharename &nbsp; &nbsp; &nbsp; Type &nbsp; &nbsp; &nbsp;Comment<br/>
+&#09;--------- &nbsp; &nbsp; &nbsp; ---- &nbsp; &nbsp; &nbsp;-------<br/>
+&#09;print$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Disk &nbsp; &nbsp; &nbsp;Printer Drivers<br/>
+&#09;Bob Share &nbsp; &nbsp; &nbsp; Disk &nbsp; &nbsp; &nbsp;Bob Docs<br/>
+&#09;IPC$ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;IPC &nbsp; &nbsp; &nbsp; IPC Service (sufferance debian server)<br/>
+Domain=[THINC.LOCAL] OS=[Unix] Server=[Samba 3.0.24]<br/>
+<br/>
+&#09;Server &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Comment<br/>
+&#09;--------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------<br/>
+&#09;SUFFERANCE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sufferance debian server<br/>
+<br/>
+&#09;Workgroup &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Master<br/>
+&#09;--------- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-------<br/>
+&#09;ACME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ORACLE<br/>
+&#09;MSHOME &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PAYDAY<br/>
+&#09;MYGROUP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BARRY<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RALPH<br/>
+&#09;THINC.LOCAL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SUFFERANCE<br/>
+&#09;WORKGROUP &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;MAIL<br/>
+root@kali:~# <br/>
+</body></html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>htaccess scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -p 80 --script http-auth-finder 10.11.1.0-255 --open<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-21 17:13 EST<br/>
+Nmap scan report for 10.11.1.8<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:17:A0 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.13<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:0D:D8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.14<br/>
+Host is up (0.086s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:7D:3B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.22<br/>
+Host is up (0.059s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:0F:E1 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+| http-auth-finder: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.24<br/>
+|  url                                             method<br/>
+|  http://10.11.1.24:80/                                    FORM<br/>
+|  http://10.11.1.24/index.php?target=sitemap                          FORM<br/>
+|  http://10.11.1.24/index.php?target=cart                           FORM<br/>
+|  http://10.11.1.24/index.php?mode=catalog                           FORM<br/>
+|  http://10.11.1.24/index.php?target=search                          FORM<br/>
+|  http://10.11.1.24/index.php?target=pages&amp;amp;page_id=what_is_cs               FORM<br/>
+|  http://10.11.1.24/index.php?target=topics&amp;amp;topic_id=9                   FORM<br/>
+|  http://10.11.1.24/index.php                                 FORM<br/>
+|  http://10.11.1.24/index.php?target=auth&amp;amp;mode=recover_password              FORM<br/>
+|  http://10.11.1.24/index.php?target=cart&amp;csid=dea280def90f7783e33f5a6aee218b9f        FORM<br/>
+|  http://10.11.1.24/index.php?target=auth&amp;amp;mode=login_form                 FORM<br/>
+|  http://10.11.1.24/index.php?target=pages&amp;amp;page_id=about                  FORM<br/>
+|  http://10.11.1.24/index.php?target=exceptions&amp;no_page&amp;csid=2c6bda80494c7890882ab6902df6b8f0 FORM<br/>
+|  http://10.11.1.24/index.php?target=pages&amp;amp;page_id=privacy_policy             FORM<br/>
+|  http://10.11.1.24/index.php?target=categories&amp;amp;category_id=119              FORM<br/>
+|  http://10.11.1.24/index.php?target=categories&amp;amp;category_id=85               FORM<br/>
+|  http://10.11.1.24/index.php?target=categories&amp;amp;category_id=86               FORM<br/>
+|  http://10.11.1.24/index.php?target=pages&amp;page_id=about                    FORM<br/>
+|_ http://10.11.1.24/index.php?target=wishlist                         FORM<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+| http-auth-finder: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.31<br/>
+|  url          method<br/>
+|  http://10.11.1.31:80/ FORM<br/>
+|_ http://10.11.1.31/   FORM<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.39<br/>
+Host is up (0.059s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:15:0E (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.49<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:0C:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.50<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:7D:73 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.71<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:26:A8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.115<br/>
+Host is up (0.058s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:0B:99 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.116<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:37:D7 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+| http-auth-finder: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.128<br/>
+|  url           method<br/>
+|  http://10.11.1.128:80/ FORM<br/>
+|_ http://10.11.1.128/   FORM<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+| http-auth-finder: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.133<br/>
+|  url              method<br/>
+|  http://10.11.1.133:80/    FORM<br/>
+|_ http://10.11.1.133/login.asp FORM<br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.058s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.209<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:32:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.217<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:74:1A (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.219<br/>
+Host is up (0.058s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:0F:7B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+| http-auth-finder: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.223<br/>
+|  url            method<br/>
+|_ http://10.11.1.223/xampp/ HTTP: Basic<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.227<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.237<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:27:39 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.238<br/>
+Host is up (0.056s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:51:D2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.251<br/>
+Host is up (0.057s latency).<br/>
+PORT  STATE SERVICE<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:66:33 (VMware)<br/>
+<br/>
+Nmap done: 256 IP addresses (44 hosts up) scanned in 17.23 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+<br/>
+10.11.1.8<br/>
+10.11.1.10<br/>
+10.11.1.13<br/>
+10.11.1.14<br/>
+10.11.1.22<br/>
+10.11.1.24<br/>
+10.11.1.31<br/>
+10.11.1.39<br/>
+10.11.1.49<br/>
+10.11.1.50<br/>
+10.11.1.71<br/>
+10.11.1.72<br/>
+10.11.1.115<br/>
+10.11.1.116<br/>
+10.11.1.128<br/>
+10.11.1.133<br/>
+10.11.1.202<br/>
+10.11.1.209<br/>
+10.11.1.217<br/>
+10.11.1.219<br/>
+10.11.1.223<br/>
+10.11.1.227<br/>
+10.11.1.229<br/>
+10.11.1.234<br/>
+10.11.1.237<br/>
+10.11.1.238<br/>
+10.11.1.251<br/>
+<br/>
+</body></html>

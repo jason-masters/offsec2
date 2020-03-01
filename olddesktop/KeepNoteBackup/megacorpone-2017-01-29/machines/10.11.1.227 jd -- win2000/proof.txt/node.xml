@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Proof.txt</string>
+  <key>nodeid</key><string>78b40b54-8370-4d5e-81a4-b64e086057a7</string>
+  <key>modified_time</key><integer>1485111898</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1485111888</integer>
+  <key>order</key><integer>8</integer>
+  <key>icon</key><string>note-green.png</string>
+</dict>
+</node>

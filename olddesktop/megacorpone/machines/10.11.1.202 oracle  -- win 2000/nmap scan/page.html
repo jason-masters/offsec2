@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.202<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-15 14:38 EDT<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 982 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+135/tcp &nbsp;open &nbsp;msrpc<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds<br/>
+1030/tcp open &nbsp;iad1<br/>
+1032/tcp open &nbsp;iad3<br/>
+1033/tcp open &nbsp;netinfo<br/>
+1038/tcp open &nbsp;mtqp<br/>
+1521/tcp open &nbsp;oracle<br/>
+2030/tcp open &nbsp;device2<br/>
+2100/tcp open &nbsp;amiganetfs<br/>
+3372/tcp open &nbsp;msdtc<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+4443/tcp open &nbsp;pharos<br/>
+7778/tcp open &nbsp;interwise<br/>
+8080/tcp open &nbsp;http-proxy<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.38 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.068s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|_ &nbsp; &nbsp;Anonymous access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: oracle<br/>
+| &nbsp; NetBIOS computer name: ORACLE<br/>
+| &nbsp; Domain name: acme.local<br/>
+| &nbsp; FQDN: oracle.acme.local<br/>
+|_ &nbsp;System time: 2016-12-24T17:20:04+02:00<br/>
+</body></html>

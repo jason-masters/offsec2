@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sqli-nmapscan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=http-sql-injection 10.11.1.1-255<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-18 01:24 EST<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.046s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows XP microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp<br/>
+<br/>
+Nmap scan report for 10.11.1.7<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:24:B2 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.8<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 990 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 2.0.1<br/>
+22/tcp &nbsp; open &nbsp; ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.9p1 (protocol 1.99)<br/>
+25/tcp &nbsp; closed smtp<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+111/tcp &nbsp;open &nbsp; rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;844/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;847/tcp &nbsp;status<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)<br/>
+443/tcp &nbsp;open &nbsp; ssl/http &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+445/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)<br/>
+631/tcp &nbsp;open &nbsp; ipp &nbsp; &nbsp; &nbsp; &nbsp; CUPS 1.1<br/>
+|_http-server-header: CUPS/1.1<br/>
+3306/tcp open &nbsp; mysql?<br/>
+MAC Address: 00:50:56:89:17:A0 (VMware)<br/>
+Service Info: OS: Unix<br/>
+<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.13<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.1<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:0D:D8 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.14<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.1<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:7D:3B (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.22<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp?<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.1p1 (protocol 1.99)<br/>
+23/tcp &nbsp; &nbsp;open &nbsp;telnet?<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp?<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 1.3.23 ((Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2)<br/>
+|_http-server-header: Apache/1.3.23 (Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2<br/>
+111/tcp &nbsp; open &nbsp;rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/tcp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/udp &nbsp;status<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd (workgroup: MYGROUP)<br/>
+199/tcp &nbsp; open &nbsp;smux &nbsp; &nbsp; &nbsp; &nbsp;Linux SNMP multiplexer<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp;Apache httpd 1.3.23 ((Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2)<br/>
+|_http-server-header: Apache/1.3.23 (Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2<br/>
+995/tcp &nbsp; open &nbsp;ssl/pop3 &nbsp; &nbsp;UW Imap pop3d 2001.78rh<br/>
+32768/tcp open &nbsp;status &nbsp; &nbsp; &nbsp;1 (RPC #100024)<br/>
+MAC Address: 00:50:56:89:0F:E1 (VMware)<br/>
+Service Info: Host: barry.thinc.local; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 992 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.6p1 Debian 5build1 (protocol 2.0)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.4 ((Ubuntu) PHP/5.2.3-1ubuntu6)<br/>
+|_http-server-header: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6<br/>
+110/tcp open &nbsp;pop3 &nbsp; &nbsp; &nbsp; &nbsp;Dovecot pop3d<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)<br/>
+143/tcp open &nbsp;imap &nbsp; &nbsp; &nbsp; &nbsp;Dovecot imapd<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)<br/>
+993/tcp open &nbsp;ssl/imap &nbsp; &nbsp;Dovecot imapd<br/>
+995/tcp open &nbsp;ssl/pop3 &nbsp; &nbsp;Dovecot pop3d<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2003 or 2008 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1433/tcp open &nbsp;ms-sql-s &nbsp; &nbsp; &nbsp;Microsoft SQL Server 2000 8.00.766; SP3a<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Nmap scan report for 10.11.1.35<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE &nbsp;SERVICE &nbsp; &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp; tcpwrapped<br/>
+443/tcp open &nbsp; ssl/http &nbsp; Apache httpd 2.2.3 ((CentOS))<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+631/tcp closed ipp<br/>
+MAC Address: 00:50:56:89:6D:A6 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.39<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp; ssh?<br/>
+80/tcp &nbsp; open &nbsp; http?<br/>
+3306/tcp closed mysql<br/>
+MAC Address: 00:50:56:89:15:0E (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.44<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; &nbsp;OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)<br/>
+8000/tcp open &nbsp;ssl/http Rocket httpd 1.2.6 (Python 2.6.5)<br/>
+|_http-server-header: Rocket 1.2.6 Python/2.6.5<br/>
+MAC Address: 00:50:56:89:09:4D (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.49<br/>
+Host is up (0.047s latency).<br/>
+Not shown: 996 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 8.5<br/>
+|_http-server-header: Microsoft-IIS/8.5<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:0C:B3 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.50<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 995 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 8.5<br/>
+|_http-server-header: Microsoft-IIS/8.5<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+8080/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;HttpFileServer httpd 2.3<br/>
+|_http-server-header: HFS 2.3<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:7D:73 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.71<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache/2.4.7 (Ubuntu)<br/>
+|_http-server-header: Apache/2.4.7 (Ubuntu)<br/>
+MAC Address: 00:50:56:89:26:A8 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.8p1 Debian 7ubuntu1 (Ubuntu Linux; protocol 2.0)<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp;JAMES smtpd 2.3.2<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.20 ((Ubuntu))<br/>
+|_http-server-header: Apache/2.2.20 (Ubuntu)<br/>
+110/tcp &nbsp;open &nbsp;pop3 &nbsp; &nbsp;JAMES pop3d 2.3.2<br/>
+111/tcp &nbsp;open &nbsp;rpcbind 2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;33139/tcp &nbsp;mountd<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;59705/udp &nbsp;mountd<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;49912/udp &nbsp;nlockmgr<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;57680/tcp &nbsp;nlockmgr<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;51962/udp &nbsp;status<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;52832/tcp &nbsp;status<br/>
+| &nbsp; 100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs_acl<br/>
+|_ &nbsp;100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs_acl<br/>
+119/tcp &nbsp;open &nbsp;nntp &nbsp; &nbsp;JAMES nntpd (posting ok)<br/>
+2049/tcp open &nbsp;nfs_acl 2-3 (RPC #100227)<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+Service Info: Host: beta; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.060s latency).<br/>
+Not shown: 981 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)<br/>
+554/tcp &nbsp; open &nbsp;rtsp?<br/>
+1100/tcp &nbsp;open &nbsp;rmiregistry &nbsp; Java RMI<br/>
+2869/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+3306/tcp &nbsp;open &nbsp;mysql?<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+5357/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+5800/tcp &nbsp;open &nbsp;vnc-http &nbsp; &nbsp; &nbsp;TightVNC (user: gamma; VNC TCP port: 5900)<br/>
+5900/tcp &nbsp;open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VNC (protocol 3.8)<br/>
+8080/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.4.9 ((Win32) PHP/5.5.12)<br/>
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12<br/>
+10243/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.115<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 1.1.3<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.5p1 (protocol 1.99)<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp?<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.0.40 ((Red Hat Linux))<br/>
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)<br/>
+111/tcp &nbsp; open &nbsp;rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/tcp &nbsp;status<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/udp &nbsp;status<br/>
+|_ &nbsp;391002 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32769/tcp &nbsp;sgi_fam<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd (workgroup: tMYGROUP)<br/>
+143/tcp &nbsp; open &nbsp;imap &nbsp; &nbsp; &nbsp; &nbsp;UW imapd 2001.315rh<br/>
+199/tcp &nbsp; open &nbsp;smux &nbsp; &nbsp; &nbsp; &nbsp;Linux SNMP multiplexer<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp;Apache httpd 2.0.40 ((Red Hat Linux))<br/>
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)<br/>
+3306/tcp &nbsp;open &nbsp;mysql &nbsp; &nbsp; &nbsp; MySQL (unauthorized)<br/>
+32768/tcp open &nbsp;status &nbsp; &nbsp; &nbsp;1 (RPC #100024)<br/>
+MAC Address: 00:50:56:89:0B:99 (VMware)<br/>
+Service Info: Host: tophat.acme.local; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.116<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp?<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp;OpenSSH 5.8p2_hpn13v11 (FreeBSD 20110503; protocol 2.0)<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.4.6 ((FreeBSD) PHP/5.4.23)<br/>
+|_http-server-header: Apache/2.4.6 (FreeBSD) PHP/5.4.23<br/>
+110/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+143/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+3306/tcp open &nbsp;mysql &nbsp; &nbsp; &nbsp;MySQL (unauthorized)<br/>
+MAC Address: 00:50:56:89:37:D7 (VMware)<br/>
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd<br/>
+<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+21/tcp open &nbsp;ftp &nbsp; &nbsp; Acritum Femitter Server ftpd<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft ftpd 5.0<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ESMTP 5.0.2195.6713<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft IIS httpd 5.0<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds Microsoft Windows 2000 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1026/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1029/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Distributed Transaction Coordinator<br/>
+5800/tcp open &nbsp;vnc-http &nbsp; &nbsp; TightVNC<br/>
+5900/tcp open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+Service Info: Host: dj.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.050s latency).<br/>
+Not shown: 759 closed ports, 240 filtered ports<br/>
+PORT &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+80/tcp open &nbsp;tcpwrapped<br/>
+|_http-server-header: Microsoft-IIS &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.136<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.3p2 Debian 9 (protocol 2.0)<br/>
+113/tcp open &nbsp;ident<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: LOCAL)<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: LOCAL)<br/>
+MAC Address: 00:50:56:89:54:12 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.141<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE VERSION<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; OpenSSH 4.0 (protocol 2.0)<br/>
+111/tcp &nbsp; open &nbsp;rpcbind 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+|_ &nbsp;100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+10000/tcp open &nbsp;http &nbsp; &nbsp;MiniServ 0.01 (Webmin httpd)<br/>
+MAC Address: 00:50:56:89:6F:1B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.145<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 995 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;(workgroup: WORKGROUP)<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache Tomcat/Coyote JSP engine 1.1<br/>
+|_http-server-header: Apache-Coyote/1.1<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=1/18%Time=587F0B62%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,77,"\0\0\0s\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fd\xe3\x01\0xxu\x1f\x0bq\xd2\x01\xe0\x01\x08\.\0\xe1\x92\$\xf5\xf4P\xba<br/>
+SF:tW\0O\0R\0K\0G\0R\0O\0U\0P\0\0\0H\0E\0L\0P\0D\0E\0S\0K\0\0\0");<br/>
+MAC Address: 00:50:56:89:7E:40 (VMware)<br/>
+Service Info: Host: HELPDESK; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.146<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+21/tcp open &nbsp;ftp &nbsp; &nbsp; ProFTPD 1.3.3a<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.5p1 Debian 6 (protocol 2.0)<br/>
+MAC Address: 00:50:56:89:37:10 (VMware)<br/>
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 985 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd 5.0<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.0<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2000 microsoft-ds<br/>
+1030/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1032/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1033/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1521/tcp open &nbsp;oracle-tns &nbsp; &nbsp;Oracle TNS Listener 9.2.0.1.0 (for 32-bit Windows)<br/>
+2030/tcp open &nbsp;oracle-mts &nbsp; &nbsp;Oracle MTS Recovery Service<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Distributed Transaction Coordinator<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+4443/tcp open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+7778/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+Service Info: OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Nmap scan report for 10.11.1.209<br/>
+Host is up (0.074s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; SunSSH 1.1.5 (protocol 2.0)<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp;Apache httpd 1.3.41 ((Unix) mod_perl/1.31)<br/>
+|_http-server-header: Apache/1.3.41 (Unix) mod_perl/1.31<br/>
+111/tcp &nbsp;open &nbsp;rpcbind 2-4 (RPC #100000)<br/>
+8009/tcp open &nbsp;ajp13 &nbsp; Apache Jserv (Protocol v1.3)<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp;Apache Tomcat/Coyote JSP engine 1.1<br/>
+|_http-server-header: Apache-Coyote/1.1<br/>
+MAC Address: 00:50:56:89:32:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.217<br/>
+Host is up (0.057s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp;OpenSSH 4.3 (protocol 2.0)<br/>
+25/tcp &nbsp; open &nbsp;smtp?<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.2.3<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+110/tcp &nbsp;open &nbsp;pop3?<br/>
+111/tcp &nbsp;open &nbsp;rpcbind &nbsp; &nbsp;2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;884/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;887/tcp &nbsp;status<br/>
+143/tcp &nbsp;open &nbsp;imap?<br/>
+443/tcp &nbsp;open &nbsp;ssl/http &nbsp; Apache httpd 2.2.3 ((CentOS))<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+993/tcp &nbsp;open &nbsp;imaps?<br/>
+995/tcp &nbsp;open &nbsp;pop3s?<br/>
+3306/tcp open &nbsp;mysql?<br/>
+4445/tcp open &nbsp;upnotifyp?<br/>
+MAC Address: 00:50:56:89:74:1A (VMware)<br/>
+Service Info: Host: 127.0.0.1<br/>
+<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: THINC)<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+Service Info: Host: OBSERVER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.219<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd<br/>
+|_http-server-header: Apache<br/>
+MAC Address: 00:50:56:89:0F:7B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 980 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FileZilla ftpd 0.9.34 beta<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp; &nbsp;Microsoft DNS 6.1.7601<br/>
+88/tcp &nbsp; &nbsp;open &nbsp;tcpwrapped<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+389/tcp &nbsp; open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;(workgroup: THINC)<br/>
+464/tcp &nbsp; open &nbsp;kpasswd5?<br/>
+593/tcp &nbsp; open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+636/tcp &nbsp; open &nbsp;tcpwrapped<br/>
+3268/tcp &nbsp;open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+3269/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+49158/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49165/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=1/18%Time=587F0B9E%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,6B,"\0\0\0g\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x0f2\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fc\xf3\x01\0&gt;{w\xac\x9f\x03\xcf\x01\xe0\x01\x08\"\0c\^\xce\$\xd5\xea\xc<br/>
+SF:b\x04T\0H\0I\0N\0C\0\0\0M\0A\0S\0T\0E\0R\0\0\0");<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+Service Info: Host: MASTER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.221<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 995 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp; &nbsp;Microsoft DNS 6.0.6001<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+5357/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+49158/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:18:FA (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.049s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+| http-sql-injection: <br/>
+| &nbsp; Possible sqli for queries:<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+|_ &nbsp; &nbsp;http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+| http-sql-injection: <br/>
+| &nbsp; Possible sqli for queries:<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+|_ &nbsp; &nbsp;https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;(workgroup: WORKGROUP)<br/>
+3306/tcp &nbsp;open &nbsp;mysql?<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=1/18%Time=587F0BB3%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,6F,"\0\0\0k\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fd\xe3\x01\0eV#\x82\x03q\xd2\x01\xe0\x01\x08&amp;\0\x1b\x97\t\xc8\xa55\xa5\<br/>
+SF:xb7W\0O\0R\0K\0G\0R\0O\0U\0P\0\0\0J\0E\0F\0F\0\0\0");<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+Service Info: Hosts: localhost, JEFF; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.226<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GuildFTPd<br/>
+3389/tcp closed ms-wbt-server<br/>
+MAC Address: 00:50:56:89:5F:EE (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.227<br/>
+Host is up (0.047s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft ftpd 5.0<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ESMTP 5.0.2195.5329<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft IIS httpd 5.0<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds Microsoft Windows 2000 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1026/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1028/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Distributed Transaction Coordinator<br/>
+5800/tcp open &nbsp;vnc-http &nbsp; &nbsp; RealVNC 4.0 (resolution: 400x250; VNC TCP port: 5900)<br/>
+|_http-server-header: RealVNC/4.0<br/>
+5900/tcp open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+Service Info: Host: jd.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 988 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; tcpwrapped<br/>
+23/tcp &nbsp; closed telnet<br/>
+25/tcp &nbsp; open &nbsp; smtp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer smtpd<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+110/tcp &nbsp;open &nbsp; pop3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer pop3d<br/>
+135/tcp &nbsp;open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+143/tcp &nbsp;open &nbsp; imap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer imapd<br/>
+443/tcp &nbsp;closed https<br/>
+1025/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+2869/tcp closed icslap<br/>
+3389/tcp open &nbsp; ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GoAhead WebServer<br/>
+|_http-server-header: GoAhead-Webs<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+Service Info: Host: KEVIN; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.14 ((Ubuntu))<br/>
+|_http-server-header: Apache/2.2.14 (Ubuntu)<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.237<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp;OpenSSH 6.0p1 Debian 4 (protocol 2.0)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+111/tcp open &nbsp;rpcbind &nbsp;2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;34662/tcp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;35313/udp &nbsp;status<br/>
+443/tcp open &nbsp;ssl/http Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+MAC Address: 00:50:56:89:27:39 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.238<br/>
+Host is up (0.044s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp;OpenSSH 6.0p1 Debian 4 (protocol 2.0)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+111/tcp open &nbsp;rpcbind &nbsp;2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;42346/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;59912/tcp &nbsp;status<br/>
+443/tcp open &nbsp;ssl/http Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+MAC Address: 00:50:56:89:51:D2 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.247<br/>
+Host is up (0.046s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:7E:F8 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Nmap scan report for 10.11.1.251<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.1p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.11 ((Ubuntu) PHP/5.2.6-3ubuntu4.4 with Suhosin-Patch)<br/>
+|_http-server-header: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.4 with Suhosin-Patch<br/>
+MAC Address: 00:50:56:89:66:33 (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Nmap scan report for 10.11.1.252<br/>
+Host is up (0.045s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+8000/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.2.3 ((CentOS))<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+8888/tcp open &nbsp;http-proxy Squid http proxy 3.3.8<br/>
+|_http-server-header: squid/3.3.8<br/>
+MAC Address: 00:50:56:89:22:6B (VMware)<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 255 IP addresses (44 hosts up) scanned in 604.60 seconds<br/>
+</body></html>

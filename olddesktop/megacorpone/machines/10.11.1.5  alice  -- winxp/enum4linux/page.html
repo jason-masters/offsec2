@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Enum4linux</title>
+</head><body>root@kali:~/gen/nc# enum4linux -a 10.11.1.5<br/>
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Dec 25 00:40:48 2016<br/>
+<br/>
+&nbsp;========================== <br/>
+| &nbsp; &nbsp;Target Information &nbsp; &nbsp;|<br/>
+&nbsp;========================== <br/>
+Target ........... 10.11.1.5<br/>
+RID Range ........ 500-550,1000-1050<br/>
+Username ......... ''<br/>
+Password ......... ''<br/>
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none<br/>
+<br/>
+<br/>
+&nbsp;================================================= <br/>
+| &nbsp; &nbsp;Enumerating Workgroup/Domain on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;================================================= <br/>
+[+] Got domain/workgroup name: THINC<br/>
+<br/>
+&nbsp;========================================= <br/>
+| &nbsp; &nbsp;Nbtstat Information for 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;========================================= <br/>
+Looking up status of 10.11.1.5<br/>
+&#09;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;00&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Workstation Service<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;00&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Domain/Workgroup Name<br/>
+&#09;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;03&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Messenger Service<br/>
+&#09;ALICE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;20&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;File Server Service<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;1e&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Browser Service Elections<br/>
+<br/>
+&#09;MAC Address = 00-50-56-89-25-59<br/>
+<br/>
+&nbsp;================================== <br/>
+| &nbsp; &nbsp;Session Check on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;================================== <br/>
+[+] Server 10.11.1.5 allows sessions using username '', password ''<br/>
+<br/>
+&nbsp;======================================== <br/>
+| &nbsp; &nbsp;Getting domain SID for 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;======================================== <br/>
+Domain Name: THINC<br/>
+Domain Sid: S-1-5-21-4254429285-501146052-1604752251<br/>
+[+] Host is part of a domain (not a workgroup)<br/>
+<br/>
+&nbsp;=================================== <br/>
+| &nbsp; &nbsp;OS information on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;=================================== <br/>
+[+] Got OS info for 10.11.1.5 from smbclient: Domain=[THINC] OS=[Windows 5.1] Server=[Windows 2000 LAN Manager]<br/>
+[+] Got OS info for 10.11.1.5 from srvinfo:<br/>
+Could not initialise srvsvc. Error was NT_STATUS_PIPE_NOT_AVAILABLE<br/>
+<br/>
+&nbsp;========================== <br/>
+| &nbsp; &nbsp;Users on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;========================== <br/>
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+&nbsp;====================================== <br/>
+| &nbsp; &nbsp;Share Enumeration on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;====================================== <br/>
+[E] Can't list shares: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Attempting to map shares on 10.11.1.5<br/>
+<br/>
+&nbsp;================================================= <br/>
+| &nbsp; &nbsp;Password Policy Information for 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;================================================= <br/>
+[E] Can't connect to host with supplied credentials.<br/>
+<br/>
+[E] Failed to get password policy with rpcclient<br/>
+<br/>
+<br/>
+&nbsp;=========================== <br/>
+| &nbsp; &nbsp;Groups on 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;=========================== <br/>
+<br/>
+[+] Getting builtin groups:<br/>
+<br/>
+[+] Getting builtin group memberships:<br/>
+<br/>
+[+] Getting local groups:<br/>
+<br/>
+[+] Getting local group memberships:<br/>
+<br/>
+[+] Getting domain groups:<br/>
+<br/>
+[+] Getting domain group memberships:<br/>
+<br/>
+&nbsp;==================================================================== <br/>
+| &nbsp; &nbsp;Users on 10.11.1.5 via RID cycling (RIDS: 500-550,1000-1050) &nbsp; &nbsp;|<br/>
+&nbsp;==================================================================== <br/>
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED. &nbsp;RID cycling not possible.<br/>
+[I] Found new SID: S-1-5-32<br/>
+[I] Found new SID: S-1-5-21-1085031214-1677128483-839522115<br/>
+[+] Enumerating users using SID S-1-5-21-1085031214-1677128483-839522115 and logon username '', password ''<br/>
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''<br/>
+<br/>
+&nbsp;========================================== <br/>
+| &nbsp; &nbsp;Getting printer info for 10.11.1.5 &nbsp; &nbsp;|<br/>
+&nbsp;========================================== <br/>
+Could not initialise spoolss. Error was NT_STATUS_OBJECT_NAME_NOT_FOUND<br/>
+<br/>
+<br/>
+enum4linux complete on Sun Dec 25 00:45:24 2016<br/>
+</body></html>

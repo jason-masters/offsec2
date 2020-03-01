@@ -1,0 +1,112 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>New Page</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS -p 3389 10.11.1.0-254 --open<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-21 17:31 EST<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.056s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.7<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:24:B2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.13<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:0D:D8 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.14<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:7D:3B (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.056s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.49<br/>
+Host is up (0.077s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:0C:B3 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.077s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.145<br/>
+Host is up (0.064s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:7E:40 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.065s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.221<br/>
+Host is up (0.065s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:18:FA (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.065s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.065s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+<br/>
+Nmap scan report for 10.11.1.247<br/>
+Host is up (0.057s latency).<br/>
+PORT   STATE SERVICE<br/>
+3389/tcp open ms-wbt-server<br/>
+MAC Address: 00:50:56:89:7E:F8 (VMware)<br/>
+<br/>
+Nmap done: 255 IP addresses (44 hosts up) scanned in 2.18 seconds<br/>
+root@kali:~/gen/nmap# nmap -sS -p 3389 10.11.1.0-254 --open | grep report | cut -d&quot; &quot; -f5<br/>
+10.11.1.7<br/>
+10.11.1.31<br/>
+10.11.1.49<br/>
+10.11.1.73<br/>
+10.11.1.145<br/>
+10.11.1.220<br/>
+10.11.1.221<br/>
+10.11.1.223<br/>
+10.11.1.229<br/>
+10.11.1.230<br/>
+10.11.1.247<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

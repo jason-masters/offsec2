@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>1c1bf429-7607-4fdc-b1f9-294f159f88f9</string>
+  <key>nodeid</key><string>83ab5ec1-ca3e-43bf-ba20-00384670b6a7</string>
+  <key>modified_time</key><integer>1482349470</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482349470</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>MasterProfiles</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>2</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

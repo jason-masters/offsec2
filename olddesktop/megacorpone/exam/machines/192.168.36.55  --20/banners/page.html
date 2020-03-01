@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body><br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap --script=banner 192.168.36.55<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-07-01 09:08 EDT<br/>
+Nmap scan report for 192.168.36.55<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+21/tcp &nbsp; open &nbsp;ftp<br/>
+|_banner: 220-Wellcome to Home Ftp Server!\x0D\x0A220 Server ready.<br/>
+3306/tcp open &nbsp;mysql<br/>
+| banner: F\x00\x00\x00\xFFj\x04Host '192.168.36.31' is not allowed to co<br/>
+|_nnect to this MySQL server<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+MAC Address: 00:50:56:89:35:67 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 25.89 seconds<br/>
+</body></html>

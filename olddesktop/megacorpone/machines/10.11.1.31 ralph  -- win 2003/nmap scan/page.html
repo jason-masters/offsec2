@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body><br/>
+root@kali:~/gen/nmap# nmap -sS 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 11:18 EDT<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+135/tcp &nbsp;open &nbsp;msrpc<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds<br/>
+1025/tcp open &nbsp;NFS-or-IIS<br/>
+1433/tcp open &nbsp;ms-sql-s<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.12 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-11 12:16 EST<br/>
+Stats: 0:00:49 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan<br/>
+NSE Timing: About 99.49% done; ETC: 12:17 (0:00:00 remaining)<br/>
+Stats: 0:01:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan<br/>
+NSE Timing: About 99.49% done; ETC: 12:17 (0:00:00 remaining)<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.094s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+| http-csrf: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.31<br/>
+| &nbsp; Found the following possible CSRF vulnerabilities: <br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.31:80/<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: login-off.asp<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.31/<br/>
+| &nbsp; &nbsp; Form id: <br/>
+|_ &nbsp; &nbsp;Form action: login-off.asp<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2003 or 2008 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1433/tcp open &nbsp;ms-sql-s &nbsp; &nbsp; &nbsp;Microsoft SQL Server 2000 8.00.766; SP3a<br/>
+|_sslv2-drown: <br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| rdp-vuln-ms12-020: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0152<br/>
+| &nbsp; &nbsp; Risk factor: Medium &nbsp;CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+| &nbsp; <br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0002<br/>
+| &nbsp; &nbsp; Risk factor: High &nbsp;CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002<br/>
+|_ssl-ccs-injection: No reply from server (TIMEOUT)<br/>
+|_sslv2-drown: <br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Host script results:<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND<br/>
+|_smb-vuln-regsvc-dos: ERROR: Script execution failed (use -d to debug)<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 167.01 seconds<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.31<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sS 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-11 11:57 EST<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.083s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+135/tcp &nbsp;open &nbsp;msrpc<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds<br/>
+1025/tcp open &nbsp;NFS-or-IIS<br/>
+1433/tcp open &nbsp;ms-sql-s<br/>
+3389/tcp open &nbsp;ms-wbt-server<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 6.97 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Type: Not a file share<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; &nbsp; Current user access: READ/WRITE<br/>
+| &nbsp; wwwroot: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+|_ &nbsp; &nbsp;Current user access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2003 3790 Service Pack 1 (Windows Server 2003 5.2)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2003::sp1<br/>
+| &nbsp; Computer name: ralph<br/>
+| &nbsp; NetBIOS computer name: RALPH<br/>
+| &nbsp; Workgroup: THINC<br/>
+|_ &nbsp;System time: 2016-12-24T08:33:59-06:00<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script=http-enum 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-15 17:10 EST<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+| http-enum: <br/>
+| &nbsp; /_vti_log/: Frontpage file or folder<br/>
+| &nbsp; /postinfo.html: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/access.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/bots.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/botinfs.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/service.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/services.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/svcacl.cnf: Frontpage file or folder<br/>
+| &nbsp; /_vti_pvt/writeto.cnf: Frontpage file or folder<br/>
+| &nbsp; /images/: Potentially interesting folder<br/>
+|_ &nbsp;/_private/: Potentially interesting folder<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2003 or 2008 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1433/tcp open &nbsp;ms-sql-s &nbsp; &nbsp; &nbsp;Microsoft SQL Server 2000 8.00.766; SP3a<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 57.90 seconds<br/>
+</body></html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen/nmap# nmap -sS 10.11.1.10<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 23:22 EDT<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.076s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE<br/>
+80/tcp open &nbsp;http<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 12.86 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.10<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 23:26 EDT<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /CFIDE/administrator/enter.cfm: ColdFusion Admin Console<br/>
+| &nbsp; /CFIDE/administrator/entman/index.cfm: ColdFusion Admin Console<br/>
+| &nbsp; /cfide/install.cfm: ColdFusion Admin Console<br/>
+| &nbsp; /CFIDE/administrator/archives/index.cfm: ColdFusion Admin Console<br/>
+| &nbsp; /CFIDE/wizards/common/_logintowizard.cfm: ColdFusion Admin Console<br/>
+|_ &nbsp;/CFIDE/componentutils/login.cfm: ColdFusion Admin Console<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+| http-vuln-cve2010-2861: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Adobe ColdFusion Directory Traversal Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE (Exploitable)<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:67047 &nbsp;CVE:CVE-2010-2861<br/>
+| &nbsp; &nbsp; &nbsp; Multiple directory traversal vulnerabilities in the administrator console<br/>
+| &nbsp; &nbsp; &nbsp; in Adobe ColdFusion 9.0.1 and earlier allow remote attackers to read arbitrary files via the<br/>
+| &nbsp; &nbsp; &nbsp; locale parameter<br/>
+| &nbsp; &nbsp; Disclosure date: 2010-08-10<br/>
+| &nbsp; &nbsp; Extra information:<br/>
+| &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; ColdFusion8<br/>
+| &nbsp; &nbsp; &nbsp; HMAC: F5209DDBB0243FC4EAC2022BE78567864575A598<br/>
+| &nbsp; &nbsp; &nbsp; Salt: 1489689055867<br/>
+| &nbsp; &nbsp; &nbsp; Hash: AAFDC23870ECBCD3D557B6423A8982134E17927E<br/>
+| &nbsp; <br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2861<br/>
+| &nbsp; &nbsp; &nbsp; http://www.nessus.org/plugins/index.php?view=single&amp;id=48340<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/67047<br/>
+| &nbsp; &nbsp; &nbsp; http://www.blackhatacademy.org/security101/Cold_Fusion_Hacking<br/>
+|_ &nbsp; &nbsp; &nbsp;http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-2861<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 319.70 seconds<br/>
+</body></html>

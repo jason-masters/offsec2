@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nikto</title>
+</head><body>root@kali:~/gen/nikto# nikto -host 10.11.1.223<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10.11.1.223<br/>
++ Target Hostname: &nbsp; &nbsp;10.11.1.223<br/>
++ Target Port: &nbsp; &nbsp; &nbsp; &nbsp;80<br/>
++ Start Time: &nbsp; &nbsp; &nbsp; &nbsp; 2017-04-02 01:53:25 (GMT-4)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ OSVDB-3268: /: Directory indexing found.<br/>
++ mod_ssl/2.2.14 appears to be outdated (current is at least 2.8.31) (may depend on server version)<br/>
++ Apache/2.2.14 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.<br/>
++ PHP/5.3.1 appears to be outdated (current is at least 5.6.9). PHP 5.5.25 and 5.4.41 are also current.<br/>
++ OpenSSL/0.9.8l appears to be outdated (current is at least 1.0.1j). OpenSSL 1.0.0o and 0.9.8zc are also current.<br/>
++ mod_apreq2-20090110/2.7.1 appears to be outdated (current is at least 2.8.0)<br/>
++ mod_perl/2.0.4 appears to be outdated (current is at least 2.0.7)<br/>
++ Perl/v5.10.1 appears to be outdated (current is at least v5.14.2)<br/>
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var<br/>
++ mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.<br/>
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE <br/>
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST<br/>
++ OSVDB-3268: /./: Directory indexing found.<br/>
++ OSVDB-3268: /?mod=node&amp;nid=some_thing&amp;op=view: Directory indexing found.<br/>
++ OSVDB-3268: /?mod=some_thing&amp;op=browse: Directory indexing found.<br/>
++ /./: Appending '/./' to a directory allows indexing<br/>
++ OSVDB-3268: //: Directory indexing found.<br/>
++ //: Apache on Red Hat Linux release 9 reveals the root directory listing by default if there is no index page.<br/>
++ OSVDB-3268: /?Open: Directory indexing found.<br/>
++ OSVDB-3268: /?OpenServer: Directory indexing found.<br/>
++ OSVDB-3268: /%2e/: Directory indexing found.<br/>
++ OSVDB-576: /%2e/: Weblogic allows source code or directory listing, upgrade to v6.0 SP1 or higher. http://www.securityfocus.com/bid/2513.<br/>
++ OSVDB-3268: /?mod=&lt;script&gt;alert(document.cookie)&lt;/script&gt;&amp;op=browse: Directory indexing found.<br/>
++ OSVDB-3268: /?sql_debug=1: Directory indexing found.<br/>
++ OSVDB-3268: ///: Directory indexing found.<br/>
++ OSVDB-3268: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: Directory indexing found.<br/>
++ OSVDB-3268: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: Directory indexing found.<br/>
++ OSVDB-3268: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: Directory indexing found.<br/>
++ OSVDB-3268: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: Directory indexing found.<br/>
++ OSVDB-561: /server-status: This reveals Apache information. Comment out appropriate line in the Apache conf file or restrict access to allowed sources.<br/>
++ OSVDB-3268: /?PageServices: Directory indexing found.<br/>
++ OSVDB-119: /?PageServices: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0269.<br/>
++ OSVDB-3268: /?wp-cs-dump: Directory indexing found.<br/>
++ OSVDB-119: /?wp-cs-dump: The remote server may allow directory listings through Web Publisher by forcing the server to show all files via 'open directory browsing'. Web Publisher should be disabled. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-0269.<br/>
++ Retrieved x-powered-by header: PHP/5.3.1<br/>
++ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.<br/>
++ Server leaks inodes via ETags, header found with file /phpmyadmin/ChangeLog, inode: 281474976755133, size: 13334, mtime: Sun Dec 20 03:00:00 2009<br/>
++ OSVDB-3092: /phpmyadmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.<br/>
++ OSVDB-3268: /icons/: Directory indexing found.<br/>
++ OSVDB-3268: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Directory indexing found.<br/>
++ OSVDB-3288: ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////: Abyss 1.03 reveals directory listing when &#09; /'s are requested.<br/>
++ OSVDB-3268: /?pattern=/etc/*&amp;sort=name: Directory indexing found.<br/>
++ OSVDB-562: /server-info: This gives a lot of Apache information. Comment out appropriate line in httpd.conf or restrict access to allowed hosts.<br/>
++ OSVDB-3268: /?D=A: Directory indexing found.<br/>
++ OSVDB-3268: /?N=D: Directory indexing found.<br/>
++ OSVDB-3268: /?S=A: Directory indexing found.<br/>
++ OSVDB-3268: /?M=A: Directory indexing found.<br/>
++ OSVDB-3268: /?\"&gt;&lt;script&gt;alert('Vulnerable');&lt;/script&gt;: Directory indexing found.<br/>
++ OSVDB-3233: /icons/README: Apache default file found.<br/>
++ OSVDB-3268: /?_CONFIG[files][functions_page]=http://cirt.net/rfiinc.txt?: Directory indexing found.<br/>
++ OSVDB-3268: /?npage=-1&amp;content_dir=http://cirt.net/rfiinc.txt?%00&amp;cmd=ls: Directory indexing found.<br/>
++ OSVDB-3268: /?npage=1&amp;content_dir=http://cirt.net/rfiinc.txt?%00&amp;cmd=ls: Directory indexing found.<br/>
++ OSVDB-3268: /?show=http://cirt.net/rfiinc.txt??: Directory indexing found.<br/>
++ OSVDB-3268: /?-s: Directory indexing found.<br/>
++ OSVDB-3092: /.svn/wc.db: Subversion SQLite DB file may contain directory listing information. See http://pen-testing.sans.org/blog/pen-testing/2012/12/06/all-your-svn-are-belong-to-us<br/>
++ OSVDB-3268: /?q[]=x: Directory indexing found.<br/>
++ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.<br/>
++ OSVDB-3268: /?sc_mode=edit: Directory indexing found.<br/>
++ OSVDB-3268: /?xmlcontrol=body%20onload=alert(123): Directory indexing found.<br/>
++ OSVDB-3268: /?admin: Directory indexing found.<br/>
++ /server-status: Apache server-status interface found (pass protected)<br/>
++ /server-info: Apache server-info interface found (pass protected)<br/>
++ 8647 requests: 0 error(s) and 65 item(s) reported on remote host<br/>
++ End Time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2017-04-02 02:02:36 (GMT-4) (551 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested<br/>
+root@kali:~/gen/nikto# <br/>
+</body></html>

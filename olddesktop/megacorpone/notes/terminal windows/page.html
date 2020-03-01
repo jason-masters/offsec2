@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>terminal windows</title>
+</head><body><b>root@kali</b>:<b>~/gen/vpn</b># nc -nlvp 4444<br/>
+<b>root@kali</b>:<b>~/gen</b># ifconfig <br/>
+<b>root@kali</b>:<b>~/gen/vpn</b># openvpn OS-25685-PWK.ovpn <br/>
+<b>root@kali</b>:<b>~/gen</b># wget http://192.168.21.31/nc.exe <br/>
+<b>root@kali</b>:<b>~/gen/password</b># medusa -u root -P johnpassword.txt -h 192.168.21.67 -M ssh <br/>
+<br/>
+<br/>
+<b>root@kali</b>:<b>~/gen/nmap</b># nmap --min-parallelism 100 -sT -sU 10.11.1.5-15 <br/>
+<b>root@kali</b>:<b>~/gen/nmap</b># nmap -Pn 10.11.1.8 <br/>
+<b>root@kali</b>:<b>~/gen/nmap</b># nmap --script=banner 10.11.1.8 <br/>
+<b>root@kali</b>:<b>~/gen/nmap</b># nmap -sV --script vuln 10.11.1.8 <br/>
+<b>root@kali</b>:<b>~/gen/gobuster</b># gobuster -u http://10.11.1.8 -w /usr/share/seclists/Discovery/Web_Content/common.txt -s 200,204,301,302,307,403,500 -e<br/>
+<b>root@kali</b>:<b>~/gen/nikto</b># nikto -host 10.11.1.8 <br/>
+<b>root@kali</b>:<b>~/gen/enum4linux</b># enum4linux -a 10.11.1.8 <br/>
+<b>root@kali</b>:<b>~/gen</b># dirbuster <br/>
+<u>msf</u>&nbsp;&gt; <br/>
+<b>root@kali</b>:<b>/var/www/html</b># <br/>
+<br/>
+<br/>
+misc terminals<br/>
+nmap<br/>
+ftp<br/>
+text edit<br/>
+<br/>
+<br/>
+</body></html>

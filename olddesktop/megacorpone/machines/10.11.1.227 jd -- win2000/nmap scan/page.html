@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.227<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Type: Not a file share<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; &nbsp; Current user access: READ/WRITE<br/>
+| &nbsp; share: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+|_ &nbsp; &nbsp;Current user access: READ/WRITE<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: jd<br/>
+| &nbsp; NetBIOS computer name: JD<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2016-12-25T02:08:15+02:00<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.227<br/>
+Host is up (0.059s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-vuln-ms08-067: <br/>
+<span style="background-color: #ff0000">| &nbsp; VULNERABLE:</span><br/>
+| &nbsp; Microsoft Windows system vulnerable to remote code execution (MS08-067)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2008-4250<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code via a crafted RPC request that triggers the overflow during path canonicalization.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2008-10-23<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250<br/>
+|_ &nbsp; &nbsp; &nbsp;https://technet.microsoft.com/en-us/library/security/ms08-067.aspx<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

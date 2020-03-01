@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>10.11.1.125</title>
+</head><body>https://www.exploit-db.com/exploits/12480/<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/ftp# ftp 10.11.1.125<br/>
+Connected to 10.11.1.125.<br/>
+220 Femitter FTP Server ready.<br/>
+Name (10.11.1.125:root): ftp<br/>
+331 Password required for ftp.<br/>
+Password:<br/>
+230 User ftp logged in.<br/>
+Remote system type is UNIX.<br/>
+Using binary mode to transfer files.<br/>
+ftp&gt; ls<br/>
+200 Port command successful.<br/>
+150 Opening data connection for directory list.<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Sep 23 &nbsp;2015 .<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Sep 23 &nbsp;2015 ..<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp;11164 Dec 26 &nbsp;2006 house.jpg<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;920 Jan 03 &nbsp;2007 index.htm<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Feb 10 02:38 Upload<br/>
+226 File sent ok<br/>
+ftp&gt; cd ..<br/>
+501 CWD failed. No permission<br/>
+ftp&gt; ls<br/>
+200 Port command successful.<br/>
+150 Opening data connection for directory list.<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Sep 23 &nbsp;2015 .<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Sep 23 &nbsp;2015 ..<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp;11164 Dec 26 &nbsp;2006 house.jpg<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;920 Jan 03 &nbsp;2007 index.htm<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Feb 10 02:38 Upload<br/>
+226 File sent ok<br/>
+ftp&gt; cd ..<br/>
+501 CWD failed. No permission<br/>
+ftp&gt; cd upload<br/>
+250 CWD command successful. "/C:/Program Files/Femitter/Shared/upload" is current directory.<br/>
+ftp&gt; ls<br/>
+200 Port command successful.<br/>
+150 Opening data connection for directory list.<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Feb 10 02:38 .<br/>
+drw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 Feb 10 02:38 ..<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp;26198 Feb 10 02:38 shell.php<br/>
+-rw-rw-rw- &nbsp; 1 ftp &nbsp; &nbsp; &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 28 Dec 26 &nbsp;2006 uploaded.txt<br/>
+226 File sent ok<br/>
+ftp&gt; <br/>
+<img src="screenshot.png" /></body></html>

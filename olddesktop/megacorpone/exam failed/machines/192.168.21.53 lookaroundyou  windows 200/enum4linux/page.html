@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Enum4linux</title>
+</head><body>root@kali:~/gen/smb# enum4linux -a 192.168.21.53<br/>
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Apr 16 09:57:03 2017<br/>
+<br/>
+&nbsp;========================== <br/>
+| &nbsp; &nbsp;Target Information &nbsp; &nbsp;|<br/>
+&nbsp;========================== <br/>
+Target ........... 192.168.21.53<br/>
+RID Range ........ 500-550,1000-1050<br/>
+Username ......... ''<br/>
+Password ......... ''<br/>
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none<br/>
+<br/>
+<br/>
+&nbsp;===================================================== <br/>
+| &nbsp; &nbsp;Enumerating Workgroup/Domain on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;===================================================== <br/>
+[+] Got domain/workgroup name: THINC.LOCAL<br/>
+<br/>
+&nbsp;============================================= <br/>
+| &nbsp; &nbsp;Nbtstat Information for 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;============================================= <br/>
+Looking up status of 192.168.21.53<br/>
+&#09;LOOKAROUNDYOU &nbsp; &lt;00&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Workstation Service<br/>
+&#09;THINC.LOCAL &nbsp; &nbsp; &lt;00&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Domain/Workgroup Name<br/>
+&#09;LOOKAROUNDYOU &nbsp; &lt;20&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;File Server Service<br/>
+<br/>
+&#09;MAC Address = 00-50-56-89-4F-78<br/>
+<br/>
+&nbsp;====================================== <br/>
+| &nbsp; &nbsp;Session Check on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;====================================== <br/>
+[+] Server 192.168.21.53 allows sessions using username '', password ''<br/>
+<br/>
+&nbsp;============================================ <br/>
+| &nbsp; &nbsp;Getting domain SID for 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;============================================ <br/>
+could not initialise lsa pipe. Error was NT_STATUS_ACCESS_DENIED<br/>
+could not obtain sid from server<br/>
+error: NT_STATUS_ACCESS_DENIED<br/>
+[+] Can't determine if host is part of domain or part of a workgroup<br/>
+<br/>
+&nbsp;======================================= <br/>
+| &nbsp; &nbsp;OS information on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;======================================= <br/>
+[+] Got OS info for 192.168.21.53 from smbclient: Domain=[LOOKAROUNDYOU] OS=[Windows Server 2008 R2 Standard 7600] Server=[Windows Server 2008 R2 Standard 6.1]<br/>
+[E] Can't get OS info with srvinfo: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+&nbsp;============================== <br/>
+| &nbsp; &nbsp;Users on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;============================== <br/>
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+&nbsp;========================================== <br/>
+| &nbsp; &nbsp;Share Enumeration on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;========================================== <br/>
+[E] Can't list shares: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Attempting to map shares on 192.168.21.53<br/>
+<br/>
+&nbsp;===================================================== <br/>
+| &nbsp; &nbsp;Password Policy Information for 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;===================================================== <br/>
+[E] Unexpected error from polenum:<br/>
+<br/>
+[+] Attaching to 192.168.21.53 using a NULL share<br/>
+<br/>
+&#09;[+] Trying protocol 445/SMB...<br/>
+<br/>
+&#09;[!] Protocol failed: SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)<br/>
+<br/>
+&#09;[+] Trying protocol 139/SMB...<br/>
+<br/>
+&#09;[!] Protocol failed: SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)<br/>
+<br/>
+[E] Failed to get password policy with rpcclient<br/>
+<br/>
+<br/>
+&nbsp;=============================== <br/>
+| &nbsp; &nbsp;Groups on 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;=============================== <br/>
+<br/>
+[+] Getting builtin groups:<br/>
+[E] Can't get builtin groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting builtin group memberships:<br/>
+<br/>
+[+] Getting local groups:<br/>
+[E] Can't get local groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting local group memberships:<br/>
+<br/>
+[+] Getting domain groups:<br/>
+[E] Can't get domain groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting domain group memberships:<br/>
+<br/>
+&nbsp;======================================================================== <br/>
+| &nbsp; &nbsp;Users on 192.168.21.53 via RID cycling (RIDS: 500-550,1000-1050) &nbsp; &nbsp;|<br/>
+&nbsp;======================================================================== <br/>
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED. &nbsp;RID cycling not possible.<br/>
+<br/>
+&nbsp;============================================== <br/>
+| &nbsp; &nbsp;Getting printer info for 192.168.21.53 &nbsp; &nbsp;|<br/>
+&nbsp;============================================== <br/>
+could not initialise lsa pipe. Error was NT_STATUS_ACCESS_DENIED<br/>
+could not obtain sid from server<br/>
+error: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+<br/>
+enum4linux complete on Sun Apr 16 09:57:11 2017<br/>
+</body></html>

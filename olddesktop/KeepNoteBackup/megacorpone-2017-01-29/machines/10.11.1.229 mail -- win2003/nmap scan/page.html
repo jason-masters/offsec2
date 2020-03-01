@@ -1,0 +1,35 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>Host script results:<br/>
+| smb-os-discovery: <br/>
+|  OS: Windows Server 2003 3790 Service Pack 1 (Windows Server 2003 5.2)<br/>
+|  OS CPE: cpe:/o:microsoft:windows_server_2003::sp1<br/>
+|  Computer name: mail<br/>
+|  NetBIOS computer name: MAIL<br/>
+|  Workgroup: WORKGROUP<br/>
+|_ System time: 2016-12-24T09:29:05-06:00<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.052s latency).<br/>
+PORT  STATE SERVICE<br/>
+139/tcp open netbios-ssn<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-vuln-ms08-067: <br/>
+<span style="background-color: #ff0000">|  VULNERABLE:</span><br/>
+|  Microsoft Windows system vulnerable to remote code execution (MS08-067)<br/>
+|   State: VULNERABLE<br/>
+|   IDs: CVE:CVE-2008-4250<br/>
+|      The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,<br/>
+|      Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary<br/>
+|      code via a crafted RPC request that triggers the overflow during path canonicalization.<br/>
+|      <br/>
+|   Disclosure date: 2008-10-23<br/>
+|   References:<br/>
+|    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250<br/>
+|_   https://technet.microsoft.com/en-us/library/security/ms08-067.aspx<br/>
+</body></html>

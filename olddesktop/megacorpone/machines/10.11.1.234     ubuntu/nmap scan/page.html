@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen# nmap -sS 10.11.1.234<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-15 16:48 EST<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE<br/>
+22/tcp open &nbsp;ssh<br/>
+80/tcp open &nbsp;http<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 1.16 seconds<br/>
+root@kali:~/gen# <br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script=http-enum 10.11.1.234<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-15 16:51 EST<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.057s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.14 ((Ubuntu))<br/>
+| http-enum: <br/>
+| &nbsp; /wp-login.php: Possible admin folder<br/>
+| &nbsp; /wp-login.php: Wordpress login page.<br/>
+| &nbsp; /readme.html: WordPress version 3.3.1<br/>
+| &nbsp; /icons/: Potentially interesting folder w/ directory listing<br/>
+|_ &nbsp;/index/: Potentially interesting folder<br/>
+|_http-server-header: Apache/2.2.14 (Ubuntu)<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 40.87 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

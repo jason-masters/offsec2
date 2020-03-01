@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.202<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-15 14:39 EDT<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.049s latency).<br/>
+Not shown: 982 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd 5.0<br/>
+|_banner: 220 oracle Microsoft FTP Service (Version 5.0).<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.0<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2000 microsoft-ds<br/>
+1030/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1032/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1033/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1038/tcp open &nbsp;oracle &nbsp; &nbsp; &nbsp; &nbsp;Oracle Database<br/>
+1521/tcp open &nbsp;oracle-tns &nbsp; &nbsp;Oracle TNS Listener 9.2.0.1.0 (for 32-bit Windows)<br/>
+2030/tcp open &nbsp;oracle-mts &nbsp; &nbsp;Oracle MTS Recovery Service<br/>
+2100/tcp open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Oracle Enterprise XML DB ftpd 9.2.0.1.0<br/>
+| banner: 220 oracle FTP Server (Oracle XML DB/Oracle9i Enterprise Editio<br/>
+|_n Release 9.2.0.1.0 - Production) ready.<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Distributed Transaction Coordinator<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+4443/tcp open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+7778/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle XML DB Enterprise Edition httpd 9.2.0.1.0 (Oracle9i Enterprise Edition Release)<br/>
+|_http-server-header: Oracle XML DB/Oracle9i Enterprise Edition Release 9.2.0.1.0 - Production<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+Service Info: Host: oracle; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 130.46 seconds<br/>
+</body></html>

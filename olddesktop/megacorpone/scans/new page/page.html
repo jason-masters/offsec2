@@ -1,0 +1,2350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Page</title>
+</head><body>root@kali:~/gen/nmap# for ips in $(cat active-ips.txt); do nmap -A $ips -oG nmap-a.txt; done<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:45 EST<br/>
+Nmap scan report for 10.11.1.5<br/>
+Host is up (0.073s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds Windows XP microsoft-ds<br/>
+MAC Address: 00:50:56:89:25:59 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=135%CT=1%CU=41427%PV=Y%DS=1%DC=D%G=Y%M=005<br/>
+OS:056%TM=589CFF45%P=i686-pc-linux-gnu)SEQ(SP=8C%GCD=1%ISR=9B%TI=I%II=I%SS=<br/>
+OS:S%TS=0)OPS(O1=M529NW0NNT00NNS%O2=M529NW0NNT00NNS%O3=M529NW0NNT00%O4=M529<br/>
+OS:NW0NNT00NNS%O5=M529NW0NNT00NNS%O6=M529NNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=FA<br/>
+OS:F0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M529NW0NNS%CC=N%Q=<br/>
+OS:)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N<br/>
+OS:%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=38<br/>
+OS:%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -3h47m26s, deviation: 0s, median: -3h47m26s<br/>
+|_nbstat: NetBIOS name: ALICE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:25:59 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows XP (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_xp::-<br/>
+| &nbsp; Computer name: alice<br/>
+| &nbsp; NetBIOS computer name: ALICE<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; Forest name: thinc.local<br/>
+| &nbsp; FQDN: alice.thinc.local<br/>
+|_ &nbsp;System time: 2017-02-09T19:58:00+00:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 72.65 ms 10.11.1.5<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-3h47m26s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 70.43 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:46 EST<br/>
+Nmap scan report for 10.11.1.7<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:24:B2 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: WAP|general purpose<br/>
+Running (JUST GUESSING): Apple embedded (90%), FreeBSD 6.X (85%)<br/>
+OS CPE: cpe:/h:apple:airport_extreme cpe:/o:freebsd:freebsd:6.2<br/>
+Aggressive OS guesses: Apple AirPort Extreme WAP (90%), FreeBSD 6.2-RELEASE (85%), FreeBSD 6.3-RELEASE (85%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 52.33 ms 10.11.1.7<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 19.72 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:46 EST<br/>
+Nmap scan report for 10.11.1.8<br/>
+Host is up (0.074s latency).<br/>
+Not shown: 990 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 2.0.1<br/>
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+|_Can't get directory listing: ERROR<br/>
+22/tcp &nbsp; open &nbsp; ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.9p1 (protocol 1.99)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 89:94:af:2e:5d:c1:da:84:25:11:2c:12:45:c6:70:ac (RSA1)<br/>
+| &nbsp; 1024 c1:c5:d1:83:0f:4d:d8:9e:8f:82:4c:be:53:4b:6e:14 (DSA)<br/>
+|_ &nbsp;1024 bc:e1:e6:dd:ab:5e:fd:d1:21:2e:11:7c:d5:b2:03:52 (RSA)<br/>
+|_sshv1: Server supports SSHv1<br/>
+25/tcp &nbsp; closed smtp<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+| http-robots.txt: 2 disallowed entries <br/>
+|_/internal/ &nbsp;/tmp/ <br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).<br/>
+111/tcp &nbsp;open &nbsp; rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;844/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;847/tcp &nbsp;status<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)<br/>
+443/tcp &nbsp;open &nbsp; ssl/http &nbsp; &nbsp;Apache httpd 2.0.52 ((CentOS))<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+| http-robots.txt: 2 disallowed entries <br/>
+|_/internal/ &nbsp;/tmp/ <br/>
+|_http-server-header: Apache/2.0.52 (CentOS)<br/>
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).<br/>
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--<br/>
+| Not valid before: 2009-09-16T14:03:22<br/>
+|_Not valid after: &nbsp;2010-09-16T14:03:22<br/>
+|_ssl-date: 2017-02-09T19:26:46+00:00; -4h22m27s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_64_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+445/tcp &nbsp;open &nbsp; netbios-ssn Samba smbd 3.0.33-0.17.el4 (workgroup: MYGROUP)<br/>
+631/tcp &nbsp;open &nbsp; ipp &nbsp; &nbsp; &nbsp; &nbsp; CUPS 1.1<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: PUT<br/>
+|_http-server-header: CUPS/1.1<br/>
+|_http-title: 403 Forbidden<br/>
+3306/tcp open &nbsp; mysql?<br/>
+|_mysql-info: ERROR: Script execution failed (use -d to debug)<br/>
+MAC Address: 00:50:56:89:17:A0 (VMware)<br/>
+Aggressive OS guesses: Linux 2.6.9 - 2.6.27 (93%), Linux 2.6.9 (93%), Linux 2.6.11 (92%), Linux 2.6.28 (92%), Cisco SA520 firewall (Linux 2.6) (90%), Linux 2.6.30 (90%), Linux 2.6.32 (90%), Linux 2.6.9 (CentOS 4.4) (90%), Riverbed Steelhead 200 proxy server (90%), Linux 2.6.18 (90%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Unix<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -4h22m28s, deviation: 1s, median: -4h22m28s<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Unix (Samba 3.0.33-0.17.el4)<br/>
+| &nbsp; Computer name: phoenix<br/>
+| &nbsp; NetBIOS computer name: <br/>
+| &nbsp; Domain name: <br/>
+| &nbsp; FQDN: phoenix<br/>
+|_ &nbsp;System time: 2017-02-09T14:26:45-05:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 74.37 ms 10.11.1.8<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-4h22m28s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 174.30 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:49 EST<br/>
+Nmap scan report for 10.11.1.10<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 990 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-title: Under Construction<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Windows Server 2003 3790 Service Pack 2 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1033/tcp open &nbsp;netinfo?<br/>
+1038/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+2522/tcp open &nbsp;windb?<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+7999/tcp open &nbsp;irdmi2?<br/>
+MAC Address: 00:50:56:89:04:25 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=80%CT=1%CU=30253%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0059%P=i686-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=106%TI=I%II=I%SS<br/>
+OS:=S%TS=0)SEQ(SP=100%GCD=1%ISR=106%II=I%TS=0)OPS(O1=M529NW0NNT00NNS%O2=M52<br/>
+OS:9NW0NNT00NNS%O3=M529NW0NNT00%O4=M529NW0NNT00NNS%O5=M529NW0NNT00NNS%O6=M5<br/>
+OS:29NNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%D<br/>
+OS:F=N%T=80%W=FAF0%O=M529NW0NNS%CC=N%Q=)T1(R=Y%DF=N%T=80%S=O%A=S+%F=AS%RD=0<br/>
+OS:%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T<br/>
+OS:6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RU<br/>
+OS:D=G)IE(R=Y%DFI=S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h05m40s, deviation: 0s, median: -8h05m40s<br/>
+|_nbstat: NetBIOS name: MIKE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:04:25 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2003 3790 Service Pack 2 (Windows Server 2003 5.2)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2003::sp2<br/>
+| &nbsp; Computer name: mike<br/>
+| &nbsp; NetBIOS computer name: MIKE<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T07:45:04-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.09 ms 10.11.1.10<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h05m40s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 81.70 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:50 EST<br/>
+Nmap scan report for 10.11.1.13<br/>
+Host is up (0.084s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd<br/>
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+| 01-17-07 &nbsp;06:42PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AdminScripts<br/>
+| 01-17-07 &nbsp;06:43PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ftproot<br/>
+| 01-17-07 &nbsp;06:43PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iissamples<br/>
+| 01-17-07 &nbsp;06:43PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Scripts<br/>
+| 02-08-17 &nbsp;03:02PM &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3370 shell.asp<br/>
+|_02-09-17 &nbsp;02:45PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;wwwroot<br/>
+80/tcp &nbsp; open &nbsp; tcpwrapped<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE DELETE COPY MOVE PROPFIND PROPPATCH SEARCH MKCOL LOCK UNLOCK PUT<br/>
+|_http-server-header: Microsoft-IIS/5.1<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+|_http-webdav-scan: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp closed ms-wbt-server<br/>
+MAC Address: 00:50:56:89:0D:D8 (VMware)<br/>
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU<br/>
+No OS matches for host<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 84.19 ms 10.11.1.13<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 32.00 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:51 EST<br/>
+Nmap scan report for 10.11.1.14<br/>
+Host is up (0.081s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd<br/>
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+| 01-17-07 &nbsp;06:42PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;AdminScripts<br/>
+| 01-17-07 &nbsp;06:43PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ftproot<br/>
+| 01-17-07 &nbsp;06:43PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iissamples<br/>
+| 02-09-17 &nbsp;04:02PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Scripts<br/>
+|_02-09-17 &nbsp;04:01PM &nbsp; &nbsp; &nbsp; &lt;DIR&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;wwwroot<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.1<br/>
+|_http-server-header: Microsoft-IIS/5.1<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+|_http-webdav-scan: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp closed ms-wbt-server<br/>
+MAC Address: 00:50:56:89:7D:3B (VMware)<br/>
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU<br/>
+No OS matches for host<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 80.91 ms 10.11.1.14<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 23.94 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:51 EST<br/>
+Nmap scan report for 10.11.1.22<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp?<br/>
+|_ftp-bounce: no banner<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.1p1 (protocol 1.99)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 4a:e3:f8:07:d5:d6:b1:b5:bf:54:ac:e7:17:36:7e:e8 (RSA1)<br/>
+| &nbsp; 1024 77:67:f2:2c:3d:7c:45:24:fe:5e:0f:de:07:65:b3:57 (DSA)<br/>
+|_ &nbsp;1024 42:b1:48:0b:41:f8:a9:12:cc:9b:c4:ed:26:74:64:2c (RSA)<br/>
+|_sshv1: Server supports SSHv1<br/>
+23/tcp &nbsp; &nbsp;open &nbsp;telnet?<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp?<br/>
+|_smtp-commands: Couldn't establish connection on port 25<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 1.3.23 ((Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: PUT DELETE CONNECT PATCH PROPFIND PROPPATCH MKCOL COPY MOVE LOCK UNLOCK TRACE<br/>
+|_http-server-header: Apache/1.3.23 (Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2<br/>
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux<br/>
+111/tcp &nbsp; open &nbsp;rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/tcp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/udp &nbsp;status<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd (workgroup: MYGROUP)<br/>
+199/tcp &nbsp; open &nbsp;smux &nbsp; &nbsp; &nbsp; &nbsp;Linux SNMP multiplexer<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp;Apache httpd 1.3.23 ((Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: PUT DELETE CONNECT PATCH PROPFIND PROPPATCH MKCOL COPY MOVE LOCK UNLOCK TRACE<br/>
+|_http-server-header: Apache/1.3.23 (Unix) &nbsp;(Red-Hat/Linux) mod_python/2.7.6 Python/1.5.2 mod_ssl/2.8.7 OpenSSL/0.9.6b DAV/1.0.3 PHP/4.1.2 mod_perl/1.26 mod_throttle/3.1.2<br/>
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux<br/>
+| ssl-cert: Subject: commonName=MAILMAN/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB<br/>
+| Not valid before: 2007-01-16T14:44:50<br/>
+|_Not valid after: &nbsp;2008-01-16T14:44:50<br/>
+|_ssl-date: 2017-02-09T15:32:24+00:00; -8h22m10s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_64_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+995/tcp &nbsp; open &nbsp;ssl/pop3 &nbsp; &nbsp;UW Imap pop3d 2001.78rh<br/>
+|_pop3-capabilities: USER TOP UIDL SASL(PLAIN LOGIN) LOGIN-DELAY(180)<br/>
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--<br/>
+| Not valid before: 2007-01-16T06:13:33<br/>
+|_Not valid after: &nbsp;2008-01-16T06:13:33<br/>
+|_ssl-date: 2017-02-09T15:32:24+00:00; -8h22m10s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+32768/tcp open &nbsp;status &nbsp; &nbsp; &nbsp;1 (RPC #100024)<br/>
+MAC Address: 00:50:56:89:0F:E1 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=40204%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0159%P=i686-pc-linux-gnu)SEQ(SP=CE%GCD=1%ISR=CF%TI=Z%II=I%TS=7<br/>
+OS:)SEQ(II=I)OPS(O1=M529ST11NW0%O2=M529ST11NW0%O3=M529NNT11NW0%O4=M529ST11N<br/>
+OS:W0%O5=M529ST11NW0%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A<br/>
+OS:0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW0%CC=N%Q=)ECN(R=N)T1(R=Y%D<br/>
+OS:F=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T1(R=N)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T<br/>
+OS:=FF%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=FF%IPL=164%<br/>
+OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=FF%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: barry.thinc.local; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h22m10s, deviation: 0s, median: -8h22m10s<br/>
+|_nbstat: NetBIOS name: BARRY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.05 ms 10.11.1.22<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h22m10s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 200.03 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:55 EST<br/>
+Nmap scan report for 10.11.1.24<br/>
+Host is up (0.068s latency).<br/>
+Not shown: 992 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.6p1 Debian 5build1 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 f3:6e:87:04:ea:2d:b3:60:ff:42:ad:26:67:17:94:d5 (DSA)<br/>
+|_ &nbsp;2048 bb:03:ce:ed:13:f1:9a:9e:36:03:e2:af:ca:b2:35:04 (RSA)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.4 ((Ubuntu) PHP/5.2.3-1ubuntu6)<br/>
+|_http-server-header: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6<br/>
+|_http-title: CS-Cart. Powerful PHP shopping cart software<br/>
+110/tcp open &nbsp;pop3 &nbsp; &nbsp; &nbsp; &nbsp;Dovecot pop3d<br/>
+|_pop3-capabilities: CAPA RESP-CODES SASL TOP STLS UIDL PIPELINING<br/>
+| ssl-cert: Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX<br/>
+| Not valid before: 2008-04-25T02:02:48<br/>
+|_Not valid after: &nbsp;2008-05-25T02:02:48<br/>
+|_ssl-date: 2017-02-10T01:04:57+00:00; +1h09m07s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_WITH_MD5<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)<br/>
+143/tcp open &nbsp;imap &nbsp; &nbsp; &nbsp; &nbsp;Dovecot imapd<br/>
+|_imap-capabilities: SASL-IR THREAD=REFERENCES LITERAL+ Capability OK IDLE NAMESPACE MULTIAPPEND CHILDREN STARTTLS LOGIN-REFERRALS LOGINDISABLEDA0001 UNSELECT SORT IMAP4rev1 completed<br/>
+| ssl-cert: Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX<br/>
+| Not valid before: 2008-04-25T02:02:48<br/>
+|_Not valid after: &nbsp;2008-05-25T02:02:48<br/>
+|_ssl-date: 2017-02-10T01:04:56+00:00; +1h09m07s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_WITH_MD5<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.0.26a (workgroup: MSHOME)<br/>
+993/tcp open &nbsp;ssl/imap &nbsp; &nbsp;Dovecot imapd<br/>
+| ssl-cert: Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX<br/>
+| Not valid before: 2008-04-25T02:02:48<br/>
+|_Not valid after: &nbsp;2008-05-25T02:02:48<br/>
+|_ssl-date: 2017-02-10T01:04:56+00:00; +1h09m07s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_WITH_MD5<br/>
+995/tcp open &nbsp;ssl/pop3 &nbsp; &nbsp;Dovecot pop3d<br/>
+| ssl-cert: Subject: commonName=ubuntu01/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX<br/>
+| Not valid before: 2008-04-25T02:02:48<br/>
+|_Not valid after: &nbsp;2008-05-25T02:02:48<br/>
+|_ssl-date: 2017-02-10T01:04:54+00:00; +1h09m07s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_WITH_MD5<br/>
+MAC Address: 00:50:56:89:5A:35 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=30806%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0190%P=i686-pc-linux-gnu)SEQ(SP=E9%GCD=1%ISR=F1%TI=Z%II=I%TS=7<br/>
+OS:)OPS(O1=M529ST11NW5%O2=M529ST11NW5%O3=M529NNT11NW5%O4=M529ST11NW5%O5=M52<br/>
+OS:9ST11NW5%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW5%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: 1h09m07s, deviation: 0s, median: 1h09m07s<br/>
+|_nbstat: NetBIOS name: PAYDAY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Unix (Samba 3.0.26a)<br/>
+| &nbsp; Computer name: payday<br/>
+| &nbsp; NetBIOS computer name: <br/>
+| &nbsp; Domain name: <br/>
+| &nbsp; FQDN: payday<br/>
+|_ &nbsp;System time: 2017-02-09T20:04:54-05:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 68.16 ms 10.11.1.24<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;1h09m07s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 55.59 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:56 EST<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-title: Login<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Windows Server 2003 3790 Service Pack 1 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1433/tcp open &nbsp;ms-sql-s &nbsp; &nbsp; &nbsp;Microsoft SQL Server 2000 8.00.766.00; SP3a<br/>
+| ms-sql-ntlm-info: <br/>
+|_ &nbsp;Product_Version: 5.2.3790<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=80%CT=1%CU=31833%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D01AD%P=i686-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10C%II=I%TS=0)SE<br/>
+OS:Q(SP=107%GCD=1%ISR=10C%TS=0)OPS(O1=M529NW0NNT00NNS%O2=M529NW0NNT00NNS%O3<br/>
+OS:=M529NW0NNT00%O4=M529NW0NNT00NNS%O5=M529NW0NNT00NNS%O6=M529NNT00NNS)WIN(<br/>
+OS:W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=N%T=80%W=FAF0<br/>
+OS:%O=M529NW0NNS%CC=N%Q=)T1(R=Y%DF=N%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R<br/>
+OS:=N)T4(R=N)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1<br/>
+OS:(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=<br/>
+OS:S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h22m09s, deviation: 0s, median: -8h22m09s<br/>
+| ms-sql-info: <br/>
+| &nbsp; Windows server name: RALPH<br/>
+| &nbsp; 10.11.1.31\MSSQLSERVER: <br/>
+| &nbsp; &nbsp; Instance name: MSSQLSERVER<br/>
+| &nbsp; &nbsp; Version: <br/>
+| &nbsp; &nbsp; &nbsp; Service pack level: SP3a<br/>
+| &nbsp; &nbsp; &nbsp; Product: Microsoft SQL Server 2000<br/>
+| &nbsp; &nbsp; &nbsp; Post-SP patches applied: false<br/>
+| &nbsp; &nbsp; &nbsp; number: 8.00.766.00<br/>
+| &nbsp; &nbsp; &nbsp; name: Microsoft SQL Server 2000 SP3a<br/>
+| &nbsp; &nbsp; TCP port: 1433<br/>
+| &nbsp; &nbsp; Named pipe: \\10.11.1.31\pipe\sql\query<br/>
+|_ &nbsp; &nbsp;Clustered: false<br/>
+|_nbstat: NetBIOS name: RALPH, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:17:75 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2003 3790 Service Pack 1 (Windows Server 2003 5.2)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2003::sp1<br/>
+| &nbsp; Computer name: ralph<br/>
+| &nbsp; NetBIOS computer name: RALPH<br/>
+| &nbsp; Workgroup: THINC<br/>
+|_ &nbsp;System time: 2017-02-09T09:34:18-06:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 54.43 ms 10.11.1.31<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h22m09s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 28.36 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:56 EST<br/>
+Nmap scan report for 10.11.1.35<br/>
+Host is up (0.059s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE &nbsp;SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp; ssh &nbsp; &nbsp; &nbsp;OpenSSH 4.3 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 ab:a7:86:a8:a0:39:c6:0a:81:0b:f9:ae:6f:4b:51:79 (DSA)<br/>
+|_ &nbsp;2048 8b:a5:11:b8:ca:75:9e:8c:a7:17:2c:a3:c9:90:1e:87 (RSA)<br/>
+443/tcp open &nbsp; ssl/http Apache httpd 2.2.3 ((CentOS))<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).<br/>
+| ssl-cert: Subject: commonName=pain/organizationName=Thinc LTD/stateOrProvinceName=Pain/countryName=US<br/>
+| Not valid before: 2016-01-07T12:46:17<br/>
+|_Not valid after: &nbsp;2017-01-06T12:46:17<br/>
+|_ssl-date: 2017-02-09T16:06:39+00:00; -7h50m13s from scanner time.<br/>
+631/tcp closed ipp<br/>
+MAC Address: 00:50:56:89:6D:A6 (VMware)<br/>
+Device type: firewall|general purpose|proxy server|WAP|PBX|media device|broadband router<br/>
+Running (JUST GUESSING): Linux 2.6.X (93%), Cisco embedded (93%), Riverbed embedded (93%), Ruckus embedded (93%), FreeBSD 6.X (89%), Sony embedded (89%), Zhone embedded (88%)<br/>
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:sa520 cpe:/o:linux:linux_kernel:2.6.28 cpe:/h:riverbed:steelhead_200 cpe:/h:ruckus:7363 cpe:/h:cisco:uc320w cpe:/o:freebsd:freebsd:6.2<br/>
+Aggressive OS guesses: Cisco SA520 firewall (Linux 2.6) (93%), Linux 2.6.28 (93%), Linux 2.6.30 (93%), Linux 2.6.9 (CentOS 4.4) (93%), Linux 2.6.9 - 2.6.27 (93%), Riverbed Steelhead 200 proxy server (93%), Ruckus 7363 WAP (93%), Linux 2.6.9 (91%), Linux 2.6.11 (90%), Linux 2.6.32 (90%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -7h50m13s, deviation: 0s, median: -7h50m13s<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 59.34 ms 10.11.1.35<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-7h50m13s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 25.13 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:56 EST<br/>
+Nmap scan report for 10.11.1.39<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp; ssh &nbsp; &nbsp; OpenSSH 6.6.1 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 2048 5e:c1:7e:d2:f9:20:f9:11:ea:4b:02:68:07:3f:54:f2 (RSA)<br/>
+|_ &nbsp;256 36:ef:27:31:a2:fd:4a:e3:d2:4e:12:58:1f:7a:03:58 (ECDSA)<br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp;nginx 1.6.3<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: nginx/1.6.3<br/>
+|_http-title: Apache HTTP Server Test Page powered by CentOS<br/>
+3306/tcp closed mysql<br/>
+MAC Address: 00:50:56:89:15:0E (VMware)<br/>
+Aggressive OS guesses: Linux 3.10 - 3.12 (93%), Linux 4.0 (88%), Linux 3.11 - 4.1 (88%), Linux 2.6.32 (88%), Linux 2.6.39 (88%), Linux 3.4 (88%), Synology DiskStation Manager 5.1 (88%), WatchGuard Fireware 11.8 (88%), Linux 3.10 (87%), Linux 2.6.35 (87%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.64 ms 10.11.1.39<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 19.39 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:57 EST<br/>
+Nmap scan report for 10.11.1.44<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp; &nbsp;SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp; open &nbsp; &nbsp; ssh &nbsp; &nbsp; &nbsp;OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 65:63:69:c9:8b:96:b1:fb:be:d5:5c:f8:1e:7b:de:8f (DSA)<br/>
+|_ &nbsp;2048 28:99:c0:51:20:9b:31:e1:a4:fb:9a:17:46:52:cf:fc (RSA)<br/>
+8000/tcp filtered http-alt<br/>
+MAC Address: 00:50:56:89:09:4D (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=34721%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D01EC%P=i686-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10D%TI=Z%II=I%TS<br/>
+OS:=8)OPS(O1=M529ST11NW6%O2=M529ST11NW6%O3=M529NNT11NW6%O4=M529ST11NW6%O5=M<br/>
+OS:529ST11NW6%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16<br/>
+OS:A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=<br/>
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%<br/>
+OS:O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPC<br/>
+OS:K=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 54.98 ms 10.11.1.44<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 18.20 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:57 EST<br/>
+Nmap scan report for 10.11.1.49<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 996 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 8.5<br/>
+|_http-generator: Drupal 7 (http://drupal.org)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+| http-robots.txt: 36 disallowed entries (15 shown)<br/>
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ <br/>
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt <br/>
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt <br/>
+|_/LICENSE.txt /MAINTAINERS.txt<br/>
+|_http-server-header: Microsoft-IIS/8.5<br/>
+|_http-title: Welcome to Bethany&amp;#039;s Page | Bethany&amp;#039;s Page<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:0C:B3 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|phone|specialized<br/>
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|8.1|7|Vista|2012 (92%)<br/>
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012<br/>
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 53.75 ms 10.11.1.49<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 105.32 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 18:59 EST<br/>
+Nmap scan report for 10.11.1.50<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 996 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 8.5<br/>
+|_http-generator: Drupal 7 (http://drupal.org)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+| http-robots.txt: 36 disallowed entries (15 shown)<br/>
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ <br/>
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt <br/>
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt <br/>
+|_/LICENSE.txt /MAINTAINERS.txt<br/>
+|_http-server-header: Microsoft-IIS/8.5<br/>
+|_http-title: Welcome to Bethany&amp;#039;s Page | Bethany&amp;#039;s Page<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Microsoft Windows netbios-ssn<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:7D:73 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|phone|specialized<br/>
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|8.1|7|Vista|2012 (92%)<br/>
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012<br/>
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.42 ms 10.11.1.50<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 112.91 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:01 EST<br/>
+Nmap scan report for 10.11.1.71<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 2048 1a:f6:a7:0d:ed:c2:73:a1:6f:a3:08:68:28:b5:3b:bb (RSA)<br/>
+|_ &nbsp;256 e6:43:89:59:f9:85:d8:e2:bb:e3:d7:ed:28:5c:c5:65 (ECDSA)<br/>
+80/tcp open &nbsp;http?<br/>
+MAC Address: 00:50:56:89:26:A8 (VMware)<br/>
+Device type: firewall<br/>
+Running (JUST GUESSING): Fortinet embedded (87%)<br/>
+OS CPE: cpe:/h:fortinet:fortigate_100d<br/>
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 55.49 ms 10.11.1.71<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 101.36 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:02 EST<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.060s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.8p1 Debian 7ubuntu1 (Ubuntu Linux; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 d3:2e:10:0d:48:90:ce:9a:33:fb:66:3f:a0:a6:94:48 (DSA)<br/>
+| &nbsp; 2048 ef:0a:3b:8e:3f:92:a4:5e:f0:ab:e7:7d:75:f0:de:0e (RSA)<br/>
+|_ &nbsp;256 15:3a:65:3b:97:ed:e0:fc:85:bc:4b:53:48:22:61:b1 (ECDSA)<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp;JAMES smtpd 2.3.2<br/>
+|_smtp-commands: beta Hello nmap.scanme.org (10.11.0.175 [10.11.0.175]), <br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.20 ((Ubuntu))<br/>
+|_http-server-header: Apache/2.2.20 (Ubuntu)<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+110/tcp &nbsp;open &nbsp;pop3 &nbsp; &nbsp;JAMES pop3d 2.3.2<br/>
+111/tcp &nbsp;open &nbsp;rpcbind 2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;33139/tcp &nbsp;mountd<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;59705/udp &nbsp;mountd<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;49912/udp &nbsp;nlockmgr<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;57680/tcp &nbsp;nlockmgr<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;51962/udp &nbsp;status<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;52832/tcp &nbsp;status<br/>
+| &nbsp; 100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs_acl<br/>
+|_ &nbsp;100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs_acl<br/>
+119/tcp &nbsp;open &nbsp;nntp &nbsp; &nbsp;JAMES nntpd (posting ok)<br/>
+2049/tcp open &nbsp;nfs_acl 2-3 (RPC #100227)<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=40577%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0351%P=i686-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10B%TI=Z%II=I%TS<br/>
+OS:=8)OPS(O1=M529ST11NW4%O2=M529ST11NW4%O3=M529NNT11NW4%O4=M529ST11NW4%O5=M<br/>
+OS:529ST11NW4%O6=M529ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=38<br/>
+OS:90)ECN(R=Y%DF=Y%T=40%W=3908%O=M529NNSNW4%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=<br/>
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%<br/>
+OS:O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPC<br/>
+OS:K=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: beta; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 60.10 ms 10.11.1.72<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 37.43 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:03 EST<br/>
+Nmap scan report for 10.11.1.73<br/>
+Host is up (0.057s latency).<br/>
+Not shown: 981 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+135/tcp &nbsp; open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp; netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp; microsoft-ds &nbsp;Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)<br/>
+554/tcp &nbsp; open &nbsp; rtsp?<br/>
+1100/tcp &nbsp;open &nbsp; java-rmi &nbsp; &nbsp; &nbsp;Java RMI Registry<br/>
+| rmi-dumpregistry: <br/>
+| &nbsp; creamtec/ajaxswing/JVMFactory<br/>
+| &nbsp; &nbsp; com.creamtec.ajaxswing.core.JVMFactory_Stub<br/>
+| &nbsp; &nbsp; @10.11.1.73:49157<br/>
+| &nbsp; &nbsp; extends<br/>
+| &nbsp; &nbsp; &nbsp; java.rmi.server.RemoteStub<br/>
+| &nbsp; &nbsp; &nbsp; extends<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;java.rmi.server.RemoteObject<br/>
+2869/tcp &nbsp;open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+3306/tcp &nbsp;open &nbsp; mysql?<br/>
+|_mysql-info: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp &nbsp;closed ms-wbt-server<br/>
+5357/tcp &nbsp;open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-title: Service Unavailable<br/>
+5800/tcp &nbsp;open &nbsp; vnc-http &nbsp; &nbsp; &nbsp;TightVNC (user: gamma; VNC TCP port: 5900)<br/>
+|_http-title: TightVNC desktop [gamma]<br/>
+5900/tcp &nbsp;open &nbsp; vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; VNC (protocol 3.8)<br/>
+| vnc-info: <br/>
+| &nbsp; Protocol version: 3.8<br/>
+| &nbsp; Security types: <br/>
+| &nbsp; &nbsp; VNC Authentication (2)<br/>
+| &nbsp; &nbsp; Tight (16)<br/>
+| &nbsp; Tight auth subtypes: <br/>
+|_ &nbsp; &nbsp;STDV VNCAUTH_ (2)<br/>
+8080/tcp &nbsp;open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.4.9 ((Win32) PHP/5.5.12)<br/>
+|_http-open-proxy: Proxy might be redirecting requests<br/>
+| http-robots.txt: 1 disallowed entry <br/>
+|_/testmysql.php<br/>
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+10243/tcp open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-title: Not Found<br/>
+49152/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp; unknown<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+Device type: general purpose|phone|specialized<br/>
+Running (JUST GUESSING): Microsoft Windows 2008|7|Vista|2012|8.1|Phone (93%)<br/>
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_8.1:r1 cpe:/o:microsoft:windows<br/>
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 (93%), Microsoft Windows 7 (93%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (93%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (93%), Microsoft Windows Vista SP2 (93%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (93%), Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (92%), Microsoft Windows 7 Professional or Windows 8 (92%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (92%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -5h53m08s, deviation: 0s, median: -5h53m08s<br/>
+|_nbstat: NetBIOS name: GAMMA, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:61:7d (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::sp1:professional<br/>
+| &nbsp; Computer name: gamma<br/>
+| &nbsp; NetBIOS computer name: GAMMA<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T10:12:56-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 57.16 ms 10.11.1.73<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-5h53m08s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 220.66 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:07 EST<br/>
+Nmap scan report for 10.11.1.115<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 1.1.3<br/>
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+|_drwxr-xr-x &nbsp; &nbsp;2 0 &nbsp; &nbsp; &nbsp; &nbsp;0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4096 Feb 28 &nbsp;2003 pub<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 3.5p1 (protocol 1.99)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 36:70:a4:9f:32:47:ac:57:3f:ef:a1:ec:0b:ba:44:1b (RSA1)<br/>
+| &nbsp; 1024 64:79:7d:c6:a2:63:32:54:f0:d9:2b:f3:5d:c7:d2:69 (DSA)<br/>
+|_ &nbsp;1024 48:fb:39:3d:30:82:50:de:66:69:c5:ca:45:62:c0:dc (RSA)<br/>
+|_sshv1: Server supports SSHv1<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp?<br/>
+|_smtp-commands: Couldn't establish connection on port 25<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.0.40 ((Red Hat Linux))<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)<br/>
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux<br/>
+111/tcp &nbsp; open &nbsp;rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/tcp &nbsp;status<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32768/udp &nbsp;status<br/>
+|_ &nbsp;391002 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;32769/tcp &nbsp;sgi_fam<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd (workgroup: uo5lMYGROUP)<br/>
+143/tcp &nbsp; open &nbsp;imap &nbsp; &nbsp; &nbsp; &nbsp;UW imapd 2001.315rh<br/>
+|_imap-capabilities: LOGIN-REFERRALS STARTTLS MULTIAPPEND AUTH=LOGINA0001 NAMESPACE SORT IMAP4REV1 MAILBOX-REFERRALS THREAD=ORDEREDSUBJECT THREAD=REFERENCES CAPABILITY SCAN IDLE OK completed<br/>
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--<br/>
+| Not valid before: 2007-01-16T06:07:45<br/>
+|_Not valid after: &nbsp;2008-01-16T06:07:45<br/>
+|_ssl-date: 2017-02-09T15:34:06+00:00; -8h35m49s from scanner time.<br/>
+199/tcp &nbsp; open &nbsp;smux &nbsp; &nbsp; &nbsp; &nbsp;Linux SNMP multiplexer<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp;Apache httpd 2.0.40 ((Red Hat Linux))<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.0.40 (Red Hat Linux)<br/>
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux<br/>
+| ssl-cert: Subject: commonName=redhat/organizationName=ACME LOCAL LTD/stateOrProvinceName=Berkshire/countryName=GB<br/>
+| Not valid before: 2007-01-16T14:54:43<br/>
+|_Not valid after: &nbsp;2008-01-16T14:54:43<br/>
+|_ssl-date: 2017-02-09T15:34:06+00:00; -8h35m50s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_64_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC2_128_CBC_WITH_MD5<br/>
+3306/tcp &nbsp;open &nbsp;mysql &nbsp; &nbsp; &nbsp; MySQL (unauthorized)<br/>
+32768/tcp open &nbsp;status &nbsp; &nbsp; &nbsp;1 (RPC #100024)<br/>
+MAC Address: 00:50:56:89:0B:99 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=40431%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D04F3%P=i686-pc-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CF%TI=Z%II=I%TS=7<br/>
+OS:)OPS(O1=M529ST11NW0%O2=M529ST11NW0%O3=M529NNT11NW0%O4=M529ST11NW0%O5=M52<br/>
+OS:9ST11NW0%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: tophat.acme.local; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h35m50s, deviation: 1s, median: -8h35m50s<br/>
+|_nbstat: NetBIOS name: TOPHAT, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.03 ms 10.11.1.115<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h35m50s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 197.06 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:10 EST<br/>
+Nmap scan report for 10.11.1.116<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 994 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp?<br/>
+|_ftp-bounce: no banner<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp;OpenSSH 5.8p2_hpn13v11 (FreeBSD 20110503; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 75:e8:80:6f:6c:2f:d2:51:1a:d6:c9:9e:e4:a2:4c:2f (DSA)<br/>
+| &nbsp; 2048 28:43:26:62:1d:07:f9:e3:9f:0b:1a:94:98:1a:74:45 (RSA)<br/>
+|_ &nbsp;256 50:2f:db:dd:1a:8e:22:23:f8:dc:7b:65:c9:fc:8e:df (ECDSA)<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.4.6 ((FreeBSD) PHP/5.4.23)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.4.6 (FreeBSD) PHP/5.4.23<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+110/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+143/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+3306/tcp open &nbsp;mysql &nbsp; &nbsp; &nbsp;MySQL (unauthorized)<br/>
+MAC Address: 00:50:56:89:37:D7 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=40188%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D05A3%P=i686-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=108%TI=I%II=I%SS<br/>
+OS:=S%TS=21)SEQ(SP=F8%GCD=1%ISR=FE%TI=I%II=I%TS=21)SEQ(SP=107%GCD=1%ISR=10B<br/>
+OS:%II=I%TS=21)OPS(O1=M529NW6ST11%O2=M529NW6ST11%O3=M280NW6NNT11%O4=M529NW6<br/>
+OS:ST11%O5=M218NW6ST11%O6=M109ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=F<br/>
+OS:FFF%W6=FFFF)ECN(R=Y%DF=Y%T=40%W=FFFF%O=M529NW6SLL%CC=N%Q=)T1(R=Y%DF=Y%T=<br/>
+OS:40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A<br/>
+OS:=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RI<br/>
+OS:D=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: FreeBSD; CPE: cpe:/o:freebsd:freebsd<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.04 ms 10.11.1.116<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 176.69 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:13 EST<br/>
+Nmap scan report for 10.11.1.125<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+21/tcp open &nbsp;ftp &nbsp; &nbsp; Acritum Femitter Server ftpd<br/>
+|_ftp-anon: ERROR: Script execution failed (use -d to debug)<br/>
+|_ftp-bounce: bounce working!<br/>
+MAC Address: 00:50:56:89:7C:D9 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: WAP|general purpose|media device<br/>
+Running (JUST GUESSING): Apple embedded (90%), Microsoft Windows XP|2003|2000 (89%), FreeBSD 6.X (86%), RIM Tablet OS 2.X (85%)<br/>
+OS CPE: cpe:/h:apple:airport_extreme cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_server_2003::- cpe:/o:freebsd:freebsd:6.2 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:rim:tablet_os:2<br/>
+Aggressive OS guesses: Apple AirPort Extreme WAP (90%), Microsoft Windows Server 2003 SP0 or Windows XP SP2 (89%), Microsoft Windows XP SP2 (89%), Microsoft Windows XP SP3 (89%), Microsoft Windows XP SP3 or Small Business Server 2003 (88%), Microsoft Windows XP Home SP1 (French) (87%), Microsoft Windows XP Professional SP2 (French) (87%), FreeBSD 6.2-RELEASE (86%), Microsoft Windows 2000 SP4 (86%), Microsoft Windows Server 2003 SP2 (86%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 53.16 ms 10.11.1.125<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 11.67 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:13 EST<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft ftpd 5.0<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ESMTP 5.0.2195.6713<br/>
+| smtp-commands: dj.acme.local Hello [10.11.0.175], AUTH GSSAPI NTLM LOGIN, AUTH=LOGIN, TURN, ATRN, SIZE 2097152, ETRN, PIPELINING, DSN, ENHANCEDSTATUSCODES, 8bitmime, BINARYMIME, CHUNKING, VRFY, OK, <br/>
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH TURN ATRN ETRN BDAT VRFY <br/>
+| smtp-ntlm-info: <br/>
+| &nbsp; Target_Name: DJ<br/>
+| &nbsp; NetBIOS_Domain_Name: DJ<br/>
+| &nbsp; NetBIOS_Computer_Name: DJ<br/>
+| &nbsp; DNS_Domain_Name: dj.acme.local<br/>
+| &nbsp; DNS_Computer_Name: dj.acme.local<br/>
+|_ &nbsp;Product_Version: 5.0.2195<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft IIS httpd 5.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+|_http-title: Login<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds Windows 2000 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1026/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1029/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Distributed Transaction Coordinator<br/>
+5800/tcp open &nbsp;vnc-http &nbsp; &nbsp; TightVNC<br/>
+|_http-title: TightVNC desktop [dj]<br/>
+5900/tcp open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+| vnc-info: <br/>
+| &nbsp; Protocol version: 3.8<br/>
+| &nbsp; Security types: <br/>
+| &nbsp; &nbsp; VNC Authentication (2)<br/>
+| &nbsp; &nbsp; Tight (16)<br/>
+| &nbsp; Tight auth subtypes: <br/>
+|_ &nbsp; &nbsp;STDV VNCAUTH_ (2)<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=41189%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D05F9%P=i686-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=109%TI=I%II=I%SS<br/>
+OS:=S%TS=0)OPS(O1=M529NW0NNT00NNS%O2=M529NW0NNT00NNS%O3=M529NW0NNT00%O4=M52<br/>
+OS:9NW0NNT00NNS%O5=M529NW0NNT00NNS%O6=M529NNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=F<br/>
+OS:AF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M529NW0NNS%CC=N%Q<br/>
+OS:=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=<br/>
+OS:N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=3<br/>
+OS:8%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: dj.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: 1h13m14s, deviation: 0s, median: 1h13m14s<br/>
+| ms-sql-info: <br/>
+| &nbsp; Windows server name: DJ<br/>
+| &nbsp; 10.11.1.128\MSSQLSERVER: <br/>
+| &nbsp; &nbsp; Instance name: MSSQLSERVER<br/>
+| &nbsp; &nbsp; Version: <br/>
+| &nbsp; &nbsp; &nbsp; number: 8.00.194.00<br/>
+| &nbsp; &nbsp; &nbsp; Post-SP patches applied: false<br/>
+| &nbsp; &nbsp; &nbsp; Service pack level: RTM<br/>
+| &nbsp; &nbsp; &nbsp; Product: Microsoft SQL Server 2000<br/>
+| &nbsp; &nbsp; &nbsp; name: Microsoft SQL Server 2000 RTM<br/>
+| &nbsp; &nbsp; TCP port: 27900<br/>
+| &nbsp; &nbsp; Named pipe: \\10.11.1.128\pipe\sql\query<br/>
+|_ &nbsp; &nbsp;Clustered: false<br/>
+|_nbstat: NetBIOS name: DJ, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:45:48 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: dj<br/>
+| &nbsp; NetBIOS computer name: DJ<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-10T03:27:59+02:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.38 ms 10.11.1.128<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;1h13m14s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 74.18 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:14 EST<br/>
+Nmap scan report for 10.11.1.133<br/>
+Host is up (0.084s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE &nbsp; &nbsp;SERVICE VERSION<br/>
+22/tcp filtered ssh<br/>
+80/tcp open &nbsp; &nbsp; http &nbsp; &nbsp;Microsoft-IIS &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+|_http-server-header: Microsoft-IIS &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port80-TCP:V=7.25BETA2%I=7%D=2/9%Time=589D0604%P=i686-pc-linux-gnu%r(Ge<br/>
+SF:tRequest,333,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2009\x20Feb\x202<br/>
+SF:017\x2016:03:10\x20GMT\r\nServer:\x20Microsoft-IIS\x20\x20\x20\x20\x20\<br/>
+SF:x20\x20\x20\x20\r\nContent-Type:\x20text/html\r\nCache-control:\x20priv<br/>
+SF:ate\r\nVary:\x20Accept-Encoding\r\nContent-Length:\x20619\r\nConnection<br/>
+SF::\x20close\r\n\r\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;Let's\x20play\x20with\x20the\x<br/>
+SF:20offsec\x20team&lt;/title&gt;\n&lt;/head&gt;\n&lt;body\x20style=\"color:\x20#FFFFFF;\<br/>
+SF:x20background-color:\x20#000000;font-family:\x20verdana;\"&gt;\n&lt;center&gt;\n<br/>
+SF:&lt;div\x20style=\"width:600px;height:399px;background-image:url\(offsec-t<br/>
+SF:eam\.jpg\);\"&gt;\n&lt;form\x20method=\"post\"\x20action=\"login\.asp\"&gt;\n&lt;ta<br/>
+SF:ble\x20style=\"padding-top:170px;\"&gt;\n&lt;tr&gt;\n&lt;td&gt;Username:\x20&lt;/td&gt;&lt;td&gt;&lt;<br/>
+SF:input\x20type=\"text\"\x20name=\"username\"\x20value=\"\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\<br/>
+SF:n&lt;tr&gt;\n&lt;td&gt;Password:\x20&lt;/td&gt;&lt;td&gt;&lt;input\x20type=\"password\"\x20name=\"<br/>
+SF:password\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td\x20colspan=\"2\"\x20align=\"right\"&gt;<br/>
+SF:&lt;input\x20type=\"submit\"\x20name=\"submit\"\x20value=\"Enter\"&gt;&lt;/td&gt;\n<br/>
+SF:&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/form&gt;\n&lt;/div&gt;\n&lt;/center&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n")%r(HTT<br/>
+SF:POptions,333,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2009\x20Feb\x202<br/>
+SF:017\x2016:03:10\x20GMT\r\nServer:\x20Microsoft-IIS\x20\x20\x20\x20\x20\<br/>
+SF:x20\x20\x20\x20\r\nContent-Type:\x20text/html\r\nCache-control:\x20priv<br/>
+SF:ate\r\nVary:\x20Accept-Encoding\r\nContent-Length:\x20619\r\nConnection<br/>
+SF::\x20close\r\n\r\n&lt;html&gt;\n&lt;head&gt;\n&lt;title&gt;Let's\x20play\x20with\x20the\x<br/>
+SF:20offsec\x20team&lt;/title&gt;\n&lt;/head&gt;\n&lt;body\x20style=\"color:\x20#FFFFFF;\<br/>
+SF:x20background-color:\x20#000000;font-family:\x20verdana;\"&gt;\n&lt;center&gt;\n<br/>
+SF:&lt;div\x20style=\"width:600px;height:399px;background-image:url\(offsec-t<br/>
+SF:eam\.jpg\);\"&gt;\n&lt;form\x20method=\"post\"\x20action=\"login\.asp\"&gt;\n&lt;ta<br/>
+SF:ble\x20style=\"padding-top:170px;\"&gt;\n&lt;tr&gt;\n&lt;td&gt;Username:\x20&lt;/td&gt;&lt;td&gt;&lt;<br/>
+SF:input\x20type=\"text\"\x20name=\"username\"\x20value=\"\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\<br/>
+SF:n&lt;tr&gt;\n&lt;td&gt;Password:\x20&lt;/td&gt;&lt;td&gt;&lt;input\x20type=\"password\"\x20name=\"<br/>
+SF:password\"&gt;&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td\x20colspan=\"2\"\x20align=\"right\"&gt;<br/>
+SF:&lt;input\x20type=\"submit\"\x20name=\"submit\"\x20value=\"Enter\"&gt;&lt;/td&gt;\n<br/>
+SF:&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/form&gt;\n&lt;/div&gt;\n&lt;/center&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n");<br/>
+MAC Address: 00:50:56:89:45:BD (VMware)<br/>
+Device type: firewall<br/>
+Running (JUST GUESSING): Fortinet embedded (87%)<br/>
+OS CPE: cpe:/h:fortinet:fortigate_100d<br/>
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 83.96 ms 10.11.1.133<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 92.13 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:16 EST<br/>
+Nmap scan report for 10.11.1.136<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.3p2 Debian 9 (protocol 2.0)<br/>
+|_auth-owners: root<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 88:23:98:0d:9d:8a:20:59:35:b8:14:12:14:d5:d0:44 (DSA)<br/>
+|_ &nbsp;2048 6b:5d:04:71:76:78:56:96:56:92:a8:02:30:73:ee:fa (RSA)<br/>
+113/tcp open &nbsp;ident<br/>
+|_auth-owners: identd<br/>
+139/tcp open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: LOCAL)<br/>
+|_auth-owners: root<br/>
+445/tcp open &nbsp;netbios-ssn Samba smbd 3.0.24 (workgroup: LOCAL)<br/>
+|_auth-owners: root<br/>
+MAC Address: 00:50:56:89:54:12 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=39129%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0671%P=i686-pc-linux-gnu)SEQ(SP=C0%GCD=1%ISR=CF%TI=Z%II=I%TS=8<br/>
+OS:)OPS(O1=M529ST11NW6%O2=M529ST11NW6%O3=M529NNT11NW6%O4=M529ST11NW6%O5=M52<br/>
+OS:9ST11NW6%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW6%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: 7h43m52s, deviation: 0s, median: 7h43m52s<br/>
+|_nbstat: NetBIOS name: SUFFERANCE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Unix (Samba 3.0.24)<br/>
+| &nbsp; NetBIOS computer name: <br/>
+| &nbsp; Workgroup: THINC.LOCAL<br/>
+|_ &nbsp;System time: 2017-02-10T03:00:40-05:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: share (dangerous)<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.39 ms 10.11.1.136<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;7h43m52s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 27.27 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:16 EST<br/>
+Nmap scan report for 10.11.1.141<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE VERSION<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; OpenSSH 4.0 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 fe:cd:bb:f6:36:d4:59:62:92:b4:10:e4:75:04:43:54 (DSA)<br/>
+|_ &nbsp;1024 9a:99:25:75:ac:04:e5:f9:f7:21:c6:f5:88:4f:12:6a (RSA)<br/>
+111/tcp &nbsp; open &nbsp;rpcbind 2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+|_ &nbsp;100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+10000/tcp open &nbsp;http &nbsp; &nbsp;MiniServ 0.01 (Webmin httpd)<br/>
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).<br/>
+MAC Address: 00:50:56:89:6F:1B (VMware)<br/>
+Device type: firewall|general purpose|proxy server|WAP|PBX|media device|broadband router<br/>
+Running (JUST GUESSING): Linux 2.6.X (93%), Cisco embedded (93%), Riverbed embedded (93%), Ruckus embedded (93%), FreeBSD 6.X (89%), Sony embedded (89%), Zhone embedded (88%)<br/>
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:sa520 cpe:/o:linux:linux_kernel:2.6.9 cpe:/h:riverbed:steelhead_200 cpe:/h:ruckus:7363 cpe:/h:cisco:uc320w cpe:/o:freebsd:freebsd:6.2<br/>
+Aggressive OS guesses: Cisco SA520 firewall (Linux 2.6) (93%), Linux 2.6.9 (CentOS 4.4) (93%), Linux 2.6.9 - 2.6.27 (93%), Riverbed Steelhead 200 proxy server (93%), Ruckus 7363 WAP (93%), Linux 2.6.9 (93%), Linux 2.6.28 (92%), Linux 2.6.30 (92%), Linux 2.6.11 (90%), Linux 2.6.32 (90%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.48 ms 10.11.1.141<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 42.42 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:17 EST<br/>
+Nmap scan report for 10.11.1.145<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 995 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| ssl-cert: Subject: commonName=HELPDESK<br/>
+| Not valid before: 2017-02-07T12:11:56<br/>
+|_Not valid after: &nbsp;2017-08-09T12:11:56<br/>
+|_ssl-date: 2017-02-09T16:52:26+00:00; -7h25m29s from scanner time.<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache Tomcat/Coyote JSP engine 1.1<br/>
+|_http-server-header: Apache-Coyote/1.1<br/>
+|_http-title: ManageEngine ServiceDesk Plus<br/>
+MAC Address: 00:50:56:89:7E:40 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|phone|specialized<br/>
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|8.1|7|Vista|2012 (92%)<br/>
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012<br/>
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: HELPDESK; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -7h25m29s, deviation: 0s, median: -7h25m29s<br/>
+|_nbstat: NetBIOS name: HELPDESK, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:7e:40 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2008::sp1<br/>
+| &nbsp; Computer name: HELPDESK<br/>
+| &nbsp; NetBIOS computer name: HELPDESK<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T08:52:25-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 52.18 ms 10.11.1.145<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-7h25m29s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 61.87 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:18 EST<br/>
+Nmap scan report for 10.11.1.146<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+21/tcp open &nbsp;ftp &nbsp; &nbsp; ProFTPD 1.3.3a<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.5p1 Debian 6 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 bb:1e:db:11:2a:c7:90:96:e8:0f:f1:ce:aa:14:6a:c1 (DSA)<br/>
+|_ &nbsp;2048 67:62:39:ab:ef:7b:2d:e2:70:18:fd:7d:3d:65:bf:c7 (RSA)<br/>
+MAC Address: 00:50:56:89:37:10 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=36062%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D06E9%P=i686-pc-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CB%TI=Z%II=I%TS=8<br/>
+OS:)OPS(O1=M529ST11NW5%O2=M529ST11NW5%O3=M529NNT11NW5%O4=M529ST11NW5%O5=M52<br/>
+OS:9ST11NW5%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW5%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.33 ms 10.11.1.146<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 15.90 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:18 EST<br/>
+Nmap scan report for 10.11.1.202<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 982 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ftpd 5.0<br/>
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 5.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+|_http-title: Under Construction<br/>
+|_http-webdav-scan: ERROR: Script execution failed (use -d to debug)<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Windows 2000 microsoft-ds<br/>
+1030/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1032/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1033/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1038/tcp open &nbsp;oracle &nbsp; &nbsp; &nbsp; &nbsp;Oracle Database<br/>
+1521/tcp open &nbsp;oracle-tns &nbsp; &nbsp;Oracle TNS Listener 9.2.0.1.0 (for 32-bit Windows)<br/>
+2030/tcp open &nbsp;oracle-mts &nbsp; &nbsp;Oracle MTS Recovery Service<br/>
+2100/tcp open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Oracle Enterprise XML DB ftpd 9.2.0.1.0<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Distributed Transaction Coordinator<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+4443/tcp open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_hadoop-datanode-info: <br/>
+|_hadoop-jobtracker-info: <br/>
+|_hadoop-tasktracker-info: <br/>
+|_hbase-master-info: <br/>
+|_http-generator: Mozilla/4.72 [en] (WinNT; U) [Netscape]<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+|_http-title: Oracle HTTP Server Index<br/>
+| ssl-cert: Subject: commonName=NOT SECURE!!!/organizationName=ORACLE DEMO CERTIFICATE/stateOrProvinceName=oregon/countryName=us<br/>
+| Not valid before: 2000-06-27T23:32:42<br/>
+|_Not valid after: &nbsp;2027-11-13T23:32:42<br/>
+|_ssl-date: 2017-02-09T16:46:20+00:00; -7h34m34s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_RC4_64_WITH_MD5<br/>
+7778/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle HTTP Server Powered by Apache 1.3.22 (mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25)<br/>
+|_hadoop-datanode-info: <br/>
+|_hadoop-jobtracker-info: <br/>
+|_hadoop-tasktracker-info: <br/>
+|_hbase-master-info: <br/>
+|_http-generator: Mozilla/4.72 [en] (WinNT; U) [Netscape]<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Oracle HTTP Server Powered by Apache/1.3.22 (Win32) mod_plsql/3.0.9.8.3b mod_ssl/2.8.5 OpenSSL/0.9.6b mod_fastcgi/2.2.12 mod_oprocmgr/1.0 mod_perl/1.25<br/>
+|_http-title: Oracle HTTP Server Index<br/>
+8080/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Oracle XML DB Enterprise Edition httpd 9.2.0.1.0 (Oracle9i Enterprise Edition Release)<br/>
+| http-auth: <br/>
+| HTTP/1.1 401 Unauthorized<br/>
+|_ &nbsp;Basic realm=XDB<br/>
+|_http-server-header: Oracle XML DB/Oracle9i Enterprise Edition Release 9.2.0.1.0 - Production<br/>
+|_http-title: 401 Unauthorized<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=40211%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D076C%P=i686-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=10C%II=I%TS=0)SE<br/>
+OS:Q(SP=104%GCD=1%ISR=10C%TI=I%II=I%SS=S%TS=0)SEQ(SP=103%GCD=1%ISR=10C%TI=I<br/>
+OS:%II=I%TS=0)OPS(O1=M529NW0NNT00NNS%O2=M529NW0NNT00NNS%O3=M529NW0NNT00%O4=<br/>
+OS:M529NW0NNT00NNS%O5=M529NW0NNT00NNS%O6=M529NNT00NNS)WIN(W1=FAF0%W2=FAF0%W<br/>
+OS:3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M529NW0NNS%CC=<br/>
+OS:N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%<br/>
+OS:DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IP<br/>
+OS:L=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: oracle; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -7h34m34s, deviation: 0s, median: -7h34m34s<br/>
+|_nbstat: NetBIOS name: ORACLE, NetBIOS user: TEST, NetBIOS MAC: 00:50:56:89:69:ce (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: oracle<br/>
+| &nbsp; NetBIOS computer name: ORACLE<br/>
+| &nbsp; Domain name: acme.local<br/>
+| &nbsp; FQDN: oracle.acme.local<br/>
+|_ &nbsp;System time: 2017-02-09T18:46:18+02:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 50.99 ms 10.11.1.202<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-7h34m34s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 130.46 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:21 EST<br/>
+Nmap scan report for 10.11.1.209<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; SunSSH 1.1.5 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 b0:d1:14:4f:d2:43:20:e4:90:f7:ca:e3:8a:36:39:86 (DSA)<br/>
+|_ &nbsp;1024 dd:36:f6:09:23:4c:c4:c3:44:d6:6e:2f:6a:ff:b3:12 (RSA)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp;Apache httpd 1.3.41 ((Unix) mod_perl/1.31)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/1.3.41 (Unix) mod_perl/1.31<br/>
+|_http-title: Test Page for the SSL/TLS-aware Apache Installation on Web Site<br/>
+111/tcp open &nbsp;rpcbind 2-4 (RPC #100000)<br/>
+MAC Address: 00:50:56:89:32:B3 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=42081%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D07A0%P=i686-pc-linux-gnu)SEQ(SP=9A%GCD=1%ISR=A4%TI=I%II=I%SS=S<br/>
+OS:%TS=7)OPS(O1=NNT11M529NW0NNS%O2=NNT11M529NW0NNS%O3=NNT11M529NW0%O4=NNT11<br/>
+OS:M529NW0NNS%O5=NNT11M529NW0NNS%O6=NNT11M529NNS)WIN(W1=C24E%W2=C24E%W3=C1C<br/>
+OS:C%W4=C068%W5=C068%W6=C0B7)ECN(R=Y%DF=Y%T=3C%W=C416%O=M529NW0NNS%CC=Y%Q=)<br/>
+OS:T1(R=Y%DF=Y%T=3C%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%<br/>
+OS:T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=Y%T=FF%IPL=70%<br/>
+OS:UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=Y%T=FF%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.34 ms 10.11.1.209<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 51.76 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:21 EST<br/>
+Nmap scan report for 10.11.1.217<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 989 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp;OpenSSH 4.3 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 1a:f6:e5:4c:f5:65:5c:a3:79:ce:e1:30:f9:5a:9c:af (DSA)<br/>
+|_ &nbsp;2048 b1:9e:c8:ea:eb:4c:fc:55:cb:1e:4d:4c:40:6e:80:f2 (RSA)<br/>
+25/tcp &nbsp; open &nbsp;smtp?<br/>
+|_smtp-commands: hotline.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, <br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.2.3<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+|_http-title: Did not follow redirect to https://10.11.1.217/<br/>
+110/tcp &nbsp;open &nbsp;pop3?<br/>
+111/tcp &nbsp;open &nbsp;rpcbind &nbsp; &nbsp;2 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;884/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;887/tcp &nbsp;status<br/>
+143/tcp &nbsp;open &nbsp;imap?<br/>
+443/tcp &nbsp;open &nbsp;ssl/http &nbsp; Apache httpd 2.2.3 ((CentOS))<br/>
+| http-robots.txt: 1 disallowed entry <br/>
+|_/<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+|_http-title: Elastix - Login page<br/>
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--<br/>
+| Not valid before: 2012-03-23T19:29:13<br/>
+|_Not valid after: &nbsp;2013-03-23T19:29:13<br/>
+|_ssl-date: 2017-02-09T18:31:33+00:00; -5h53m05s from scanner time.<br/>
+993/tcp &nbsp;open &nbsp;imaps?<br/>
+995/tcp &nbsp;open &nbsp;pop3s?<br/>
+3306/tcp open &nbsp;mysql?<br/>
+|_mysql-info: ERROR: Script execution failed (use -d to debug)<br/>
+4445/tcp open &nbsp;upnotifyp?<br/>
+MAC Address: 00:50:56:89:74:1A (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=37708%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D08D3%P=i686-pc-linux-gnu)SEQ(SP=CD%GCD=1%ISR=D3%TI=Z%II=I%TS=A<br/>
+OS:)OPS(O1=M529ST11NW7%O2=M529ST11NW7%O3=M529NNT11NW7%O4=M529ST11NW7%O5=M52<br/>
+OS:9ST11NW7%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW7%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: 127.0.0.1<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -5h53m05s, deviation: 0s, median: -5h53m05s<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.06 ms 10.11.1.217<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-5h53m05s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 307.80 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:26 EST<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: THINC)<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|phone|specialized<br/>
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|8.1|7|Vista|2012 (92%)<br/>
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012<br/>
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: OBSERVER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -1139d16h49m27s, deviation: 0s, median: -1139d16h49m27s<br/>
+|_nbstat: NetBIOS name: OBSERVER, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:4b:13 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::sp1:professional<br/>
+| &nbsp; Computer name: observer<br/>
+| &nbsp; NetBIOS computer name: OBSERVER<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; Forest name: thinc.local<br/>
+| &nbsp; FQDN: observer.thinc.local<br/>
+|_ &nbsp;System time: 2013-12-27T23:37:57-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.85 ms 10.11.1.218<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-1139d16h49m27s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 64.59 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:28 EST<br/>
+Nmap scan report for 10.11.1.219<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd<br/>
+|_http-server-header: Apache<br/>
+|_http-title: Apache2 Ubuntu Default Page: It works<br/>
+MAC Address: 00:50:56:89:0F:7B (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose<br/>
+Running (JUST GUESSING): Linux 3.X|4.X (89%)<br/>
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4<br/>
+Aggressive OS guesses: Linux 3.11 - 4.1 (89%), Linux 3.16 (88%), Linux 3.2.0 (87%), Linux 3.13 (86%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.12 ms 10.11.1.219<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 18.33 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:28 EST<br/>
+Nmap scan report for 10.11.1.220<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 980 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FileZilla ftpd 0.9.34 beta<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp; &nbsp;Microsoft DNS 6.1.7601<br/>
+| dns-nsid: <br/>
+|_ &nbsp;bind.version: Microsoft DNS 6.1.7601 (1DB1446A)<br/>
+88/tcp &nbsp; &nbsp;open &nbsp;kerberos-sec &nbsp;Microsoft Windows Kerberos (server time: 2013-12-28 07:37:24Z)<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+389/tcp &nbsp; open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;Windows Server 2008 R2 Standard 7601 Service Pack 1 microsoft-ds (workgroup: THINC)<br/>
+464/tcp &nbsp; open &nbsp;kpasswd5?<br/>
+593/tcp &nbsp; open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+636/tcp &nbsp; open &nbsp;tcpwrapped<br/>
+3268/tcp &nbsp;open &nbsp;ldap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows Active Directory LDAP (Domain: thinc.local, Site: Default-First-Site-Name)<br/>
+3269/tcp &nbsp;open &nbsp;tcpwrapped<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| ssl-cert: Subject: commonName=master.thinc.local<br/>
+| Not valid before: 2013-12-27T07:37:06<br/>
+|_Not valid after: &nbsp;2014-06-28T07:37:06<br/>
+|_ssl-date: 2013-12-28T07:37:33+00:00; -3y43d16h52m07s from scanner time.<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;ncacn_http &nbsp; &nbsp;Microsoft Windows RPC over HTTP 1.0<br/>
+49158/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49165/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:31:E1 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=30746%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D097C%P=i686-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=I%II=I%TS<br/>
+OS:=7)SEQ(SP=106%GCD=1%ISR=10A%TI=I%II=I%SS=S%TS=7)OPS(O1=M529NW8ST11%O2=M5<br/>
+OS:29NW8ST11%O3=M529NW8NNT11%O4=M529NW8ST11%O5=M529NW8ST11%O6=M529ST11)WIN(<br/>
+OS:W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000<br/>
+OS:%O=M529NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R<br/>
+OS:=N)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1<br/>
+OS:(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI<br/>
+OS:=N%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: MASTER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -1139d16h52m07s, deviation: 0s, median: -1139d16h52m07s<br/>
+|_nbstat: NetBIOS name: MASTER, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:31:e1 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2008 R2 Standard 7601 Service Pack 1 (Windows Server 2008 R2 Standard 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2008::sp1<br/>
+| &nbsp; Computer name: master<br/>
+| &nbsp; NetBIOS computer name: MASTER<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; Forest name: thinc.local<br/>
+| &nbsp; FQDN: master.thinc.local<br/>
+|_ &nbsp;System time: 2013-12-27T23:37:32-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: required<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.42 ms 10.11.1.220<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-1139d16h52m07s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 85.04 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:29 EST<br/>
+Nmap scan report for 10.11.1.221<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 995 filtered ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp; &nbsp;Microsoft DNS 6.0.6001<br/>
+| dns-nsid: <br/>
+|_ &nbsp;bind.version: Microsoft DNS 6.0.6001 (17714650)<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| ssl-cert: Subject: commonName=slave.thinc.local<br/>
+| Not valid before: 2013-12-26T21:08:51<br/>
+|_Not valid after: &nbsp;2014-06-27T21:08:51<br/>
+|_ssl-date: 2013-12-28T07:37:56+00:00; -3y43d16h52m59s from scanner time.<br/>
+5357/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)<br/>
+|_http-server-header: Microsoft-HTTPAPI/2.0<br/>
+|_http-title: Service Unavailable<br/>
+49158/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:18:FA (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 SP1 (90%), Microsoft Windows Server 2008 (90%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 R2 or Windows 8 (90%), Microsoft Windows 7 SP1 (90%), Microsoft Windows 8.1 Update 1 (90%), Microsoft Windows 8.1 R1 (90%), Microsoft Windows Phone 7.5 or 8.0 (90%), Microsoft Windows Server 2008 or 2008 Beta 3 (89%), Microsoft Windows Server 2008 R2 or Windows 8.1 (89%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -1139d16h52m59s, deviation: 0s, median: -1139d16h52m59s<br/>
+|_nbstat: NetBIOS name: SLAVE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:18:fa (VMware)<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.74 ms 10.11.1.221<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-1139d16h52m59s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 73.54 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:31 EST<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 ((Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+|_http-title: Index of /<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+|_http-title: Index of /<br/>
+| ssl-cert: Subject: commonName=localhost<br/>
+| Not valid before: 2009-11-10T23:48:47<br/>
+|_Not valid after: &nbsp;2019-11-08T23:48:47<br/>
+|_ssl-date: 2017-02-09T16:11:39+00:00; -8h22m03s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_IDEA_128_CBC_WITH_MD5<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)<br/>
+3306/tcp &nbsp;open &nbsp;mysql?<br/>
+|_mysql-info: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| ssl-cert: Subject: commonName=Jeff<br/>
+| Not valid before: 2016-05-24T11:56:58<br/>
+|_Not valid after: &nbsp;2016-11-23T11:56:58<br/>
+|_ssl-date: 2017-02-09T16:11:39+00:00; -8h22m03s from scanner time.<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=80%CT=1%CU=40261%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0A6B%P=i686-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10D%TI=I%II=I%TS<br/>
+OS:=7)SEQ(SP=106%GCD=1%ISR=10D%TI=I%II=I%SS=S%TS=7)OPS(O1=M529NW8ST11%O2=M5<br/>
+OS:29NW8ST11%O3=M529NW8NNT11%O4=M529NW8ST11%O5=M529NW8ST11%O6=M529ST11)WIN(<br/>
+OS:W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000<br/>
+OS:%O=M529NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R<br/>
+OS:=N)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1<br/>
+OS:(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI<br/>
+OS:=N%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Hosts: localhost, JEFF; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h22m03s, deviation: 0s, median: -8h22m03s<br/>
+|_nbstat: NetBIOS name: JEFF, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:03:d2 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2008::sp1<br/>
+| &nbsp; Computer name: Jeff<br/>
+| &nbsp; NetBIOS computer name: JEFF<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T08:11:38-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.09 ms 10.11.1.223<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h22m03s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 166.24 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:33 EST<br/>
+Nmap scan report for 10.11.1.226<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GuildFTPd<br/>
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+| -rwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 24 &nbsp;2009 AUTOEXEC.BAT [NSE: writeable]<br/>
+| -rwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 24 &nbsp;2009 CONFIG.SYS [NSE: writeable]<br/>
+| drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Sep 19 &nbsp;2011 Documents and Settings [NSE: writeable]<br/>
+| drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 24 &nbsp;2009 ftproot [NSE: writeable]<br/>
+| drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 27 &nbsp;2012 Program Files [NSE: writeable]<br/>
+| drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Jun 16 &nbsp;2016 Python26 [NSE: writeable]<br/>
+| drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Apr 20 &nbsp;2016 WINDOWS [NSE: writeable]<br/>
+|_drwxrw-rw- 1 root &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp;0 Dec 24 &nbsp;2009 wmpub [NSE: writeable]<br/>
+3389/tcp closed ms-wbt-server<br/>
+MAC Address: 00:50:56:89:5F:EE (VMware)<br/>
+Device type: general purpose|WAP<br/>
+Running (JUST GUESSING): Microsoft Windows 2003|XP|2000 (92%), Apple embedded (89%), FreeBSD 6.X (85%)<br/>
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/h:apple:airport_extreme cpe:/o:microsoft:windows_2000::sp4 cpe:/o:freebsd:freebsd:6.2<br/>
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (92%), Microsoft Windows XP SP3 (90%), Apple AirPort Extreme WAP (89%), Microsoft Windows 2000 SP4 (89%), Microsoft Windows Server 2003 (87%), Microsoft Windows XP (87%), Microsoft Windows Server 2003 SP1 (86%), Microsoft Windows Server 2003 SP0 - SP2 (86%), Microsoft Windows Server 2003 SP1 or SP2 (86%), Microsoft Windows Server 2003 2 (86%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.35 ms 10.11.1.226<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 24.28 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:34 EST<br/>
+Nmap scan report for 10.11.1.227<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+21/tcp &nbsp; open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft ftpd 5.0<br/>
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp; Microsoft ESMTP 5.0.2195.5329<br/>
+| smtp-commands: jd.acme.local Hello [10.11.0.175], AUTH GSSAPI NTLM LOGIN, AUTH=LOGIN, TURN, ATRN, SIZE 2097152, ETRN, PIPELINING, DSN, ENHANCEDSTATUSCODES, 8bitmime, BINARYMIME, CHUNKING, VRFY, OK, <br/>
+|_ This server supports the following commands: HELO EHLO STARTTLS RCPT DATA RSET MAIL QUIT HELP AUTH TURN ATRN ETRN BDAT VRFY <br/>
+| smtp-ntlm-info: <br/>
+| &nbsp; Target_Name: JD<br/>
+| &nbsp; NetBIOS_Domain_Name: JD<br/>
+| &nbsp; NetBIOS_Computer_Name: JD<br/>
+| &nbsp; DNS_Domain_Name: jd.acme.local<br/>
+| &nbsp; DNS_Computer_Name: jd.acme.local<br/>
+|_ &nbsp;Product_Version: 5.0.2195<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; Microsoft IIS httpd 5.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH<br/>
+|_http-server-header: Microsoft-IIS/5.0<br/>
+|_http-title: Directory Listing Denied<br/>
+|_http-webdav-scan: ERROR: Script execution failed (use -d to debug)<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp;open &nbsp;https?<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds Windows 2000 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1026/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+1028/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+3372/tcp open &nbsp;msdtc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Distributed Transaction Coordinator<br/>
+5800/tcp open &nbsp;vnc-http &nbsp; &nbsp; RealVNC 4.0 (resolution: 400x250; VNC TCP port: 5900)<br/>
+|_http-title: VNC viewer for Java<br/>
+5900/tcp open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;VNC (protocol 3.8)<br/>
+|_realvnc-auth-bypass: Vulnerable<br/>
+| vnc-info: <br/>
+| &nbsp; Protocol version: 3.8<br/>
+| &nbsp; Security types: <br/>
+|_ &nbsp; &nbsp;VNC Authentication (2)<br/>
+MAC Address: 00:50:56:89:1B:3B (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=21%CT=1%CU=41436%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0AD3%P=i686-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=108%TI=I%II=I%SS<br/>
+OS:=S%TS=0)SEQ(SP=108%GCD=1%ISR=108%TI=I%II=I%TS=0)OPS(O1=M529NW0NNT00NNS%O<br/>
+OS:2=M529NW0NNT00NNS%O3=M529NW0NNT00%O4=M529NW0NNT00NNS%O5=M529NW0NNT00NNS%<br/>
+OS:O6=M529NNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)ECN(<br/>
+OS:R=Y%DF=Y%T=80%W=FAF0%O=M529NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS<br/>
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0<br/>
+OS:%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK<br/>
+OS:=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: jd.acme.local; OSs: Windows, Windows 2000; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_2000<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: 1h13m17s, deviation: 0s, median: 1h13m17s<br/>
+| ms-sql-info: <br/>
+| &nbsp; Windows server name: JD<br/>
+| &nbsp; 10.11.1.227\MSSQLSERVER: <br/>
+| &nbsp; &nbsp; Instance name: MSSQLSERVER<br/>
+| &nbsp; &nbsp; Version: <br/>
+| &nbsp; &nbsp; &nbsp; number: 8.00.194.00<br/>
+| &nbsp; &nbsp; &nbsp; Product: Microsoft SQL Server 2000<br/>
+| &nbsp; &nbsp; &nbsp; name: Microsoft SQL Server 2000 RTM<br/>
+| &nbsp; &nbsp; &nbsp; Service pack level: RTM<br/>
+| &nbsp; &nbsp; &nbsp; Post-SP patches applied: false<br/>
+| &nbsp; &nbsp; TCP port: 27900<br/>
+| &nbsp; &nbsp; Named pipe: \\10.11.1.227\pipe\sql\query<br/>
+|_ &nbsp; &nbsp;Clustered: false<br/>
+|_nbstat: NetBIOS name: JD, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:1b:3b (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: jd<br/>
+| &nbsp; NetBIOS computer name: JD<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-10T03:48:44+02:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 50.91 ms 10.11.1.227<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;1h13m17s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 79.51 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:35 EST<br/>
+Nmap scan report for 10.11.1.229<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 988 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE &nbsp;SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; open &nbsp; tcpwrapped<br/>
+23/tcp &nbsp; closed telnet<br/>
+25/tcp &nbsp; open &nbsp; smtp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer smtpd<br/>
+| smtp-commands: MAIL, SIZE 20480000, AUTH LOGIN, <br/>
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY <br/>
+80/tcp &nbsp; open &nbsp; http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE DELETE COPY MOVE PROPFIND PROPPATCH SEARCH MKCOL LOCK UNLOCK PUT<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+|_http-title: 10.11.1.229 - /<br/>
+|_http-webdav-scan: ERROR: Script execution failed (use -d to debug)<br/>
+110/tcp &nbsp;open &nbsp; pop3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer pop3d<br/>
+|_pop3-capabilities: ERROR: Script execution failed (use -d to debug)<br/>
+135/tcp &nbsp;open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp; netbios-ssn &nbsp; Windows Server 2003 3790 Service Pack 1 netbios-ssn<br/>
+143/tcp &nbsp;open &nbsp; imap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;hMailServer imapd<br/>
+|_imap-capabilities: SORT CHILDREN CAPABILITY IDLE completed RIGHTS=texkA0001 QUOTA OK NAMESPACE IMAP4rev1 IMAP4 ACL<br/>
+443/tcp &nbsp;closed https<br/>
+1025/tcp open &nbsp; msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+2869/tcp closed icslap<br/>
+3389/tcp open &nbsp; ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:14:14 (VMware)<br/>
+Device type: general purpose|media device<br/>
+Running (JUST GUESSING): Microsoft Windows 2003|XP|2000|PocketPC/CE (93%), Motorola embedded (86%)<br/>
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_ce:5.0 cpe:/h:motorola:vip1216<br/>
+Aggressive OS guesses: Microsoft Windows Server 2003 SP2 (93%), Microsoft Windows XP SP3 (91%), Microsoft Windows XP (89%), Microsoft Windows Server 2003 SP1 (88%), Microsoft Windows Server 2003 SP0 - SP2 (88%), Microsoft Windows Server 2003 SP1 or SP2 (88%), Microsoft Windows Server 2003 (87%), Microsoft Windows 2000 SP4 (87%), Microsoft Windows 2003 (86%), Microsoft Windows 2000 Server SP4 or Windows XP Professional SP3 (86%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -7h25m27s, deviation: 0s, median: -7h25m27s<br/>
+|_nbstat: NetBIOS name: MAIL, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:14:14 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server 2003 3790 Service Pack 1 (Windows Server 2003 5.2)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2003::sp1<br/>
+| &nbsp; Computer name: mail<br/>
+| &nbsp; NetBIOS computer name: MAIL<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T11:10:29-06:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server doesn't support SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.28 ms 10.11.1.229<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-7h25m27s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 63.51 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:36 EST<br/>
+Nmap scan report for 10.11.1.230<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 990 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp; Windows 7 Ultimate N 7600 microsoft-ds (workgroup: WORKGROUP)<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server?<br/>
+| ssl-cert: Subject: commonName=kevin<br/>
+| Not valid before: 2017-02-07T16:07:21<br/>
+|_Not valid after: &nbsp;2017-08-09T16:07:21<br/>
+|_ssl-date: 2017-02-09T16:32:19+00:00; -8h05m34s from scanner time.<br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+MAC Address: 00:50:56:89:32:45 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=135%CT=1%CU=40820%PV=Y%DS=1%DC=D%G=Y%M=005<br/>
+OS:056%TM=589D0B65%P=i686-pc-linux-gnu)SEQ(SP=FC%GCD=1%ISR=10E%TI=I%II=I%SS<br/>
+OS:=S%TS=7)OPS(O1=M529NW8ST11%O2=M529NW8ST11%O3=M529NW8NNT11%O4=M529NW8ST11<br/>
+OS:%O5=M529NW8ST11%O6=M529ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%<br/>
+OS:W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M529NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S<br/>
+OS:=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%<br/>
+OS:F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G<br/>
+OS:%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: Host: KEVIN; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h05m34s, deviation: 1s, median: -8h05m34s<br/>
+|_nbstat: NetBIOS name: KEVIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:89:32:45 (VMware)<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::-<br/>
+| &nbsp; Computer name: kevin<br/>
+| &nbsp; NetBIOS computer name: KEVIN<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2017-02-09T08:32:18-08:00<br/>
+| smb-security-mode: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; authentication_level: user<br/>
+| &nbsp; challenge_response: supported<br/>
+|_ &nbsp;message_signing: disabled (dangerous, but default)<br/>
+|_smbv2-enabled: Server supports SMBv2 protocol<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.08 ms 10.11.1.230<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h05m34s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 81.64 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:37 EST<br/>
+Nmap scan report for 10.11.1.234<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 998 closed ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 2c:83:67:02:29:20:87:99:87:55:95:92:6c:8d:a4:a3 (DSA)<br/>
+|_ &nbsp;2048 6b:91:08:a8:c0:90:ac:68:bd:c9:cd:9c:be:69:2b:ac (RSA)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.14 ((Ubuntu))<br/>
+|_http-server-header: Apache/2.2.14 (Ubuntu)<br/>
+|_http-title: Business Statistics | New Server for Thinc&amp;#039;s Business Sta...<br/>
+MAC Address: 00:50:56:89:79:5F (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=38671%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0B81%P=i686-pc-linux-gnu)SEQ(SP=AF%GCD=1%ISR=B6%TI=Z%II=I%TS=8<br/>
+OS:)OPS(O1=M529ST11NW6%O2=M529ST11NW6%O3=M529NNT11NW6%O4=M529ST11NW6%O5=M52<br/>
+OS:9ST11NW6%O6=M529ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0<br/>
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M529NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+<br/>
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=<br/>
+OS:%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=<br/>
+OS:G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.21 ms 10.11.1.234<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 28.01 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:38 EST<br/>
+Nmap scan report for 10.11.1.237<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp;OpenSSH 6.0p1 Debian 4 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 fc:89:ba:50:c2:ea:2d:ab:b9:19:f1:f9:0a:b4:c0:5a (DSA)<br/>
+| &nbsp; 2048 de:2d:b8:bd:43:8a:c3:28:2b:d3:22:84:d0:6c:e0:9d (RSA)<br/>
+|_ &nbsp;256 a5:58:4d:9d:e8:61:de:55:83:e2:71:6b:5d:ad:83:e2 (ECDSA)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+111/tcp open &nbsp;rpcbind &nbsp;2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;34662/tcp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;35313/udp &nbsp;status<br/>
+443/tcp open &nbsp;ssl/http Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+| ssl-cert: Subject: commonName=localhost<br/>
+| Not valid before: 2013-12-26T16:25:05<br/>
+|_Not valid after: &nbsp;2023-12-24T16:25:05<br/>
+|_ssl-date: 2017-02-09T16:16:50+00:00; -8h22m02s from scanner time.<br/>
+MAC Address: 00:50:56:89:27:39 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=33165%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0B9F%P=i686-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10C%TI=Z%II=I%TS<br/>
+OS:=8)OPS(O1=M529ST11NW3%O2=M529ST11NW3%O3=M529NNT11NW3%O4=M529ST11NW3%O5=M<br/>
+OS:529ST11NW3%O6=M529ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=38<br/>
+OS:90)ECN(R=Y%DF=Y%T=40%W=3908%O=M529NNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=<br/>
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%<br/>
+OS:O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPC<br/>
+OS:K=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -8h22m02s, deviation: 0s, median: -8h22m02s<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.04 ms 10.11.1.237<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-8h22m02s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 30.41 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:38 EST<br/>
+Nmap scan report for 10.11.1.238<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 996 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp;VERSION<br/>
+22/tcp &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp;OpenSSH 6.0p1 Debian 4 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 fc:89:ba:50:c2:ea:2d:ab:b9:19:f1:f9:0a:b4:c0:5a (DSA)<br/>
+| &nbsp; 2048 de:2d:b8:bd:43:8a:c3:28:2b:d3:22:84:d0:6c:e0:9d (RSA)<br/>
+|_ &nbsp;256 a5:58:4d:9d:e8:61:de:55:83:e2:71:6b:5d:ad:83:e2 (ECDSA)<br/>
+80/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+111/tcp open &nbsp;rpcbind &nbsp;2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;42346/udp &nbsp;status<br/>
+|_ &nbsp;100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;59912/tcp &nbsp;status<br/>
+443/tcp open &nbsp;ssl/http Apache httpd 2.2.22 ((Debian))<br/>
+|_http-server-header: Apache/2.2.22 (Debian)<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+| ssl-cert: Subject: commonName=localhost<br/>
+| Not valid before: 2013-12-26T16:25:05<br/>
+|_Not valid after: &nbsp;2023-12-24T16:25:05<br/>
+|_ssl-date: 2017-02-09T16:49:16+00:00; -7h50m08s from scanner time.<br/>
+MAC Address: 00:50:56:89:51:D2 (VMware)<br/>
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).<br/>
+TCP/IP fingerprint:<br/>
+OS:SCAN(V=7.25BETA2%E=4%D=2/9%OT=22%CT=1%CU=36049%PV=Y%DS=1%DC=D%G=Y%M=0050<br/>
+OS:56%TM=589D0BBD%P=i686-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%II=I%TS<br/>
+OS:=8)OPS(O1=M529ST11NW3%O2=M529ST11NW3%O3=M529NNT11NW3%O4=M529ST11NW3%O5=M<br/>
+OS:529ST11NW3%O6=M529ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=38<br/>
+OS:90)ECN(R=Y%DF=Y%T=40%W=3908%O=M529NNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=<br/>
+OS:S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%<br/>
+OS:O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPC<br/>
+OS:K=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)<br/>
+<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_clock-skew: mean: -7h50m08s, deviation: 0s, median: -7h50m08s<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.48 ms 10.11.1.238<br/>
+<br/>
+Post-scan script results:<br/>
+| clock-skew: <br/>
+|_ &nbsp;-7h50m08s: Majority of systems scanned<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 29.83 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:39 EST<br/>
+Nmap scan report for 10.11.1.247<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 999 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:7E:F8 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|WAP<br/>
+Running (JUST GUESSING): Microsoft Windows 2000|XP|2003 (90%), Apple embedded (90%), FreeBSD 6.X (85%)<br/>
+OS CPE: cpe:/o:microsoft:windows_2000::sp4 cpe:/h:apple:airport_extreme cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:freebsd:freebsd:6.2<br/>
+Aggressive OS guesses: Microsoft Windows 2000 SP4 (90%), Apple AirPort Extreme WAP (90%), Microsoft Windows XP SP3 (89%), Microsoft Windows Server 2003 SP2 (86%), Microsoft Windows XP (86%), FreeBSD 6.2-RELEASE (85%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.10 ms 10.11.1.247<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 17.73 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:39 EST<br/>
+Nmap scan report for 10.11.1.251<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; STATE SERVICE VERSION<br/>
+22/tcp open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.1p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 fd:35:c0:66:fc:2a:d0:76:c0:33:55:21:cb:70:55:54 (DSA)<br/>
+|_ &nbsp;2048 bf:e1:ee:61:60:a5:3d:28:0f:af:7d:85:0c:19:c5:8d (RSA)<br/>
+80/tcp open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.11 ((Ubuntu) PHP/5.2.6-3ubuntu4.4 with Suhosin-Patch)<br/>
+| http-methods: <br/>
+|_ &nbsp;Potentially risky methods: TRACE<br/>
+|_http-server-header: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.4 with Suhosin-Patch<br/>
+|_http-title: Site doesn't have a title (text/html).<br/>
+MAC Address: 00:50:56:89:66:33 (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|broadband router|remote management|phone|VoIP phone|firewall|security-misc|printer<br/>
+Running (JUST GUESSING): Linux 2.6.X|3.X (90%), D-Link embedded (89%), HP embedded (89%), Linksys embedded (89%), Nokia Symbian OS (87%), Thomson embedded (87%), Barracuda Networks embedded (87%), Canon embedded (86%)<br/>
+OS CPE: cpe:/o:linux:linux_kernel:2.6.23 cpe:/h:dlink:dsl-2540b cpe:/a:hp:onboard_administrator:2.04 cpe:/h:linksys:wrv200 cpe:/o:nokia:symbian_os cpe:/o:linux:linux_kernel:3.2.0 cpe:/h:canon:imagerunner_advance_c5051<br/>
+Aggressive OS guesses: Linux 2.6.23 (90%), Linux 2.6.22 (Debian 4.0) (90%), Linux 2.6.26 (90%), D-Link DSL-2540B ADSL router (89%), HP Onboard Administrator 2.04 (89%), Linksys WRV200 wireless broadband router (89%), Linux 2.6.15 (Ubuntu) (89%), Linux 2.6.15 - 2.6.26 (likely embedded) (89%), Linux 2.6.16 (89%), Linux 2.6.28 (Ubuntu) (89%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 51.47 ms 10.11.1.251<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 18.84 seconds<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-09 19:40 EST<br/>
+Nmap scan report for 10.11.1.252<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp;VERSION<br/>
+8000/tcp open &nbsp;http &nbsp; &nbsp; &nbsp; Apache httpd 2.2.3 ((CentOS))<br/>
+|_http-open-proxy: Proxy might be redirecting requests<br/>
+|_http-server-header: Apache/2.2.3 (CentOS)<br/>
+| http-title: TimeClock Software :: Dev. Dpt. Thinc.local :: Log In<br/>
+|_Requested resource was login.php<br/>
+8888/tcp open &nbsp;http-proxy Squid http proxy 3.3.8<br/>
+|_http-server-header: squid/3.3.8<br/>
+|_http-title: Endian Firewall - &nbsp;The requested URL could not be retrieved<br/>
+MAC Address: 00:50:56:89:22:6B (VMware)<br/>
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port<br/>
+Device type: general purpose|firewall|WAP|proxy server|PBX<br/>
+Running (JUST GUESSING): Linux 2.6.X (91%), Cisco embedded (89%), ZoneAlarm embedded (89%), Ruckus embedded (89%), Riverbed embedded (87%)<br/>
+OS CPE: cpe:/o:linux:linux_kernel:2.6.9 cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:sa520 cpe:/h:zonealarm:z100g cpe:/h:ruckus:7363 cpe:/h:riverbed:steelhead_200 cpe:/h:cisco:uc320w<br/>
+Aggressive OS guesses: Linux 2.6.9 (91%), Cisco SA520 firewall (Linux 2.6) (89%), Linux 2.6.28 (89%), Linux 2.6.9 - 2.6.27 (89%), ZoneAlarm Z100G WAP (89%), Ruckus 7363 WAP (89%), Linux 2.6.30 (87%), Linux 2.6.9 (CentOS 4.4) (87%), Riverbed Steelhead 200 proxy server (87%), Linux 2.6.22.1-32.fc6 (x86, SMP) (86%)<br/>
+No exact OS matches for host (test conditions non-ideal).<br/>
+Network Distance: 1 hop<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; &nbsp;ADDRESS<br/>
+1 &nbsp; 53.49 ms 10.11.1.252<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 52.23 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

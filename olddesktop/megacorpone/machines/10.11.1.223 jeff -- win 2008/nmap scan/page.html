@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~# nmap -Pn -p- 10.11.1.223<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-02 01:55 EDT<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.052s latency).<br/>
+Not shown: 65522 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http<br/>
+135/tcp &nbsp; open &nbsp;msrpc<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn<br/>
+443/tcp &nbsp; open &nbsp;https<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds<br/>
+3306/tcp &nbsp;open &nbsp;mysql<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server<br/>
+49152/tcp open &nbsp;unknown<br/>
+49153/tcp open &nbsp;unknown<br/>
+49154/tcp open &nbsp;unknown<br/>
+49155/tcp open &nbsp;unknown<br/>
+49156/tcp open &nbsp;unknown<br/>
+49157/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 96.14 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.223<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-16 15:56 EDT<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.049s latency).<br/>
+Not shown: 987 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+| http-csrf: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.223<br/>
+| &nbsp; Found the following possible CSRF vulnerabilities: <br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.223/flatfilelogin/<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: login.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: http://10.11.1.223/flatfilelogin/login.php<br/>
+| &nbsp; &nbsp; Form id: <br/>
+|_ &nbsp; &nbsp;Form action: /flatfilelogin/login.php<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+| &nbsp; /: Root directory w/ listing on 'apache/2.2.14 (win32) dav/2 mod_ssl/2.2.14 openssl/0.9.8l mod_autoindex_color php/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 perl/v5.10.1'<br/>
+| &nbsp; /security/xamppsecurity.php: XAMPP (401 Authorization Required)<br/>
+| &nbsp; /phpmyadmin/: phpMyAdmin (401 Unauthorized)<br/>
+| &nbsp; /icons/: Potentially interesting folder w/ directory listing<br/>
+| &nbsp; /licenses/: Potentially interesting directory w/ listing on 'apache/2.2.14 (win32) dav/2 mod_ssl/2.2.14 openssl/0.9.8l mod_autoindex_color php/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 perl/v5.10.1'<br/>
+| &nbsp; /security/: Potentially interesting folder (401 Authorization Required)<br/>
+| &nbsp; /server-info/: Potentially interesting folder<br/>
+| &nbsp; /server-status/: Potentially interesting folder<br/>
+|_ &nbsp;/webdav/: Potentially interesting folder<br/>
+| http-phpself-xss: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Unsafe use of $_SERVER["PHP_SELF"] in PHP files<br/>
+| &nbsp; &nbsp; State: VULNERABLE (Exploitable)<br/>
+| &nbsp; &nbsp; &nbsp; PHP files are not handling safely the variable $_SERVER["PHP_SELF"] causing Reflected Cross Site Scripting vulnerabilities.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>
+| &nbsp; &nbsp; Extra information:<br/>
+| &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; Vulnerable files with proof of concept:<br/>
+| &nbsp; &nbsp; http://10.11.1.223/flatfilelogin/login.php/%27%22/%3E%3Cscript%3Ealert(1)%3C/script%3E<br/>
+| &nbsp; Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.223<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)<br/>
+|_ &nbsp; &nbsp; &nbsp;http://php.net/manual/en/reserved.variables.server.php<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+| http-slowloris-check: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Slowloris DOS attack<br/>
+| &nbsp; &nbsp; State: LIKELY VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2007-6750<br/>
+| &nbsp; &nbsp; &nbsp; Slowloris tries to keep many connections to the target web server open and hold<br/>
+| &nbsp; &nbsp; &nbsp; them open as long as possible. &nbsp;It accomplishes this by opening connections to<br/>
+| &nbsp; &nbsp; &nbsp; the target web server and sending a partial request. By doing so, it starves<br/>
+| &nbsp; &nbsp; &nbsp; the http server's resources causing Denial Of Service.<br/>
+| &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2009-09-17<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://ha.ckers.org/slowloris/<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750<br/>
+| http-sql-injection: <br/>
+| &nbsp; Possible sqli for queries:<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; http://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+|_ &nbsp; &nbsp;http://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+135/tcp &nbsp; open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+443/tcp &nbsp; open &nbsp;ssl/http &nbsp; &nbsp; &nbsp;Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)<br/>
+| http-csrf: <br/>
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.223<br/>
+| &nbsp; Found the following possible CSRF vulnerabilities: <br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: https://10.11.1.223/flatfilelogin/<br/>
+| &nbsp; &nbsp; Form id: <br/>
+| &nbsp; &nbsp; Form action: login.php<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Path: https://10.11.1.223/flatfilelogin/login.php<br/>
+| &nbsp; &nbsp; Form id: <br/>
+|_ &nbsp; &nbsp;Form action: /flatfilelogin/login.php<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+|_ &nbsp;/: Root directory w/ listing on 'apache/2.2.14 (win32) dav/2 mod_ssl/2.2.14 openssl/0.9.8l mod_autoindex_color php/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 perl/v5.10.1'<br/>
+| http-phpself-xss: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Unsafe use of $_SERVER["PHP_SELF"] in PHP files<br/>
+| &nbsp; &nbsp; State: VULNERABLE (Exploitable)<br/>
+| &nbsp; &nbsp; &nbsp; PHP files are not handling safely the variable $_SERVER["PHP_SELF"] causing Reflected Cross Site Scripting vulnerabilities.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br/>
+| &nbsp; &nbsp; Extra information:<br/>
+| &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; Vulnerable files with proof of concept:<br/>
+| &nbsp; &nbsp; https://10.11.1.223/flatfilelogin/login.php/%27%22/%3E%3Cscript%3Ealert(1)%3C/script%3E<br/>
+| &nbsp; Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.223<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)<br/>
+|_ &nbsp; &nbsp; &nbsp;http://php.net/manual/en/reserved.variables.server.php<br/>
+|_http-server-header: Apache/2.2.14 (Win32) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1<br/>
+| http-slowloris-check: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Slowloris DOS attack<br/>
+| &nbsp; &nbsp; State: LIKELY VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2007-6750<br/>
+| &nbsp; &nbsp; &nbsp; Slowloris tries to keep many connections to the target web server open and hold<br/>
+| &nbsp; &nbsp; &nbsp; them open as long as possible. &nbsp;It accomplishes this by opening connections to<br/>
+| &nbsp; &nbsp; &nbsp; the target web server and sending a partial request. By doing so, it starves<br/>
+| &nbsp; &nbsp; &nbsp; the http server's resources causing Denial Of Service.<br/>
+| &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2009-09-17<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://ha.ckers.org/slowloris/<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750<br/>
+| http-sql-injection: <br/>
+| &nbsp; Possible sqli for queries:<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=N%3bO%3dD%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=M%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=S%3bO%3dA%27%20OR%20sqlspider<br/>
+| &nbsp; &nbsp; https://10.11.1.223/?C=D%3bO%3dA%27%20OR%20sqlspider<br/>
+|_ &nbsp; &nbsp;https://10.11.1.223/?C=N%3bO%3dA%27%20OR%20sqlspider<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+|_http-trace: TRACE is enabled<br/>
+| ssl-ccs-injection: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL/TLS MITM vulnerability (CCS Injection)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; Risk factor: High<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h<br/>
+| &nbsp; &nbsp; &nbsp; does not properly restrict processing of ChangeCipherSpec messages,<br/>
+| &nbsp; &nbsp; &nbsp; which allows man-in-the-middle attackers to trigger use of a zero<br/>
+| &nbsp; &nbsp; &nbsp; length master key in certain OpenSSL-to-OpenSSL communications, and<br/>
+| &nbsp; &nbsp; &nbsp; consequently hijack sessions or obtain sensitive information, via<br/>
+| &nbsp; &nbsp; &nbsp; a crafted TLS handshake, aka the "CCS Injection" vulnerability.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224<br/>
+| &nbsp; &nbsp; &nbsp; http://www.cvedetails.com/cve/2014-0224<br/>
+|_ &nbsp; &nbsp; &nbsp;http://www.openssl.org/news/secadv_20140605.txt<br/>
+| ssl-dh-params: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:122331 &nbsp;CVE:CVE-2015-4000<br/>
+| &nbsp; &nbsp; &nbsp; The Transport Layer Security (TLS) protocol contains a flaw that is<br/>
+| &nbsp; &nbsp; &nbsp; triggered when handling Diffie-Hellman key exchanges defined with<br/>
+| &nbsp; &nbsp; &nbsp; the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker<br/>
+| &nbsp; &nbsp; &nbsp; to downgrade the security of a TLS session to 512-bit export-grade<br/>
+| &nbsp; &nbsp; &nbsp; cryptography, which is significantly weaker, allowing the attacker<br/>
+| &nbsp; &nbsp; &nbsp; to more easily break the encryption and monitor or tamper with<br/>
+| &nbsp; &nbsp; &nbsp; the encrypted stream.<br/>
+| &nbsp; &nbsp; Disclosure date: 2015-5-19<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; EXPORT-GRADE DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: mod_ssl 2.2.x/512-bit MODP group with safe prime modulus<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 512<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 512<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://weakdh.org<br/>
+| &nbsp; &nbsp; &nbsp; http://osvdb.org/122331<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000<br/>
+| &nbsp; <br/>
+| &nbsp; Diffie-Hellman Key Exchange Insufficient Group Strength<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; Transport Layer Security (TLS) services that use Diffie-Hellman groups<br/>
+| &nbsp; &nbsp; &nbsp; of insufficient strength, especially those using one of a few commonly<br/>
+| &nbsp; &nbsp; &nbsp; shared groups, may be susceptible to passive eavesdropping attacks.<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; WEAK DH GROUP 1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cipher Suite: TLS_DHE_RSA_WITH_DES_CBC_SHA<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Type: Safe prime<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Source: mod_ssl 2.2.x/1024-bit MODP group with safe prime modulus<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Modulus Length: 1024<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Generator Length: 8<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Public Key Length: 1024<br/>
+| &nbsp; &nbsp; References:<br/>
+|_ &nbsp; &nbsp; &nbsp;https://weakdh.org<br/>
+| ssl-poodle: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; SSL POODLE information leak<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;OSVDB:113251 &nbsp;CVE:CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; products, uses nondeterministic CBC padding, which makes it easier<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for man-in-the-middle attackers to obtain cleartext data via a<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; padding-oracle attack, aka the "POODLE" issue.<br/>
+| &nbsp; &nbsp; Disclosure date: 2014-10-14<br/>
+| &nbsp; &nbsp; Check results:<br/>
+| &nbsp; &nbsp; &nbsp; TLS_RSA_WITH_AES_128_CBC_SHA<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://www.imperialviolet.org/2014/10/14/poodle.html<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566<br/>
+| &nbsp; &nbsp; &nbsp; https://www.openssl.org/~bodo/ssl-poodle.pdf<br/>
+|_ &nbsp; &nbsp; &nbsp;http://osvdb.org/113251<br/>
+| sslv2-drown: <br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_IDEA_128_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_64_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+| &nbsp; vulns: <br/>
+| &nbsp; &nbsp; CVE-2016-0703: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Divide-and-conquer session key recovery in SSLv2<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0703<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in<br/>
+| &nbsp; &nbsp; &nbsp; OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before<br/>
+| &nbsp; &nbsp; &nbsp; 1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary<br/>
+| &nbsp; &nbsp; &nbsp; cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value<br/>
+| &nbsp; &nbsp; &nbsp; and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a<br/>
+| &nbsp; &nbsp; &nbsp; related issue to CVE-2016-0800.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160301.txt<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703<br/>
+| &nbsp; &nbsp; CVE-2016-0800: <br/>
+| &nbsp; &nbsp; &nbsp; title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)<br/>
+| &nbsp; &nbsp; &nbsp; state: VULNERABLE<br/>
+| &nbsp; &nbsp; &nbsp; ids: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; CVE:CVE-2016-0800<br/>
+| &nbsp; &nbsp; &nbsp; description: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and<br/>
+| &nbsp; &nbsp; &nbsp; other products, requires a server to send a ServerVerify message before establishing<br/>
+| &nbsp; &nbsp; &nbsp; that a client possesses certain plaintext RSA data, which makes it easier for remote<br/>
+| &nbsp; &nbsp; &nbsp; attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding<br/>
+| &nbsp; &nbsp; &nbsp; oracle, aka a "DROWN" attack.<br/>
+| &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; &nbsp; refs: <br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; https://www.openssl.org/news/secadv/20160301.txt<br/>
+|_ &nbsp; &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800<br/>
+445/tcp &nbsp; open &nbsp;microsoft-ds &nbsp;(workgroup: WORKGROUP)<br/>
+3306/tcp &nbsp;open &nbsp;mysql?<br/>
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)<br/>
+3389/tcp &nbsp;open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+| rdp-vuln-ms12-020: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0152<br/>
+| &nbsp; &nbsp; Risk factor: Medium &nbsp;CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+| &nbsp; <br/>
+| &nbsp; MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability<br/>
+| &nbsp; &nbsp; State: VULNERABLE<br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2012-0002<br/>
+| &nbsp; &nbsp; Risk factor: High &nbsp;CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2012-03-13<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; http://technet.microsoft.com/en-us/security/bulletin/ms12-020<br/>
+|_ &nbsp; &nbsp; &nbsp;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002<br/>
+|_sslv2-drown: <br/>
+49152/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49153/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49154/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49155/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49156/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+49157/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :<br/>
+SF-Port445-TCP:V=7.25BETA2%I=7%D=3/16%Time=58CAEDEC%P=i686-pc-linux-gnu%r(<br/>
+SF:SMBProgNeg,6F,"\0\0\0k\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\0\0<br/>
+SF:\0\0@\x06\0\0\x01\0\x11\x07\0\x032\0\x01\0\x04A\0\0\0\0\x01\0\0\0\0\0\x<br/>
+SF:fd\xe3\x01\0\xb5\x1a:\xfaA\x9e\xd2\x01\xa4\x01\x08&amp;\0\xde}Y\xa1\xaa@aAW<br/>
+SF:\0O\0R\0K\0G\0R\0O\0U\0P\0\0\0J\0E\0F\0F\0\0\0");<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+Service Info: Hosts: localhost, JEFF; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 470.08 seconds<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.223<br/>
+Host is up (0.059s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:03:D2 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_ &nbsp; &nbsp;Anonymous access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_server_2008::sp1<br/>
+| &nbsp; Computer name: Jeff<br/>
+| &nbsp; NetBIOS computer name: JEFF<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2016-12-24T06:34:03-08:00<br/>
+</body></html>

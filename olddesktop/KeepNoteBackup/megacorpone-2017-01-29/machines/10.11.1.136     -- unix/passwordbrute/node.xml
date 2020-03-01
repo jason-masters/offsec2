@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>c2636dff-8093-4bc4-8017-d53fc6b1d56a</string>
+  <key>title</key><string>PasswordBrute</string>
+  <key>nodeid</key><string>59bae876-3360-4ff7-aeae-0dc233232b24</string>
+  <key>modified_time</key><integer>1482344813</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482250715</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>0</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

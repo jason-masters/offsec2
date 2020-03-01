@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>d2e1e9ef-3f2f-4bc1-a237-a025d0b8c7bb</string>
+  <key>title</key><string>nmap Banners</string>
+  <key>nodeid</key><string>c9f6ab03-8a96-4ab5-a151-422346a9f92c</string>
+  <key>modified_time</key><integer>1482344809</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482248047</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>37</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

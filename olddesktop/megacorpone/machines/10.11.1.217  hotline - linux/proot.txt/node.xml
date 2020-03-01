@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Proot.txt</string>
+  <key>nodeid</key><string>e91153cc-2bb7-49b8-ad9a-9fd10f911f88</string>
+  <key>modified_time</key><integer>1489274554</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1489274446</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>7</integer>
+  <key>info_sort</key><string>order</string>
+  <key>icon</key><string>note-green.png</string>
+</dict>
+</node>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap -sV --script=banner 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-02-11 12:04 EST<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.082s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE &nbsp; &nbsp; &nbsp; VERSION<br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Microsoft IIS httpd 6.0<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+135/tcp &nbsp;open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+139/tcp &nbsp;open &nbsp;netbios-ssn &nbsp; Microsoft Windows netbios-ssn<br/>
+445/tcp &nbsp;open &nbsp;microsoft-ds &nbsp;Microsoft Windows 2003 or 2008 microsoft-ds<br/>
+1025/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp; Microsoft Windows RPC<br/>
+1433/tcp open &nbsp;ms-sql-s &nbsp; &nbsp; &nbsp;Microsoft SQL Server 2000 8.00.766; SP3a<br/>
+3389/tcp open &nbsp;ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 30.73 seconds<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

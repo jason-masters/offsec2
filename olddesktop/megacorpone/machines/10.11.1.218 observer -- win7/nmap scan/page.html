@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body><br/>
+root@kali:~/gen/nmap# nmap -sS 10.11.1.218<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-03-15 23:30 EDT<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.050s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+135/tcp open &nbsp;msrpc<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 5.62 seconds<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script vuln 10.11.1.218<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-04 20:37 EDT<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.051s latency).<br/>
+Not shown: 997 filtered ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; &nbsp;VERSION<br/>
+135/tcp open &nbsp;msrpc &nbsp; &nbsp; &nbsp; &nbsp;Microsoft Windows RPC<br/>
+139/tcp open &nbsp;netbios-ssn &nbsp;Microsoft Windows netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: THINC)<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+Service Info: Host: OBSERVER; OS: Windows; CPE: cpe:/o:microsoft:windows<br/>
+<br/>
+Host script results:<br/>
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED<br/>
+|_smb-vuln-ms10-054: false<br/>
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 27.63 seconds<br/>
+<br/>
+<br/>
+<br/>
+Nmap scan report for 10.11.1.218<br/>
+Host is up (0.059s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:4B:13 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+| &nbsp; account_used: &lt;blank&gt;<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_ &nbsp; &nbsp;Anonymous access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_7::sp1:professional<br/>
+| &nbsp; Computer name: observer<br/>
+| &nbsp; NetBIOS computer name: OBSERVER<br/>
+| &nbsp; Domain name: thinc.local<br/>
+| &nbsp; Forest name: thinc.local<br/>
+| &nbsp; FQDN: observer.thinc.local<br/>
+|_ &nbsp;System time: 2013-12-27T23:37:44-08:00<br/>
+<br/>
+</body></html>

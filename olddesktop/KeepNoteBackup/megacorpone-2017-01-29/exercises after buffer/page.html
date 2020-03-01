@@ -1,0 +1,192 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Exercises after buffer</title>
+</head><body><span style="font-size: 16pt">11.2.3<br/>
+</span><br/>
+1. <img src="screenshot.png"/><br/>
+<br/>
+2. <img src="screenshot 2.png"/><br/>
+<br/>
+<br/>
+3. The following are examples (stolen from :https://blog.netspi.com/windows-privilege-escalation-part-1-local-administrator-privileges/)<ul><li>Clear Text Passwords Stored in Files</li>
+<li>Clear Text Passwords Stored in the Registry:</li>
+<li/>
+<li>Write Access to the System32 Directory: </li>
+<li>Write Access to the All Users Startup Folder</li>
+<li>Insecurely Registered Executables:</li>
+<li>Windows Services Running as SYSTEM </li>
+<li>Weak Application Configurations</li>
+<li>Windows At Command: </li>
+<li>Install a User-Defined Service</li>
+<li>Install a User-Defined Service</li>
+</ul>
+<br/>
+<br/>
+<span style="font-size: 16pt">12.2.3</span><br/>
+<br/>
+1.<br/>
+<br/>
+<img src="screenshot 4.png"/><br/>
+<br/>
+<br/>
+<img src="screenshot 3.png"/><br/>
+<br/>
+2. the host is listening on 4444, but the windows firewall is blocking inbound connections..... but if you use a reverse shell, the victim machine makes an outbound connection, so the inbound firewall doesn't block the connection. <br/>
+<img src="screenshot 5.png"/><br/>
+<br/>
+<span style="font-size: 16pt">12.3.1<br/>
+<br/>
+</span>1. <br/>
+<img src="screenshot 6.png"/><br/>
+<br/>
+2. You can change various pieces of the display so that user's will associate what they see with 'good gut feelings', therefore will trust it.<br/>
+<br/>
+<img src="screenshot 7.png"/><br/>
+<br/>
+<span style="font-size: 16pt">13.2.3</span><br/>
+<br/>
+1. <img src="screenshot 8.png"/><br/>
+<br/>
+2. you could imbed a link to the java.html from the previous session (or any malicious code), from which the user's could/would run from their browser, which might give you additional entry points to hosts.<br/>
+<br/>
+3. It can actually do both.. Its specifically giving you access to browser data (for further exploitaton of hosts), and possibly admin panels (in this case), but with further exploitation you can gain access to further hosts. <br/>
+<br/>
+<br/>
+<span style="font-size: 16pt">13.3.1.3</span><span style="font-size: 10pt"><br/>
+</span><span style="font-size: 10pt"><br/>
+1. <img src="image.png"/><br/>
+</span><br/>
+2.<br/>
+<br/>
+<img src="screenshot 9.png"/><br/>
+<br/>
+<span style="font-size: 16pt">13.3.2.1</span><br/>
+<br/>
+<br/>
+1.<br/>
+<img src="screenshot 10.png"/><br/>
+<br/>
+<span style="font-size: 16pt">13.4.1.1</span><br/>
+<br/>
+1.<br/>
+<img src="screenshot 11.png"/><br/>
+<br/>
+2. <br/>
+<img src="screenshot 12.png"/><br/>
+<br/>
+3. Because its printing back out to the screen the $_SESSION['user'] that it created when i entered the info in the username filed originally.<br/>
+<br/>
+<span style="font-size: 16pt">13.4.5.1<br/>
+<br/>
+</span>1.<br/>
+<img src="screenshot 14.png"/><br/>
+<br/>
+2.You are inserting additional commands in the text fields, that SQL is happily processing on the backend....  <br/>
+<br/>
+3. <br/>
+<img src="screenshot 13.png"/><br/>
+<br/>
+<span style="font-size: 16pt">13.4.6.1<br/>
+</span><br/>
+1. <img src="screenshot 15.png"/><br/>
+<br/>
+2. <br/>
+<br/>
+<img src="screenshot 16.png"/><br/>
+<br/>
+<img src="screenshot 17.png"/><br/>
+<br/>
+<span style="font-size: 16pt">13.5.1<br/>
+<br/>
+<span style="font-size: 11pt">1. <br/>
+</span><img src="screenshot 21.png"/><span style="font-size: 11pt"><br/>
+</span><span style="font-size: 11pt"><br/>
+2. <br/>
+</span><img src="screenshot 22.png"/><br/>
+<span style="font-size: 11pt"><br/>
+</span><span style="font-size: 10pt">the follow same process as 13.4.6.1<br/>
+</span><br/>
+<br/>
+13.6.1<br/>
+<br/>
+</span>1. <br/>
+<img src="screenshot 18.png"/><br/>
+<br/>
+2.<br/>
+<img src="screenshot 19.png"/><br/>
+<br/>
+3.<br/>
+<br/>
+<img src="screenshot 20.png"/><br/>
+<br/>
+4.<br/>
+<br/>
+<br/>
+<span style="font-size: 16pt">14.1.5</span><br/>
+<br/>
+<br/>
+1. <br/>
+<img src="screenshot 23.png"/><br/>
+<br/>
+2. <br/>
+<img src="screenshot 24.png"/><br/>
+<br/>
+<br/>
+<span style="font-size: 16pt">14.2.3<br/>
+</span><br/>
+1.<img src="screenshot 25.png"/><br/>
+<br/>
+2. ftp and SSH tend to be faster than RDP<br/>
+<br/>
+3. okay... :)<br/>
+<br/>
+<br/>
+<span style="font-size: 17pt">14.3..6</span><br/>
+<br/>
+1.<br/>
+<img src="screenshot 26.png"/><br/>
+<br/>
+root@kali:~/gen/password# for ips in $(cat ftpips.txt); do hydra -t 1 -l ftp -P /root/gen/password/johnpassword.txt -vV $ips ftp;done <br/>
+<br/>
+<br/>
+2.<br/>
+ <img src="screenshot 27.png"/><br/>
+<br/>
+<br/>
+<span style="font-size: 16pt">15.5.1<br/>
+<br/>
+</span><br/>
+1. <br/>
+<img src="screenshot 28.png"/><br/>
+<br/>
+<img src="screenshot 29.png"/><img src="image 2.png"/><br/>
+<br/>
+<br/>
+<br/>
+<span style="font-size: 16pt">16.4.3<br/>
+<br/>
+</span>1. <br/>
+<img src="screenshot 30.png"/><br/>
+<br/>
+<br/>
+<br/>
+2. <br/>
+<br/>
+<img src="screenshot 31.png"/><br/>
+<br/>
+<img src="screenshot 32.png"/><br/>
+<br/>
+<span style="font-size: 16pt">16.5.1 <br/>
+<br/>
+</span><br/>
+1. <img src="screenshot 33.png"/><br/>
+<br/>
+<br/>
+2. <br/>
+<img src="screenshot 34.png"/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

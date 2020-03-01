@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.128<br/>
+Host is up (0.052s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+| &nbsp; account_used: guest<br/>
+| &nbsp; ADMIN$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; C$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: &lt;none&gt;<br/>
+| &nbsp; IPC$: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Type: Not a file share<br/>
+| &nbsp; &nbsp; Anonymous access: READ<br/>
+| &nbsp; &nbsp; Current user access: READ/WRITE<br/>
+| &nbsp; share: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+| &nbsp; &nbsp; Current user access: READ/WRITE<br/>
+| &nbsp; wwwroot: <br/>
+| &nbsp; &nbsp; warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+| &nbsp; &nbsp; Anonymous access: &lt;none&gt;<br/>
+|_ &nbsp; &nbsp;Current user access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+| &nbsp; OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+| &nbsp; OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+| &nbsp; Computer name: dj<br/>
+| &nbsp; NetBIOS computer name: DJ<br/>
+| &nbsp; Workgroup: WORKGROUP<br/>
+|_ &nbsp;System time: 2016-12-25T02:08:14+02:00<br/>
+<br/>
+Nmap scan report for 10.11.1.128<br/>
+Host is up (0.053s latency).<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+MAC Address: 00:50:56:89:45:48 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-vuln-ms06-025: <br/>
+| &nbsp; VULNERABLE:<br/>
+| &nbsp; RRAS Memory Corruption vulnerability (MS06-025)<br/>
+| &nbsp; &nbsp; State:<span style="background-color: #ff0000">&nbsp;VULNERABLE</span><br/>
+| &nbsp; &nbsp; IDs: &nbsp;CVE:CVE-2006-2370<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A buffer overflow vulnerability in the Routing and Remote Access service (RRAS) in Microsoft Windows 2000 SP4, XP SP1<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and SP2, and Server 2003 SP1 and earlier allows remote unauthenticated or authenticated attackers to<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; execute arbitrary code via certain crafted "RPC related requests" aka the "RRAS Memory Corruption Vulnerability."<br/>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br/>
+| &nbsp; &nbsp; Disclosure date: 2006-6-27<br/>
+| &nbsp; &nbsp; References:<br/>
+| &nbsp; &nbsp; &nbsp; https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2370<br/>
+|_ &nbsp; &nbsp; &nbsp;https://technet.microsoft.com/en-us/library/security/ms06-025.aspx<br/>
+<br/>
+</body></html>

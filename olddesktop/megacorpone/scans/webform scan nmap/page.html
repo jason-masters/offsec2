@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>webform scan nmap</title>
+</head><body>root@kali:~/gen/nmap# nmap -p 80 --script http-auth-finder 10.11.1.1-255 | grep http://<br/>
+| &nbsp; http://10.11.1.24:80/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=search &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=sitemap &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.24/index.php &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=auth&amp;amp;mode=login_form &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=pages&amp;amp;page_id=about &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=cart &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=topics&amp;amp;topic_id=9 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=cart&amp;csid=de0e7f8d6f6f31fa2bc32a963b3478a7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=exceptions&amp;no_page&amp;csid=f719725b2d2016e30540e365e9474fe3 &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=pages&amp;amp;page_id=privacy_policy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=pages&amp;amp;page_id=what_is_cs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=auth&amp;amp;mode=recover_password &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?mode=catalog &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=categories&amp;amp;category_id=93 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=categories&amp;amp;category_id=113 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=categories&amp;amp;category_id=119 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+| &nbsp; http://10.11.1.24/index.php?target=pages&amp;page_id=privacy_policy &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+|_ &nbsp;http://10.11.1.24/index.php?target=categories&amp;amp;category_id=86 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.31:80/ &nbsp;FORM<br/>
+|_ &nbsp;http://10.11.1.31/ &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.128:80/ &nbsp;FORM<br/>
+|_ &nbsp;http://10.11.1.128/ &nbsp; &nbsp; FORM<br/>
+| &nbsp; http://10.11.1.133:80/ &nbsp; &nbsp; &nbsp; &nbsp;FORM<br/>
+|_ &nbsp;http://10.11.1.133/login.asp &nbsp;FORM<br/>
+|_ &nbsp;http://10.11.1.223/xampp/ &nbsp;HTTP: Basic<br/>
+root@kali:~/gen/nmap# <br/>
+</body></html>

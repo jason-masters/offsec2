@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~# nmap --script=banner 10.11.1.72<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-03 01:15 EDT<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE<br/>
+22/tcp &nbsp; open &nbsp;ssh<br/>
+|_banner: SSH-2.0-OpenSSH_5.8p1 Debian-7ubuntu1<br/>
+25/tcp &nbsp; open &nbsp;smtp<br/>
+| banner: 220 beta SMTP Server (JAMES SMTP Server 2.3.2) ready Mon, 3 Apr<br/>
+|_ 2017 07:43:04 -0400 (EDT)<br/>
+80/tcp &nbsp; open &nbsp;http<br/>
+110/tcp &nbsp;open &nbsp;pop3<br/>
+|_banner: +OK beta POP3 server (JAMES POP3 Server 2.3.2) ready<br/>
+111/tcp &nbsp;open &nbsp;rpcbind<br/>
+119/tcp &nbsp;open &nbsp;nntp<br/>
+|_banner: 200 beta NNTP Service Ready, posting permitted<br/>
+2049/tcp open &nbsp;nfs<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 11.77 seconds<br/>
+</body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>files cat'd</title>
+</head><body>cat /etc/amportal.conf<br/>
+# This file is part of FreePBX.<br/>
+#<br/>
+# &nbsp; &nbsp;FreePBX is free software: you can redistribute it and/or modify<br/>
+# &nbsp; &nbsp;it under the terms of the GNU General Public License as published by<br/>
+# &nbsp; &nbsp;the Free Software Foundation, either version 2 of the License, or<br/>
+# &nbsp; &nbsp;(at your option) any later version.<br/>
+#<br/>
+# &nbsp; &nbsp;FreePBX is distributed in the hope that it will be useful,<br/>
+# &nbsp; &nbsp;but WITHOUT ANY WARRANTY; without even the implied warranty of<br/>
+# &nbsp; &nbsp;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. &nbsp;See the<br/>
+# &nbsp; &nbsp;GNU General Public License for more details.<br/>
+#<br/>
+# &nbsp; &nbsp;You should have received a copy of the GNU General Public License<br/>
+# &nbsp; &nbsp;along with FreePBX. &nbsp;If not, see &lt;http://www.gnu.org/licenses/&gt;.<br/>
+#<br/>
+# This file contains settings for components of the Asterisk Management Portal<br/>
+# Spaces are not allowed!<br/>
+# Run /usr/src/AMP/apply_conf.sh after making changes to this file<br/>
+<br/>
+# FreePBX Database configuration<br/>
+# AMPDBHOST: Hostname where the FreePBX database resides<br/>
+# AMPDBENGINE: Engine hosting the FreePBX database (e.g. mysql)<br/>
+# AMPDBNAME: Name of the FreePBX database (e.g. asterisk)<br/>
+# AMPDBUSER: Username used to connect to the FreePBX database<br/>
+# AMPDBPASS: Password for AMPDBUSER (above)<br/>
+# AMPENGINE: Telephony backend engine (e.g. asterisk)<br/>
+# AMPMGRUSER: Username to access the Asterisk Manager Interface<br/>
+# AMPMGRPASS: Password for AMPMGRUSER<br/>
+#<br/>
+AMPDBHOST=localhost<br/>
+AMPDBENGINE=mysql<br/>
+# AMPDBNAME=asterisk<br/>
+AMPDBUSER=asteriskuser<br/>
+# AMPDBPASS=amp109<br/>
+AMPDBPASS=admin<br/>
+AMPENGINE=asterisk<br/>
+AMPMGRUSER=admin<br/>
+#AMPMGRPASS=amp111<br/>
+AMPMGRPASS=admin<br/>
+<br/>
+# AMPBIN: Location of the FreePBX command line scripts<br/>
+# AMPSBIN: Location of (root) command line scripts<br/>
+#<br/>
+AMPBIN=/var/lib/asterisk/bin<br/>
+AMPSBIN=/usr/local/sbin<br/>
+<br/>
+# AMPWEBROOT: Path to Apache's webroot (leave off trailing slash)<br/>
+# AMPCGIBIN: Path to Apache's cgi-bin dir (leave off trailing slash)<br/>
+# AMPWEBADDRESS: The IP address or host name used to access the AMP web admin<br/>
+#<br/>
+AMPWEBROOT=/var/www/html<br/>
+AMPCGIBIN=/var/www/cgi-bin <br/>
+# AMPWEBADDRESS=x.x.x.x|hostname<br/>
+<br/>
+# FOPWEBROOT: Path to the Flash Operator Panel webroot (leave off trailing slash)<br/>
+# FOPPASSWORD: Password for performing transfers and hangups in the Flash Operator Panel<br/>
+# FOPRUN: Set to true if you want FOP started by freepbx_engine (amportal_start), false otherwise<br/>
+# FOPDISABLE: Set to true to disable FOP in interface and retrieve_conf. &nbsp;Useful for sqlite3 <br/>
+# or if you don't want FOP.<br/>
+#<br/>
+#FOPRUN=true<br/>
+FOPWEBROOT=/var/www/html/panel<br/>
+#FOPPASSWORD=passw0rd<br/>
+FOPPASSWORD=admin<br/>
+<br/>
+# FOPSORT=extension|lastname<br/>
+# DEFAULT VALUE: extension<br/>
+# FOP should sort extensions by Last Name [lastname] or by Extension [extension]<br/>
+<br/>
+# This is the default admin name used to allow an administrator to login to ARI bypassing all security.<br/>
+# Change this to whatever you want, don't forget to change the ARI_ADMIN_PASSWORD as well<br/>
+ARI_ADMIN_USERNAME=admin<br/>
+<br/>
+# This is the default admin password to allow an administrator to login to ARI bypassing all security.<br/>
+# Change this to a secure password.<br/>
+ARI_ADMIN_PASSWORD=admin<br/>
+<br/>
+# AUTHTYPE=database|none<br/>
+# Authentication type to use for web admininstration. If type set to 'database', the primary<br/>
+# AMP admin credentials will be the AMPDBUSER/AMPDBPASS above.<br/>
+AUTHTYPE=database<br/>
+<br/>
+# AMPADMINLOGO=filename<br/>
+# Defines the logo that is to be displayed at the TOP RIGHT of the admin screen. This enables<br/>
+# you to customize the look of the administration screen.<br/>
+# NOTE: images need to be saved in the ..../admin/images directory of your AMP install<br/>
+# This image should be 55px in height<br/>
+AMPADMINLOGO=logo.png<br/>
+<br/>
+# USECATEGORIES=true|false<br/>
+# DEFAULT VALUE: true<br/>
+# Controls if the menu items in the admin interface are sorted by category (true), or sorted <br/>
+# alphabetically with no categories shown (false).<br/>
+<br/>
+# AMPEXTENSIONS=extensions|deviceanduser<br/>
+# Sets the extension behavior in FreePBX. &nbsp;If set to 'extensions', Devices and Users are<br/>
+# administered together as a unified Extension, and appear on a single page.<br/>
+# If set to 'deviceanduser', Devices and Users will be administered seperately. &nbsp;Devices (e.g. <br/>
+# each individual line on a SIP phone) and Users (e.g. '101') will be configured <br/>
+# independent of each other, allowing association of one User to many Devices, or allowing <br/>
+# Users to login and logout of Devices.<br/>
+AMPEXTENSIONS=extensions<br/>
+<br/>
+# ENABLECW=true|false<br/>
+ENABLECW=no<br/>
+# DEFAULT VALUE: true<br/>
+# Enable call waiting by default when an extension is created. Set to 'no' to if you don't want <br/>
+# phones to be commissioned with call waiting already enabled. The user would then be required<br/>
+# to dial the CW feature code (*70 default) to enable their phone. Most installations should leave<br/>
+# this alone. It allows multi-line phones to receive multiple calls on their line appearances.<br/>
+<br/>
+# CWINUSEBUSY=true|false<br/>
+# DEFAULT VALUE: true<br/>
+# For extensions that have CW enabled, report unanswered CW calls as 'busy' (resulting in busy <br/>
+# voicemail greeting). If set to no, unanswered CW calls simply report as 'no-answer'.<br/>
+<br/>
+# AMPBADNUMBER=true|false<br/>
+# DEFAULT VALUE: true<br/>
+# Generate the bad-number context which traps any bogus number or feature code and plays a<br/>
+# message to the effect. If you use the Early Dial feature on some Grandstream phones, you<br/>
+# will want to set this to false.<br/>
+<br/>
+</body></html>

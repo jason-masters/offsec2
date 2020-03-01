@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Banners</title>
+</head><body>root@kali:~/gen/nmap# nmap --script=banner 192.168.21.67<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-15 17:18 EDT<br/>
+Nmap scan report for 192.168.21.67<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 995 closed ports<br/>
+PORT &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp;open &nbsp;ssh<br/>
+|_banner: SSH-2.0-OpenSSH_6.7p1 Debian-5+deb8u3<br/>
+25/tcp &nbsp;open &nbsp;smtp<br/>
+|_banner: 220 mail.local ESMTP Postfix (Debian/GNU)<br/>
+111/tcp open &nbsp;rpcbind<br/>
+139/tcp open &nbsp;netbios-ssn<br/>
+445/tcp open &nbsp;microsoft-ds<br/>
+MAC Address: 00:50:56:89:35:22 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 16.50 seconds<br/>
+</body></html>

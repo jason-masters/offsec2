@@ -1,0 +1,37 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.73<br/>
+Host is up (0.060s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:61:7D (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)<br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|   Anonymous access: READ<br/>
+|  USERS: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED<br/>
+|_  Anonymous access: &lt;none&gt;<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+|  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)<br/>
+|  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional<br/>
+|  Computer name: gamma<br/>
+|  NetBIOS computer name: GAMMA<br/>
+|  Workgroup: WORKGROUP<br/>
+|_ System time: 2016-12-24T09:02:07-08:00<br/>
+</body></html>

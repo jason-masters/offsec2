@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>c9110946-cb1b-4329-b73b-0d71850b5dfa</string>
+  <key>title</key><string>Enum4linux</string>
+  <key>nodeid</key><string>47e5f836-4af4-4774-a065-50b849a7fb6d</string>
+  <key>modified_time</key><integer>1492351122</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482622271</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>6</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

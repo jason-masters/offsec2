@@ -1,0 +1,76 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.31<br/>
+Host is up (0.052s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: guest<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|   Current user access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Type: Not a file share<br/>
+|   Anonymous access: READ<br/>
+|   Current user access: READ/WRITE<br/>
+|  wwwroot: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|_  Current user access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+|  OS: Windows Server 2003 3790 Service Pack 1 (Windows Server 2003 5.2)<br/>
+|  OS CPE: cpe:/o:microsoft:windows_server_2003::sp1<br/>
+|  Computer name: ralph<br/>
+|  NetBIOS computer name: RALPH<br/>
+|  Workgroup: THINC<br/>
+|_ System time: 2016-12-24T08:33:59-06:00<br/>
+<br/>
+<br/>
+<br/>
+root@kali:~/gen/nmap# nmap -sV --script=http-enum 10.11.1.31<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-15 17:10 EST<br/>
+Nmap scan report for 10.11.1.31<br/>
+Host is up (0.056s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT   STATE SERVICE    VERSION<br/>
+80/tcp  open http     Microsoft IIS httpd 6.0<br/>
+| http-enum: <br/>
+|  /_vti_log/: Frontpage file or folder<br/>
+|  /postinfo.html: Frontpage file or folder<br/>
+|  /_vti_pvt/access.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/bots.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/botinfs.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/service.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/services.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/svcacl.cnf: Frontpage file or folder<br/>
+|  /_vti_pvt/writeto.cnf: Frontpage file or folder<br/>
+|  /images/: Potentially interesting folder<br/>
+|_ /_private/: Potentially interesting folder<br/>
+|_http-server-header: Microsoft-IIS/6.0<br/>
+135/tcp open msrpc     Microsoft Windows RPC<br/>
+139/tcp open netbios-ssn  Microsoft Windows netbios-ssn<br/>
+445/tcp open microsoft-ds Microsoft Windows 2003 or 2008 microsoft-ds<br/>
+1025/tcp open msrpc     Microsoft Windows RPC<br/>
+1433/tcp open ms-sql-s   Microsoft SQL Server 2000 8.00.766; SP3a<br/>
+3389/tcp open ms-wbt-server Microsoft Terminal Service<br/>
+MAC Address: 00:50:56:89:17:75 (VMware)<br/>
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2003<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 57.90 seconds<br/>
+</body></html>

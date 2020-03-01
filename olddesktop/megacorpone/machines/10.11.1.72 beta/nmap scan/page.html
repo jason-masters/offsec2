@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan</title>
+</head><body>root@kali:~# nmap -Pn -p- 10.11.1.72<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-03 01:15 EDT<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.055s latency).<br/>
+Not shown: 65522 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http<br/>
+110/tcp &nbsp; open &nbsp;pop3<br/>
+111/tcp &nbsp; open &nbsp;rpcbind<br/>
+119/tcp &nbsp; open &nbsp;nntp<br/>
+2049/tcp &nbsp;open &nbsp;nfs<br/>
+4555/tcp &nbsp;open &nbsp;rsip<br/>
+33139/tcp open &nbsp;unknown<br/>
+38944/tcp open &nbsp;unknown<br/>
+52832/tcp open &nbsp;unknown<br/>
+57680/tcp open &nbsp;unknown<br/>
+58889/tcp open &nbsp;unknown<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+<br/>
+Nmap done: 1 IP address (1 host up) scanned in 53.11 seconds<br/>
+<br/>
+<br/>
+root@kali:~# nmap -sV --script vuln 10.11.1.72<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-04-03 01:16 EDT<br/>
+Nmap scan report for 10.11.1.72<br/>
+Host is up (0.053s latency).<br/>
+Not shown: 993 closed ports<br/>
+PORT &nbsp; &nbsp; STATE SERVICE VERSION<br/>
+22/tcp &nbsp; open &nbsp;ssh &nbsp; &nbsp; OpenSSH 5.8p1 Debian 7ubuntu1 (Ubuntu Linux; protocol 2.0)<br/>
+25/tcp &nbsp; open &nbsp;smtp &nbsp; &nbsp;JAMES smtpd 2.3.2<br/>
+| smtp-vuln-cve2010-4344: <br/>
+|_ &nbsp;The SMTP server is not Exim: NOT VULNERABLE<br/>
+|_sslv2-drown: <br/>
+80/tcp &nbsp; open &nbsp;http &nbsp; &nbsp;Apache httpd 2.2.20 ((Ubuntu))<br/>
+|_http-csrf: Couldn't find any CSRF vulnerabilities.<br/>
+|_http-dombased-xss: Couldn't find any DOM based XSS.<br/>
+| http-enum: <br/>
+|_ &nbsp;/icons/: Potentially interesting folder w/ directory listing<br/>
+|_http-server-header: Apache/2.2.20 (Ubuntu)<br/>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.<br/>
+110/tcp &nbsp;open &nbsp;pop3 &nbsp; &nbsp;JAMES pop3d 2.3.2<br/>
+|_sslv2-drown: <br/>
+111/tcp &nbsp;open &nbsp;rpcbind 2-4 (RPC #100000)<br/>
+| rpcinfo: <br/>
+| &nbsp; program version &nbsp; port/proto &nbsp;service<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/tcp &nbsp;rpcbind<br/>
+| &nbsp; 100000 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; &nbsp;111/udp &nbsp;rpcbind<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs<br/>
+| &nbsp; 100003 &nbsp;2,3,4 &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;33139/tcp &nbsp;mountd<br/>
+| &nbsp; 100005 &nbsp;1,2,3 &nbsp; &nbsp; &nbsp;59705/udp &nbsp;mountd<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;49912/udp &nbsp;nlockmgr<br/>
+| &nbsp; 100021 &nbsp;1,3,4 &nbsp; &nbsp; &nbsp;57680/tcp &nbsp;nlockmgr<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;51962/udp &nbsp;status<br/>
+| &nbsp; 100024 &nbsp;1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;52832/tcp &nbsp;status<br/>
+| &nbsp; 100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/tcp &nbsp;nfs_acl<br/>
+|_ &nbsp;100227 &nbsp;2,3 &nbsp; &nbsp; &nbsp; &nbsp; 2049/udp &nbsp;nfs_acl<br/>
+119/tcp &nbsp;open &nbsp;nntp &nbsp; &nbsp;JAMES nntpd (posting ok)<br/>
+|_sslv2-drown: <br/>
+2049/tcp open &nbsp;nfs_acl 2-3 (RPC #100227)<br/>
+MAC Address: 00:50:56:89:43:35 (VMware)<br/>
+Service Info: Host: beta; OS: Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 45.37 seconds<br/>
+</body></html>

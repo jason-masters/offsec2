@@ -1,0 +1,44 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>root@kali:~/gen# nmap -sS 10.11.1.251<br/>
+<br/>
+Starting Nmap 7.25BETA2 ( https://nmap.org ) at 2017-01-15 16:29 EST<br/>
+Nmap scan report for 10.11.1.251<br/>
+Host is up (0.054s latency).<br/>
+Not shown: 998 filtered ports<br/>
+PORT  STATE SERVICE<br/>
+22/tcp open ssh<br/>
+80/tcp open http<br/>
+MAC Address: 00:50:56:89:66:33 (VMware)<br/>
+<br/>
+<br/>
+root@kali:~/gen# nikto -host http://10.11.1.251<br/>
+- Nikto v2.1.6<br/>
+---------------------------------------------------------------------------<br/>
++ Target IP:     10.11.1.251<br/>
++ Target Hostname:  10.11.1.251<br/>
++ Target Port:    80<br/>
++ Start Time:     2017-01-15 16:31:18 (GMT-5)<br/>
+---------------------------------------------------------------------------<br/>
++ Server: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.4 with Suhosin-Patch<br/>
++ Server leaks inodes via ETags, header found with file /, inode: 168205, size: 331, mtime: Mon Feb 8 02:27:40 2016<br/>
++ The anti-clickjacking X-Frame-Options header is not present.<br/>
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS<br/>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type<br/>
++ PHP/5.2.6-3ubuntu4.4 appears to be outdated (current is at least 5.6.9). PHP 5.5.25 and 5.4.41 are also current.<br/>
++ Apache/2.2.11 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.<br/>
++ Uncommon header 'tcn' found, with contents: list<br/>
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html<br/>
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE <br/>
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST<br/>
+<br/>
++ OSVDB-3268: /icons/: Directory indexing found.<br/>
++ OSVDB-3233: /icons/README: Apache default file found.<br/>
++ 8345 requests: 0 error(s) and 12 item(s) reported on remote host<br/>
++ End Time:      2017-01-15 16:39:53 (GMT-5) (515 seconds)<br/>
+---------------------------------------------------------------------------<br/>
++ 1 host(s) tested<br/>
+root@kali:~/gen# <br/>
+</body></html>

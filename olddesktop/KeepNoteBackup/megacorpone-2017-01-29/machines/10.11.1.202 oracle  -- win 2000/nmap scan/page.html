@@ -1,0 +1,34 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Nmap Scan</title>
+</head><body>Nmap scan report for 10.11.1.202<br/>
+Host is up (0.068s latency).<br/>
+PORT  STATE SERVICE<br/>
+445/tcp open microsoft-ds<br/>
+MAC Address: 00:50:56:89:69:CE (VMware)<br/>
+<br/>
+Host script results:<br/>
+| smb-enum-shares: <br/>
+|  account_used: &lt;blank&gt;<br/>
+|  ADMIN$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  C$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|   Anonymous access: &lt;none&gt;<br/>
+|  IPC$: <br/>
+|   warning: Couldn't get details for share: NT_STATUS_WERR_ACCESS_DENIED (srvsvc.netsharegetinfo)<br/>
+|_  Anonymous access: READ<br/>
+<br/>
+<br/>
+Host script results:<br/>
+| smb-os-discovery: <br/>
+|  OS: Windows 2000 (Windows 2000 LAN Manager)<br/>
+|  OS CPE: cpe:/o:microsoft:windows_2000::-<br/>
+|  Computer name: oracle<br/>
+|  NetBIOS computer name: ORACLE<br/>
+|  Domain name: acme.local<br/>
+|  FQDN: oracle.acme.local<br/>
+|_ System time: 2016-12-24T17:20:04+02:00<br/>
+</body></html>

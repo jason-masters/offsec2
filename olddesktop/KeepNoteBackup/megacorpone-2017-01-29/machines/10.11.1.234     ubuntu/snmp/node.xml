@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>a3773727-6f0a-43d9-aee3-58bd7b61b565</string>
+  <key>title</key><string>SNMP</string>
+  <key>nodeid</key><string>c5cedf2e-e79f-411c-9b9e-c1c184aacc19</string>
+  <key>modified_time</key><integer>1482781328</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1482781328</integer>
+  <key>order</key><integer>3</integer>
+</dict>
+</node>

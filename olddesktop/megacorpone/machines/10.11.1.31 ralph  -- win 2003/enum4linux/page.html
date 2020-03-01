@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Enum4linux</title>
+</head><body>root@kali:/usr/share/enum4linux# enum4linux 10.11.1.31<br/>
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sat Feb 11 11:59:53 2017<br/>
+<br/>
+&nbsp;========================== <br/>
+| &nbsp; &nbsp;Target Information &nbsp; &nbsp;|<br/>
+&nbsp;========================== <br/>
+Target ........... 10.11.1.31<br/>
+RID Range ........ 500-550,1000-1050<br/>
+Username ......... ''<br/>
+Password ......... ''<br/>
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none<br/>
+<br/>
+<br/>
+&nbsp;================================================== <br/>
+| &nbsp; &nbsp;Enumerating Workgroup/Domain on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;================================================== <br/>
+[+] Got domain/workgroup name: THINC<br/>
+<br/>
+&nbsp;========================================== <br/>
+| &nbsp; &nbsp;Nbtstat Information for 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;========================================== <br/>
+Looking up status of 10.11.1.31<br/>
+&#09;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;00&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Workstation Service<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;00&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Domain/Workgroup Name<br/>
+&#09;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;1f&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;NetDDE Service<br/>
+&#09;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;03&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Messenger Service<br/>
+&#09;RALPH &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;20&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;File Server Service<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;1e&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Browser Service Elections<br/>
+&#09;THINC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;1d&gt; - &nbsp; &nbsp; &nbsp; &nbsp; B &lt;ACTIVE&gt; &nbsp;Master Browser<br/>
+&#09;..__MSBROWSE__. &lt;01&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt; &nbsp;Master Browser<br/>
+<br/>
+&#09;MAC Address = 00-50-56-89-17-75<br/>
+<br/>
+&nbsp;=================================== <br/>
+| &nbsp; &nbsp;Session Check on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;=================================== <br/>
+[+] Server 10.11.1.31 allows sessions using username '', password ''<br/>
+<br/>
+&nbsp;========================================= <br/>
+| &nbsp; &nbsp;Getting domain SID for 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;========================================= <br/>
+could not obtain sid from server<br/>
+error: NT_STATUS_ACCESS_DENIED<br/>
+[+] Can't determine if host is part of domain or part of a workgroup<br/>
+<br/>
+&nbsp;==================================== <br/>
+| &nbsp; &nbsp;OS information on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;==================================== <br/>
+[+] Got OS info for 10.11.1.31 from smbclient: Domain=[RALPH] OS=[Windows Server 2003 3790 Service Pack 1] Server=[Windows Server 2003 5.2]<br/>
+[E] Can't get OS info with srvinfo: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+&nbsp;=========================== <br/>
+| &nbsp; &nbsp;Users on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;=========================== <br/>
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+&nbsp;======================================= <br/>
+| &nbsp; &nbsp;Share Enumeration on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;======================================= <br/>
+[E] Can't list shares: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Attempting to map shares on 10.11.1.31<br/>
+<br/>
+&nbsp;================================================== <br/>
+| &nbsp; &nbsp;Password Policy Information for 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;================================================== <br/>
+[E] Can't connect to host with supplied credentials.<br/>
+<br/>
+[E] Failed to get password policy with rpcclient<br/>
+<br/>
+<br/>
+&nbsp;============================ <br/>
+| &nbsp; &nbsp;Groups on 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;============================ <br/>
+<br/>
+[+] Getting builtin groups:<br/>
+[E] Can't get builtin groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting builtin group memberships:<br/>
+<br/>
+[+] Getting local groups:<br/>
+[E] Can't get local groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting local group memberships:<br/>
+<br/>
+[+] Getting domain groups:<br/>
+[E] Can't get domain groups: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+[+] Getting domain group memberships:<br/>
+<br/>
+&nbsp;===================================================================== <br/>
+| &nbsp; &nbsp;Users on 10.11.1.31 via RID cycling (RIDS: 500-550,1000-1050) &nbsp; &nbsp;|<br/>
+&nbsp;===================================================================== <br/>
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED. &nbsp;RID cycling not possible.<br/>
+<br/>
+&nbsp;=========================================== <br/>
+| &nbsp; &nbsp;Getting printer info for 10.11.1.31 &nbsp; &nbsp;|<br/>
+&nbsp;=========================================== <br/>
+could not obtain sid from server<br/>
+error: NT_STATUS_ACCESS_DENIED<br/>
+<br/>
+<br/>
+enum4linux complete on Sat Feb 11 12:00:09 2017<br/>
+</body></html>
