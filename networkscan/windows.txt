@@ -1,0 +1,5 @@
+# Nmap 7.25BETA2 scan initiated Mon Dec 26 00:27:17 2016 as: nmap -v -p 139,445 -oG windows.txt --script=smb-os-discovery 10.11.1.252
+# Ports scanned: TCP(2;139,445) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.11.1.252 ()	Status: Up
+Host: 10.11.1.252 ()	Ports: 139/filtered/tcp//netbios-ssn///, 445/filtered/tcp//microsoft-ds///
+# Nmap done at Mon Dec 26 00:27:19 2016 -- 1 IP address (1 host up) scanned in 2.03 seconds

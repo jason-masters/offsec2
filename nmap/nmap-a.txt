@@ -1,0 +1,4 @@
+# Nmap 7.25BETA2 scan initiated Thu Feb  9 19:40:02 2017 as: nmap -A -oG nmap-a.txt 10.11.1.252
+Host: 10.11.1.252 ()	Status: Up
+Host: 10.11.1.252 ()	Ports: 8000/open/tcp//http//Apache httpd 2.2.3 ((CentOS))/, 8888/open/tcp//http-proxy//Squid http proxy 3.3.8/	Ignored State: filtered (998)	Seq Index: 197	IP ID Seq: All zeros
+# Nmap done at Thu Feb  9 19:40:54 2017 -- 1 IP address (1 host up) scanned in 52.23 seconds

@@ -1,0 +1,33 @@
+
+*******************************************************************
+*                                                                 *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __| '_ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* TheHarvester Ver. 2.7                                           *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*******************************************************************
+
+
+[-] Searching in Bing:
+	Searching 50 results...
+	Searching 100 results...
+
+
+[+] Emails found:
+------------------
+J.Bourne@megacorpone.com
+mike@megacorpone.com
+
+[+] Hosts found in search engines:
+------------------------------------
+[-] Resolving hostnames IPs... 
+38.100.193.83:admin.megacorpone.com
+38.100.193.69:beta.megacorpone.com
+38.100.193.70:ns1.megacorpone.com
+38.100.193.80:ns2.megacorpone.com
+38.100.193.76:www.megacorpone.com

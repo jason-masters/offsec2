@@ -1,0 +1,39 @@
+This is METAFONT, Version 2.7182818 (TeX Live 2016/Debian) (preloaded base=mf 2016.9.7)  12 MAR 2017 13:58
+**msf
+(/usr/share/texlive/texmf-dist/fonts/source/public/knuth-lib/test.mf
+! Interruption.
+l.2 
+    cmchar "Lowercase thorn";
+? 
+>> cmchar
+! Isolated expression.
+<to be read again> 
+                   "Lowercase thorn"
+l.2 cmchar "Lowercase thorn"
+                            ;
+? 
+! Extra tokens will be flushed.
+<to be read again> 
+                   "Lowercase thorn"
+l.2 cmchar "Lowercase thorn"
+                            ;
+? 
+>> serif_fit#+10u#
+! Internal quantity `charwd' must receive a known value.
+<to be read again> 
+                   ;
+beginchar->...byte(EXPR0)else:0fi;charwd:=(EXPR1);
+                                                  charht:=(EXPR2);chardp:=(E...
+l.3 ...5",10u#+serif_fit#,asc_height#,desc_depth#)
+                                                  ;
+? 
+>> asc_height#
+! Internal quantity `charht' must receive a known value.
+<to be read again> 
+                   ;
+beginchar->...0fi;charwd:=(EXPR1);charht:=(EXPR2);
+                                                  chardp:=(EXPR3);w:=hround(...
+l.3 ...5",10u#+serif_fit#,asc_height#,desc_depth#)
+                                                  ;
+? exit
+
